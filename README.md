@@ -8,6 +8,9 @@ Alternatively, the dependencies can also be found here:
 
 - de.basisprofil.r4 1.4.0: https://simplifier.net/packages/de.basisprofil.r4/1.4.0
 - kbv.basis 1.5.0: https://simplifier.net/packages/kbv.basis/1.5.0
+- hl7.fhir.eu.extensions 0.1.0: https://hl7.eu/fhir/extensions/0.1.0/package.tgz
+- hl7.fhir.eu.laboratory 0.1.0: https://hl7.eu/fhir/laboratory/0.1.0/package.tgz
+- hl7.fhir.uv.extensions.r5 5.1.0: https://simplifier.net/packages/hl7.fhir.uv.extensions.r5/5.1.0
 
 The version of the validator, which was used by the mio42 GmbH is 6.4.3 and can be found here:
 
@@ -23,9 +26,9 @@ For a thorough documentation on the use of the validator, please follow this lin
   
 You can use the following command to validate the examples:
 
-Fallbeispiel:
+Fallbeispiel_Bundle:
 ```
-java -jar validator_cli.jar .\Examples\Fallbeispiel -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.5.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\hl7.fhir.eu.extensions-0.1.0 -ig .\hl7.fhir.eu.laboratory-0.1.0 -ig .\hl7.fhir.uv.extensions.r5-5.1.0 -ig .\FHIR-Specification\StructureDefinitions -ig .\FHIR-Specification\Terminologien -recurse
+java -jar validator_cli.jar .\Examples\Fallbeispiel_Bundle.json -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.5.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\hl7.fhir.eu.extensions-0.1.0 -ig .\hl7.fhir.eu.laboratory-0.1.0 -ig .\hl7.fhir.uv.extensions.r5-5.1.0 -ig .\FHIR-Specification\StructureDefinitions -ig .\FHIR-Specification\Terminologien -recurse
 ```
 																										 
 Technical-Examples
@@ -45,11 +48,14 @@ Disclaimer: Der Service zur Validierung erhebt keinen Anspruch auf Vollständigk
 
 Einführung: Dieses Archiv soll als Orientierungshilfe für Entwickler:innen bei der Umsetzung der MIOs dienen. Es enthält die verwendeten Basis-Profile, die Ressourcen des MIO, den Validator und Praxisbeispiele. Damit stellt diese Sammlung eine beispielhafte Validierungsumgebung dar. Die notwendigen Abhängigkeiten sind bereitgestellt und koennen direkt eingebunden werden.
 
-Die Dependencies finden Sie alternativ unter folgenden links:
+Die Dependencies finden Sie alternativ unter folgenden Links:
 
 - de.basisprofil.r4 1.4.0: https://simplifier.net/packages/de.basisprofil.r4/1.4.0
 - kbv.basis 1.5.0: https://simplifier.net/packages/kbv.basis/1.5.0
-  
+- hl7.fhir.eu.extensions 0.1.0: https://hl7.eu/fhir/extensions/0.1.0/package.tgz
+- hl7.fhir.eu.laboratory 0.1.0: https://hl7.eu/fhir/laboratory/0.1.0/package.tgz
+- hl7.fhir.uv.extensions.r5 5.1.0: https://simplifier.net/packages/hl7.fhir.uv.extensions.r5/5.1.0
+
 Die Version des Validators, welche von der mio42 GmbH für die Validierung verwendet wurde ist 6.4.3 und kann hier abgerufen werden:
 
 - https://github.com/hapifhir/org.hl7.fhir.core/releases/tag/6.4.3
@@ -66,7 +72,7 @@ Zur Validierung der Beispiele können Sie folgenden Aufruf verwenden:
 
 Fallbeispiel:
 ```
-java -jar validator_cli.jar .\Examples\Fallbeispiel -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.5.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\hl7.fhir.eu.extensions-0.1.0 -ig .\hl7.fhir.eu.laboratory-0.1.0 -ig .\hl7.fhir.uv.extensions.r5-5.1.0 -ig .\FHIR-Specification\StructureDefinitions -ig .\FHIR-Specification\Terminologien -recurse
+java -jar validator_cli.jar .\Examples\Fallbeispiel_Bundle.json -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.5.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\hl7.fhir.eu.extensions-0.1.0 -ig .\hl7.fhir.eu.laboratory-0.1.0 -ig .\hl7.fhir.uv.extensions.r5-5.1.0 -ig .\FHIR-Specification\StructureDefinitions -ig .\FHIR-Specification\Terminologien -recurse
 ```
 																										 
 Technical-Examples
