@@ -1,0 +1,653 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "KBV-PR-MIO-LAB-Condition-Diagnosis",
+  "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Condition_Diagnosis",
+  "version": "1.0.0-kommentierung.2",
+  "name": "KBV_PR_MIO_LAB_Condition_Diagnosis",
+  "title": "KBV_PR_MIO_LAB_Condition_Diagnosis",
+  "status": "draft",
+  "publisher": "Kassenärztliche Bundesvereinigung (KBV)",
+  "description": "Dieses Profil bildet eine Fallbegründung/Diagnose ab.",
+  "copyright": "Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health - ICF, herausgegeben durch die Weltgesundheitsorganisation.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Condition",
+  "baseDefinition": "https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Condition_Diagnosis|1.5.0",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Condition",
+        "path": "Condition",
+        "definition": "Dieses Profil bildet eine Fallbegründung/Diagnose ab."
+      },
+      {
+        "id": "Condition.meta",
+        "path": "Condition.meta",
+        "min": 1
+      },
+      {
+        "id": "Condition.meta.versionId",
+        "path": "Condition.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.meta.lastUpdated",
+        "path": "Condition.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.meta.source",
+        "path": "Condition.meta.source",
+        "max": "0"
+      },
+      {
+        "id": "Condition.meta.profile",
+        "path": "Condition.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Condition.meta.profile:mioProfile",
+        "path": "Condition.meta.profile",
+        "sliceName": "mioProfile",
+        "min": 1,
+        "max": "1",
+        "patternCanonical": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Condition_Diagnosis|1.0.0-kommentierung.2"
+      },
+      {
+        "id": "Condition.meta.security",
+        "path": "Condition.meta.security",
+        "max": "0"
+      },
+      {
+        "id": "Condition.meta.tag",
+        "path": "Condition.meta.tag",
+        "max": "0"
+      },
+      {
+        "id": "Condition.implicitRules",
+        "path": "Condition.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Condition.text",
+        "path": "Condition.text",
+        "definition": "In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."
+      },
+      {
+        "id": "Condition.text.status",
+        "path": "Condition.text.status",
+        "fixedCode": "extensions"
+      },
+      {
+        "id": "Condition.contained",
+        "path": "Condition.contained",
+        "max": "0"
+      },
+      {
+        "id": "Condition.extension",
+        "path": "Condition.extension",
+        "max": "0"
+      },
+      {
+        "id": "Condition.extension:Feststellungsdatum",
+        "path": "Condition.extension",
+        "sliceName": "Feststellungsdatum",
+        "max": "0"
+      },
+      {
+        "id": "Condition.identifier",
+        "path": "Condition.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Condition.clinicalStatus",
+        "path": "Condition.clinicalStatus",
+        "max": "0"
+      },
+      {
+        "id": "Condition.verificationStatus",
+        "path": "Condition.verificationStatus",
+        "max": "0"
+      },
+      {
+        "id": "Condition.category",
+        "path": "Condition.category",
+        "max": "0"
+      },
+      {
+        "id": "Condition.severity",
+        "path": "Condition.severity",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code",
+        "path": "Condition.code",
+        "definition": "In diesem Element wird die Diagnose in Form einer Codierung oder eines Freitextes angegeben.",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM",
+        "path": "Condition.code.coding",
+        "sliceName": "ICD-10-GM",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Mehrfachcodierungs-Kennzeichen",
+        "path": "Condition.code.coding.extension",
+        "sliceName": "Mehrfachcodierungs-Kennzeichen",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Mehrfachcodierungs-Kennzeichen.extension",
+        "path": "Condition.code.coding.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Mehrfachcodierungs-Kennzeichen.value[x]",
+        "path": "Condition.code.coding.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Mehrfachcodierungs-Kennzeichen.value[x].system",
+        "path": "Condition.code.coding.extension.value[x].system",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Mehrfachcodierungs-Kennzeichen.value[x].version",
+        "path": "Condition.code.coding.extension.value[x].version",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Mehrfachcodierungs-Kennzeichen.value[x].code",
+        "path": "Condition.code.coding.extension.value[x].code",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Mehrfachcodierungs-Kennzeichen.value[x].display",
+        "path": "Condition.code.coding.extension.value[x].display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Mehrfachcodierungs-Kennzeichen.value[x].userSelected",
+        "path": "Condition.code.coding.extension.value[x].userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation",
+        "path": "Condition.code.coding.extension",
+        "sliceName": "Seitenlokalisation",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation.extension",
+        "path": "Condition.code.coding.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation.value[x]",
+        "path": "Condition.code.coding.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation.value[x].system",
+        "path": "Condition.code.coding.extension.value[x].system",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation.value[x].version",
+        "path": "Condition.code.coding.extension.value[x].version",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation.value[x].code",
+        "path": "Condition.code.coding.extension.value[x].code",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation.value[x].display",
+        "path": "Condition.code.coding.extension.value[x].display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation.value[x].userSelected",
+        "path": "Condition.code.coding.extension.value[x].userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Diagnosesicherheit",
+        "path": "Condition.code.coding.extension",
+        "sliceName": "Diagnosesicherheit",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Diagnosesicherheit.extension",
+        "path": "Condition.code.coding.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Diagnosesicherheit.value[x]",
+        "path": "Condition.code.coding.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Diagnosesicherheit.value[x].system",
+        "path": "Condition.code.coding.extension.value[x].system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Diagnosesicherheit.value[x].version",
+        "path": "Condition.code.coding.extension.value[x].version",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Diagnosesicherheit.value[x].code",
+        "path": "Condition.code.coding.extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Diagnosesicherheit.value[x].display",
+        "path": "Condition.code.coding.extension.value[x].display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Diagnosesicherheit.value[x].userSelected",
+        "path": "Condition.code.coding.extension.value[x].userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.system",
+        "path": "Condition.code.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.version",
+        "path": "Condition.code.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.code",
+        "path": "Condition.code.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.display",
+        "path": "Condition.code.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.userSelected",
+        "path": "Condition.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding:alphaId",
+        "path": "Condition.code.coding",
+        "sliceName": "alphaId",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:alphaId.system",
+        "path": "Condition.code.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:alphaId.version",
+        "path": "Condition.code.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:alphaId.code",
+        "path": "Condition.code.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:alphaId.display",
+        "path": "Condition.code.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:alphaId.userSelected",
+        "path": "Condition.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding:snomed",
+        "path": "Condition.code.coding",
+        "sliceName": "snomed",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:snomed.system",
+        "path": "Condition.code.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:snomed.version",
+        "path": "Condition.code.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:snomed.code",
+        "path": "Condition.code.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:snomed.display",
+        "path": "Condition.code.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:snomed.userSelected",
+        "path": "Condition.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding:orphanet",
+        "path": "Condition.code.coding",
+        "sliceName": "orphanet",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:orphanet.system",
+        "path": "Condition.code.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:orphanet.version",
+        "path": "Condition.code.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:orphanet.code",
+        "path": "Condition.code.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:orphanet.display",
+        "path": "Condition.code.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:orphanet.userSelected",
+        "path": "Condition.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding:codeNichtVorhanden",
+        "path": "Condition.code.coding",
+        "sliceName": "codeNichtVorhanden",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:codeNichtVorhanden.extension",
+        "path": "Condition.code.coding.extension",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:codeNichtVorhanden.extension:data-absent-reason",
+        "path": "Condition.code.coding.extension",
+        "sliceName": "data-absent-reason",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:codeNichtVorhanden.extension:data-absent-reason.value[x]",
+        "path": "Condition.code.coding.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        }
+      },
+      {
+        "id": "Condition.code.coding:codeNichtVorhanden.extension:data-absent-reason.value[x]:valueCode",
+        "path": "Condition.code.coding.extension.value[x]",
+        "sliceName": "valueCode",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "patternCode": "unsupported",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:codeNichtVorhanden.system",
+        "path": "Condition.code.coding.system",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding:codeNichtVorhanden.version",
+        "path": "Condition.code.coding.version",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding:codeNichtVorhanden.code",
+        "path": "Condition.code.coding.code",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding:codeNichtVorhanden.display",
+        "path": "Condition.code.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.text",
+        "path": "Condition.code.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.bodySite",
+        "path": "Condition.bodySite",
+        "max": "0"
+      },
+      {
+        "id": "Condition.subject",
+        "path": "Condition.subject",
+        "definition": "In diesem Element kann die betroffene versicherte Person referenziert werden.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.subject.reference",
+        "path": "Condition.subject.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.subject.type",
+        "path": "Condition.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "Condition.subject.identifier",
+        "path": "Condition.subject.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Condition.subject.display",
+        "path": "Condition.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "Condition.encounter",
+        "path": "Condition.encounter",
+        "max": "0"
+      },
+      {
+        "id": "Condition.onset[x]",
+        "path": "Condition.onset[x]",
+        "max": "0"
+      },
+      {
+        "id": "Condition.onset[x]:onsetPeriod",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetPeriod",
+        "max": "0",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetRange",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetRange",
+        "max": "0",
+        "type": [
+          {
+            "code": "Range"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetDateTime",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetDateTime",
+        "max": "0",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetAge",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetAge",
+        "max": "0",
+        "type": [
+          {
+            "code": "Age"
+          }
+        ]
+      },
+      {
+        "id": "Condition.abatement[x]",
+        "path": "Condition.abatement[x]",
+        "max": "0"
+      },
+      {
+        "id": "Condition.abatement[x]:abatementPeriod",
+        "path": "Condition.abatement[x]",
+        "sliceName": "abatementPeriod",
+        "max": "0",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Condition.abatement[x]:abatementRange",
+        "path": "Condition.abatement[x]",
+        "sliceName": "abatementRange",
+        "max": "0",
+        "type": [
+          {
+            "code": "Range"
+          }
+        ]
+      },
+      {
+        "id": "Condition.abatement[x]:abatementDateTime",
+        "path": "Condition.abatement[x]",
+        "sliceName": "abatementDateTime",
+        "max": "0",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Condition.abatement[x]:abatementAge",
+        "path": "Condition.abatement[x]",
+        "sliceName": "abatementAge",
+        "max": "0",
+        "type": [
+          {
+            "code": "Age"
+          }
+        ]
+      },
+      {
+        "id": "Condition.recordedDate",
+        "path": "Condition.recordedDate",
+        "max": "0"
+      },
+      {
+        "id": "Condition.recorder",
+        "path": "Condition.recorder",
+        "max": "0"
+      },
+      {
+        "id": "Condition.asserter",
+        "path": "Condition.asserter",
+        "max": "0"
+      },
+      {
+        "id": "Condition.stage",
+        "path": "Condition.stage",
+        "max": "0"
+      },
+      {
+        "id": "Condition.evidence",
+        "path": "Condition.evidence",
+        "max": "0"
+      },
+      {
+        "id": "Condition.note",
+        "path": "Condition.note",
+        "max": "0"
+      }
+    ]
+  }
+}

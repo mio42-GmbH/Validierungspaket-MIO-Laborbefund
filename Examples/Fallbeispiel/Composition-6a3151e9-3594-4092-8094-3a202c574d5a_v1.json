@@ -1,0 +1,60 @@
+{
+  "resourceType": "Composition",
+  "id": "6a3151e9-3594-4092-8094-3a202c574d5a",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Composition|1.0.0-kommentierung.2"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2024-05-15T19:19:00+01:00"
+  },
+  "title": "Laboratory Report",
+  "type": {
+    "coding": [
+      {
+        "code": "4241000179101",
+        "system": "http://snomed.info/sct",
+        "display": "Laboratory report (record artifact)",
+        "version": "http://snomed.info/sct/11000274103/version/20240515"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-diagnosticReportReference",
+      "valueReference": {
+        "reference": "urn:uuid:4c6dbef6-1ca2-4d50-b219-115852db798f"
+      }
+    }
+  ],
+  "language": "de",
+  "status": "final",
+  "subject": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c452c7f"
+  },
+  "date": "2024-05-15T14:14:00+01:00",
+  "author": [
+    {
+      "reference": "urn:uuid:9b8fa53c-2254-4a07-b7be-ab525c040119"
+    }
+  ],
+  "section": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "26436-6",
+            "system": "http://loinc.org",
+            "display": "Laboratory studies (set)"
+          }
+        ]
+      },
+      "title": "Laboruntersuchungen",
+      "entry": [
+        {
+          "reference": "urn:uuid:96ec3d2b-fc16-41b4-8c69-fb4703848e29"
+        }
+      ]
+    }
+  ]
+}

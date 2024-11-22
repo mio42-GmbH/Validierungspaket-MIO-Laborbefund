@@ -1,0 +1,49 @@
+{
+  "resourceType": "Observation",
+  "id": "96f33ca8-872d-4c8b-972e-b681db27d9df",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Observation_Laboratory_Study|1.0.0-kommentierung.2"
+    ]
+  },
+  "category": [
+    {
+      "extension": [
+        {
+          "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Diskriminator",
+          "valueString": "laboratory"
+        }
+      ],
+      "coding": [
+        {
+          "code": "laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Laboratory",
+          "version": "4.0.1"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.72",
+        "code": "98981-4",
+        "display": "Urate [Mass/volume] in Blood"
+      }
+    ]
+  },
+  "valueQuantity": {
+    "system": "http://unitsofmeasure.org",
+    "value": 6.5,
+    "code": "mg/dL",
+    "unit": "mg/dL"
+  },
+  "status": "final",
+  "subject": {
+    "reference": "urn:uuid:84e01fa5-6763-4a96-99f3-170cf9b317ff"
+  },
+  "effectiveDateTime": "2021-11-15T11:30:00+01:00",
+  "issued": "2021-11-15T11:30:00+01:00"
+}

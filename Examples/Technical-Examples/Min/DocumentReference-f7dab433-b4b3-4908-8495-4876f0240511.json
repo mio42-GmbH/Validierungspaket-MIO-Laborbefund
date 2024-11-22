@@ -1,0 +1,23 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "f7dab433-b4b3-4908-8495-4876f0240511",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DocumentReference|1.0.0-kommentierung.2"
+    ]
+  },
+  "status": "current",
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/pdf",
+        "data": "dGVzdA==",
+        "title": "Anhang",
+        "creation": "2022-05-06"
+      }
+    }
+  ],
+  "subject": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7d"
+  }
+}

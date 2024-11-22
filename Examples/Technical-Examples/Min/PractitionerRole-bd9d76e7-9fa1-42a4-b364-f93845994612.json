@@ -1,0 +1,15 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "bd9d76e7-9fa1-42a4-b364-f93845994612",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_PractitionerRole|1.0.0-kommentierung.2"
+    ]
+  },
+  "practitioner": {
+    "reference": "urn:uuid:2b946366-cf18-4d89-a29c-00bf69ac90f6"
+  },
+  "organization": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7f"
+  }
+}

@@ -1,0 +1,150 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="KBV-VS-MIO-LAB-Result-Interpretation-SNOMED-CT"/>
+    <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Result_Interpretation_SNOMED_CT"/>
+    <version value="1.0.0-kommentierung.2"/>
+    <name value="KBV_VS_MIO_LAB_Result_Interpretation_SNOMED_CT"/>
+    <title value="Interpretation SNOMED CT®"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Dieses Valueset enthält die Codes zur Beschreibung von Interpretation SNOMED CT®."/>
+    <immutable value="false"/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <filter>
+                <property value="concept"/>
+                <op value="descendent-of"/>
+                <value value="442499005"/>
+            </filter>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="caf4cac8-7a46-11ef-b052-005056ad9fdf"/>
+        <timestamp value="2024-09-24T09:29:54+02:00"/>
+        <total value="19"/>
+        <offset value="0"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="281300000"/>
+            <display value="Below reference range (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="281301001"/>
+            <display value="Within reference range (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="281302008"/>
+            <display value="Above reference range (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="371148001"/>
+            <display value="Ability interpretation value (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="371150009"/>
+            <display value="Able (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="371151008"/>
+            <display value="Unable (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="371152001"/>
+            <display value="Assisted (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="371153006"/>
+            <display value="Independent (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="371154000"/>
+            <display value="Dependent (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="371155004"/>
+            <display value="Able to and does (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="371157007"/>
+            <display value="Able with difficulty (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="385640009"/>
+            <display value="Does (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="394844007"/>
+            <display value="Outside reference range (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="442705008"/>
+            <display value="Reference range interpretation value (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="442777001"/>
+            <display value="Borderline high (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="442779003"/>
+            <display value="Borderline low (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="717831006"/>
+            <display value="Level of dependence (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="717844001"/>
+            <display value="Volition interpretation (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="717896003"/>
+            <display value="Does not (qualifier value)"/>
+        </contains>
+    </expansion>
+</ValueSet>

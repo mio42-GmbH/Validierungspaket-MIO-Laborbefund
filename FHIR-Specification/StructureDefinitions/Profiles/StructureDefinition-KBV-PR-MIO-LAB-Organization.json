@@ -1,0 +1,1111 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "KBV-PR-MIO-LAB-Organization",
+  "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Organization",
+  "version": "1.0.0-kommentierung.2",
+  "name": "KBV_PR_MIO_LAB_Organization",
+  "title": "KBV_PR_MIO_LAB_Organization",
+  "status": "draft",
+  "publisher": "Kassenärztliche Bundesvereinigung (KBV)",
+  "description": "Dieses Profil bildet eine Einrichtung ab.",
+  "copyright": "Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health - ICF, herausgegeben durch die Weltgesundheitsorganisation.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Organization",
+  "baseDefinition": "https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Organization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Organization",
+        "path": "Organization",
+        "definition": "Dieses Profil bildet eine Einrichtung ab."
+      },
+      {
+        "id": "Organization.meta",
+        "path": "Organization.meta",
+        "min": 1
+      },
+      {
+        "id": "Organization.meta.versionId",
+        "path": "Organization.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.meta.lastUpdated",
+        "path": "Organization.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.meta.source",
+        "path": "Organization.meta.source",
+        "max": "0"
+      },
+      {
+        "id": "Organization.meta.profile",
+        "path": "Organization.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Organization.meta.profile:mioProfile",
+        "path": "Organization.meta.profile",
+        "sliceName": "mioProfile",
+        "min": 1,
+        "max": "1",
+        "patternCanonical": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Organization|1.0.0-kommentierung.2"
+      },
+      {
+        "id": "Organization.meta.security",
+        "path": "Organization.meta.security",
+        "max": "0"
+      },
+      {
+        "id": "Organization.meta.tag",
+        "path": "Organization.meta.tag",
+        "max": "0"
+      },
+      {
+        "id": "Organization.implicitRules",
+        "path": "Organization.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Organization.text",
+        "path": "Organization.text",
+        "definition": "In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."
+      },
+      {
+        "id": "Organization.text.status",
+        "path": "Organization.text.status",
+        "fixedCode": "extensions"
+      },
+      {
+        "id": "Organization.contained",
+        "path": "Organization.contained",
+        "max": "0"
+      },
+      {
+        "id": "Organization.extension",
+        "path": "Organization.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.extension:ergaenzende_Angaben",
+        "path": "Organization.extension",
+        "sliceName": "ergaenzende_Angaben",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.extension:ergaenzende_Angaben.extension",
+        "path": "Organization.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Organization.extension:ergaenzende_Angaben.value[x]",
+        "path": "Organization.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.extension:ergaenzende_Angaben.value[x]:valueString",
+        "path": "Organization.extension.value[x]",
+        "sliceName": "valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier",
+        "path": "Organization.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "type"
+            }
+          ],
+          "rules": "closed"
+        },
+        "definition": "Identifikator für die Einrichtung.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen",
+        "path": "Organization.identifier",
+        "sliceName": "Institutionskennzeichen",
+        "definition": "Die ARGE·IK vergibt und pflegt sogenannte Institutionskennzeichen (IK). Das sind neunstellige Ziffernfolgen, hinter denen sich ein Datensatz verbirgt, auf dessen Grundlage der Zahlungsverkehr mit den leistungserbringenden Personen abgewickelt wird. Das Institutionskennzeichen (IK) ist ein eindeutiges Merkmal zur Abrechnung mit den Trägern der Sozialversicherung.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen.use",
+        "path": "Organization.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen.type",
+        "path": "Organization.identifier.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen.type.coding",
+        "path": "Organization.identifier.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen.type.coding.system",
+        "path": "Organization.identifier.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen.type.coding.version",
+        "path": "Organization.identifier.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen.type.coding.code",
+        "path": "Organization.identifier.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen.type.coding.display",
+        "path": "Organization.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen.type.coding.userSelected",
+        "path": "Organization.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen.type.text",
+        "path": "Organization.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen.system",
+        "path": "Organization.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen.value",
+        "path": "Organization.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen.period",
+        "path": "Organization.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Institutionskennzeichen.assigner",
+        "path": "Organization.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer",
+        "path": "Organization.identifier",
+        "sliceName": "Betriebsstaettennummer",
+        "definition": "Jede Betriebsstätte und jede Nebenbetriebsstätte nach den Definitionen des Bundesmantelvertrages - Ärzte erhalten jeweils eine Betriebsstättennummer. Die Betriebsstättennummer ermöglicht die Zuordnung ärztlicher Leistungen zum Ort der Leistungserbringung. Die Betriebsstättennummer ist neunstellig. Die ersten beiden Ziffern stellen den KV-Landes- oder Bezirksstellenschlüssel gemäß Anlage 1 (Richtlinie der Kassenärztlichen Bundesvereinigung nach § 75 Absatz 7SGB V zur Vergabe der Arzt-, Betriebsstätten- sowie der Praxisnetznummern) dar (Ziffern 1-2). Die Ziffern drei bis neun werden von der KV vergeben (Ziffern 3-9). Dabei sind die Ziffern drei bis sieben so zu wählen, dass anhand der ersten sieben Stellen die Betriebsstätte eindeutig zu identifizieren ist.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer.use",
+        "path": "Organization.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer.type",
+        "path": "Organization.identifier.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer.type.coding",
+        "path": "Organization.identifier.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer.type.coding.system",
+        "path": "Organization.identifier.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer.type.coding.version",
+        "path": "Organization.identifier.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer.type.coding.code",
+        "path": "Organization.identifier.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer.type.coding.display",
+        "path": "Organization.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer.type.coding.userSelected",
+        "path": "Organization.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer.type.text",
+        "path": "Organization.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer.system",
+        "path": "Organization.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer.value",
+        "path": "Organization.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer.period",
+        "path": "Organization.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Betriebsstaettennummer.assigner",
+        "path": "Organization.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:VKNR",
+        "path": "Organization.identifier",
+        "sliceName": "VKNR",
+        "definition": "Die Vertragskassennummer der Kassenärztlichen Vereinigungen (VKNR) identifiziert Krankenkassen für Abrechnungszwecke. Rechtliche Grundlage hierfür ist § 15 der 1. Änderung des Vertrages über den Datenaustausch auf Datenträgern (Anlage 6 des Bundesmantelvertrages Ärzte vom 1. Juli 2018). Die VKNR ist wie folgt aufgebaut: 1. und 2. Stelle: Nummer der KV-Abrechnungsstelle; 3. bis 5. Stelle: Seriennummer der Krankenkasse innerhalb der Kassenart.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:VKNR.use",
+        "path": "Organization.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:VKNR.type",
+        "path": "Organization.identifier.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:VKNR.type.coding",
+        "path": "Organization.identifier.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:VKNR.type.coding.system",
+        "path": "Organization.identifier.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:VKNR.type.coding.version",
+        "path": "Organization.identifier.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:VKNR.type.coding.code",
+        "path": "Organization.identifier.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:VKNR.type.coding.display",
+        "path": "Organization.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:VKNR.type.coding.userSelected",
+        "path": "Organization.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:VKNR.type.text",
+        "path": "Organization.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:VKNR.system",
+        "path": "Organization.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:VKNR.value",
+        "path": "Organization.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:VKNR.period",
+        "path": "Organization.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:VKNR.assigner",
+        "path": "Organization.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer",
+        "path": "Organization.identifier",
+        "sliceName": "KZV-Abrechnungsnummer",
+        "definition": "Zahnärztliche Primärsysteme verwenden zur Identifikation des zahnärztlichen Akteurs die folgende Bildungsregel: „0“ + KZV-Nr + Abrechnungsnummer der Zahnarztpraxis (ggf. ergänzt um eine oder mehrere führende Nullen). Bei der Konkatenation der Nummern muss nach der „0“ die KZV-Nummer des Akteurs an die Stellen 2-3 gesetzt werden (ggf. mit ihrer führenden Null), und an die Stellen 4-9 die 1-6-stellige Abrechnungsnummer der Zahnarztpraxis, wobei sie ggf. mit einer oder mehreren führenden Nullen aufgefüllt werden muss. Beispielresultat: „004006789“",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer.use",
+        "path": "Organization.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer.type",
+        "path": "Organization.identifier.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer.type.coding",
+        "path": "Organization.identifier.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer.type.coding.system",
+        "path": "Organization.identifier.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer.type.coding.version",
+        "path": "Organization.identifier.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer.type.coding.code",
+        "path": "Organization.identifier.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer.type.coding.display",
+        "path": "Organization.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer.type.coding.userSelected",
+        "path": "Organization.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer.type.text",
+        "path": "Organization.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer.system",
+        "path": "Organization.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer.value",
+        "path": "Organization.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer.period",
+        "path": "Organization.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:KZV-Abrechnungsnummer.assigner",
+        "path": "Organization.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID",
+        "path": "Organization.identifier",
+        "sliceName": "Telematik-ID",
+        "definition": "Bei der Telematik-ID handelt es sich um eine eindeutige elektronische Identität von Leistungserbringenden und medizinischen Institutionen in der Telematikinfrastruktur (TI).",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.use",
+        "path": "Organization.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.type",
+        "path": "Organization.identifier.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.type.coding",
+        "path": "Organization.identifier.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.type.coding.system",
+        "path": "Organization.identifier.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.type.coding.version",
+        "path": "Organization.identifier.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.type.coding.code",
+        "path": "Organization.identifier.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.type.coding.display",
+        "path": "Organization.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.type.coding.userSelected",
+        "path": "Organization.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.type.text",
+        "path": "Organization.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.system",
+        "path": "Organization.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.value",
+        "path": "Organization.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.period",
+        "path": "Organization.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.assigner",
+        "path": "Organization.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Organization.active",
+        "path": "Organization.active",
+        "max": "0"
+      },
+      {
+        "id": "Organization.type",
+        "path": "Organization.type",
+        "definition": "Hier kann der Typ der Einrichtung/Organisationseinheit als Code oder als Freitext angegeben werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding",
+        "path": "Organization.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:IHE-Code",
+        "path": "Organization.type.coding",
+        "sliceName": "IHE-Code",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:IHE-Code.system",
+        "path": "Organization.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:IHE-Code.version",
+        "path": "Organization.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:IHE-Code.code",
+        "path": "Organization.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:IHE-Code.display",
+        "path": "Organization.type.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:IHE-Code.userSelected",
+        "path": "Organization.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Organization.type.coding:HL7-Fachschluesselgruppe",
+        "path": "Organization.type.coding",
+        "sliceName": "HL7-Fachschluesselgruppe",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:HL7-Fachschluesselgruppe.system",
+        "path": "Organization.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:HL7-Fachschluesselgruppe.version",
+        "path": "Organization.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:HL7-Fachschluesselgruppe.code",
+        "path": "Organization.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:HL7-Fachschluesselgruppe.display",
+        "path": "Organization.type.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:HL7-Fachschluesselgruppe.userSelected",
+        "path": "Organization.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Organization.type.coding:HL7-Fachschluesselgruppe-erweitert",
+        "path": "Organization.type.coding",
+        "sliceName": "HL7-Fachschluesselgruppe-erweitert",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:HL7-Fachschluesselgruppe-erweitert.system",
+        "path": "Organization.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:HL7-Fachschluesselgruppe-erweitert.version",
+        "path": "Organization.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:HL7-Fachschluesselgruppe-erweitert.code",
+        "path": "Organization.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:HL7-Fachschluesselgruppe-erweitert.display",
+        "path": "Organization.type.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type.coding:HL7-Fachschluesselgruppe-erweitert.userSelected",
+        "path": "Organization.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Organization.type.text",
+        "path": "Organization.type.text",
+        "definition": "Hier kann der Typ der Einrichtung als Freitext angegeben werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.name",
+        "path": "Organization.name",
+        "definition": "Name der Einrichtung.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.alias",
+        "path": "Organization.alias",
+        "max": "0"
+      },
+      {
+        "id": "Organization.telecom",
+        "path": "Organization.telecom",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.telecom.system",
+        "path": "Organization.telecom.system",
+        "definition": "Definition der Art des Kontaktes, z. B. Telefon (phone), E-Mail, Fax.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.telecom.value",
+        "path": "Organization.telecom.value",
+        "definition": "In diesem Element können Kontaktinformationen passend zum Kontaktkanal angegeben werden. Beispiele für mögliche Werte sind: 'm.mustermann@mio42.de' (beim Kontaktkanal 'E-Mail', oder '030712345678' (beim Kontaktkanal 'Telefon').",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.telecom.use",
+        "path": "Organization.telecom.use",
+        "max": "0"
+      },
+      {
+        "id": "Organization.telecom.rank",
+        "path": "Organization.telecom.rank",
+        "max": "0"
+      },
+      {
+        "id": "Organization.telecom.period",
+        "path": "Organization.telecom.period",
+        "max": "0"
+      },
+      {
+        "id": "Organization.address",
+        "path": "Organization.address",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "type"
+            }
+          ],
+          "rules": "closed"
+        },
+        "definition": "In dieses Feld kann die Anschrift eingetragen werden",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift",
+        "path": "Organization.address",
+        "sliceName": "Strassenanschrift",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.extension",
+        "path": "Organization.address.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.extension:Stadtteil",
+        "path": "Organization.address.extension",
+        "sliceName": "Stadtteil",
+        "definition": "In diesem Element soll der Stadt- oder Ortsteil, meistens eines Stadtstaates, dokumentiert werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.extension:Stadtteil.value[x]",
+        "path": "Organization.address.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.extension:Stadtteil.value[x]:valueString",
+        "path": "Organization.address.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.use",
+        "path": "Organization.address.use",
+        "max": "0"
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.text",
+        "path": "Organization.address.text",
+        "max": "0"
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line",
+        "path": "Organization.address.line",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension",
+        "path": "Organization.address.line.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "max": "3",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension:Strasse",
+        "path": "Organization.address.line.extension",
+        "sliceName": "Strasse",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension:Strasse.value[x]",
+        "path": "Organization.address.line.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension:Strasse.value[x]:valueString",
+        "path": "Organization.address.line.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension:Hausnummer",
+        "path": "Organization.address.line.extension",
+        "sliceName": "Hausnummer",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension:Hausnummer.value[x]",
+        "path": "Organization.address.line.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension:Hausnummer.value[x]:valueString",
+        "path": "Organization.address.line.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension:Adresszusatz",
+        "path": "Organization.address.line.extension",
+        "sliceName": "Adresszusatz",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension:Adresszusatz.value[x]",
+        "path": "Organization.address.line.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension:Adresszusatz.value[x]:valueString",
+        "path": "Organization.address.line.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.city",
+        "path": "Organization.address.city",
+        "definition": "In dieses Feld kann der Ort eingetragen werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.state",
+        "path": "Organization.address.state",
+        "max": "0"
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.postalCode",
+        "path": "Organization.address.postalCode",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.country",
+        "path": "Organization.address.country",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.period",
+        "path": "Organization.address.period",
+        "max": "0"
+      },
+      {
+        "id": "Organization.address:Postfach",
+        "path": "Organization.address",
+        "sliceName": "Postfach",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.extension",
+        "path": "Organization.address.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.extension:Stadtteil",
+        "path": "Organization.address.extension",
+        "sliceName": "Stadtteil",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.extension:Stadtteil.value[x]",
+        "path": "Organization.address.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.extension:Stadtteil.value[x]:valueString",
+        "path": "Organization.address.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.use",
+        "path": "Organization.address.use",
+        "max": "0"
+      },
+      {
+        "id": "Organization.address:Postfach.text",
+        "path": "Organization.address.text",
+        "max": "0"
+      },
+      {
+        "id": "Organization.address:Postfach.line",
+        "path": "Organization.address.line",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.line.extension",
+        "path": "Organization.address.line.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.line.extension:Postfach",
+        "path": "Organization.address.line.extension",
+        "sliceName": "Postfach",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.line.extension:Postfach.value[x]",
+        "path": "Organization.address.line.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.line.extension:Postfach.value[x]:valueString",
+        "path": "Organization.address.line.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.city",
+        "path": "Organization.address.city",
+        "definition": "In dieses Feld kann der Ort eingetragen werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.state",
+        "path": "Organization.address.state",
+        "max": "0"
+      },
+      {
+        "id": "Organization.address:Postfach.postalCode",
+        "path": "Organization.address.postalCode",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.country",
+        "path": "Organization.address.country",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.period",
+        "path": "Organization.address.period",
+        "max": "0"
+      },
+      {
+        "id": "Organization.partOf",
+        "path": "Organization.partOf",
+        "definition": "Hier kann die übergeordnete Einrichtung/Organisationseinheit referenziert werden, z.B. wenn es sich bei der hier betrachteten Einrichtung/Organisationseinheit um die Fachabteilung oder die Station eines Krankenhauses handelt. ",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Organization"
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.partOf.reference",
+        "path": "Organization.partOf.reference",
+        "definition": "Die Einrichtung beschreibt beispielsweise den Ort, an dem ein Kontakt zwischen der zu behandelnden Person und der leistungserbringenden Person stattfindet. Diese kann aber auch einen Gerätehersteller abbilden oder  eine rein 'fiktive' Organisation zur Abrechnung sein. ",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.partOf.type",
+        "path": "Organization.partOf.type",
+        "max": "0"
+      },
+      {
+        "id": "Organization.partOf.identifier",
+        "path": "Organization.partOf.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Organization.partOf.display",
+        "path": "Organization.partOf.display",
+        "max": "0"
+      },
+      {
+        "id": "Organization.contact",
+        "path": "Organization.contact",
+        "max": "0"
+      },
+      {
+        "id": "Organization.endpoint",
+        "path": "Organization.endpoint",
+        "max": "0"
+      }
+    ]
+  }
+}

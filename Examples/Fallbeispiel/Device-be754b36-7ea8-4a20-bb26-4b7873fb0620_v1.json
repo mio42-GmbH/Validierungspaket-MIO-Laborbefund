@@ -1,0 +1,15 @@
+{
+  "resourceType": "Device",
+  "id": "be754b36-7ea8-4a20-bb26-4b7873fb0620",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Device|1.0.0-kommentierung.2"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2024-05-15T19:19:00+01:00"
+  },
+  "language": "de",
+  "type": {
+    "text": "S-Monovette ThromboExact"
+  }
+}

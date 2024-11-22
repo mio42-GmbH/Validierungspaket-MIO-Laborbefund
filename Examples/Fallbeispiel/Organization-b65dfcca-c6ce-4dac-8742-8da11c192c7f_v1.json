@@ -1,0 +1,58 @@
+{
+  "resourceType": "Organization",
+  "id": "b65dfcca-c6ce-4dac-8742-8da11c192c7f",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Organization|1.0.0-kommentierung.2"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2024-05-15T19:19:00+01:00"
+  },
+  "address": [
+    {
+      "type": "both",
+      "line": [
+        "Hauptstr 66"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Hauptstr"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "66"
+            }
+          ]
+        }
+      ],
+      "city": "Hannover",
+      "postalCode": "30169"
+    }
+  ],
+  "language": "de",
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "https://terminology.hl7.org/2.0.0/CodeSystem-v2-0074.html",
+          "code": "LAB",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "name": "Zentrum für Laboratoriumsmedizin",
+  "telecom": [
+    {
+      "system": "fax",
+      "value": "0511-1234567-888"
+    },
+    {
+      "system": "email",
+      "value": "kontakt@Hannover-Musterlabor.de"
+    }
+  ]
+}

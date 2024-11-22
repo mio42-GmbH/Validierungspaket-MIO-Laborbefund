@@ -1,0 +1,33 @@
+{
+  "resourceType": "Specimen",
+  "id": "52a0c865-cd2f-46d4-80a5-b372bd13a426",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Specimen|1.0.0-kommentierung.2"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2024-05-15T19:19:00+01:00"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "119364003",
+        "display": "Serum specimen (specimen)"
+      }
+    ]
+  },
+  "language": "de",
+  "identifier": [
+    {
+      "value": "1234567006",
+      "system": "http://testsystem.de"
+    }
+  ],
+  "status": "available",
+  "receivedTime": "2024-05-15T11:11:00+01:00",
+  "collection": {
+    "collectedDateTime": "2024-05-15T08:08:00+01:00"
+  }
+}

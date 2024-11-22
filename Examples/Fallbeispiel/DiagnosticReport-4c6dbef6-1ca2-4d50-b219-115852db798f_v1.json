@@ -1,0 +1,72 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "4c6dbef6-1ca2-4d50-b219-115852db798f",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DiagnosticReport|1.0.0-kommentierung.2"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2024-05-15T19:19:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition",
+      "valueReference": {
+        "reference": "Composition/be9e9e22-515e-4258-bb9d-de2313e1d99d"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:4c6dbef6-1ca2-4d50-b219-115852db798f"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "AL",
+            "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Laboratory_Identificator",
+            "display": "Auftragsnummer des Labors",
+            "version": "1.0.0-kommentierung.2"
+          }
+        ]
+      },
+      "system": "http://berlin-laboratory.com/orders",
+      "value": "20240515-42"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "11502-2",
+        "system": "http://loinc.org",
+        "display": "Laboratory report",
+        "version": "2.73"
+      }
+    ],
+    "text": "DiagnosticReport"
+  },
+  "language": "de",
+  "basedOn": [
+    {
+      "reference": "urn:uuid:6b6c9092-76af-4514-913c-f3b2ede4e147"
+    }
+  ],
+  "status": "final",
+  "subject": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c452c7f"
+  },
+  "issued": "2024-05-15T14:14:00+01:00",
+  "performer": [
+    {
+      "reference": "urn:uuid:9b8fa53c-2254-4a07-b7be-ab525c040119"
+    }
+  ],
+  "result": [
+    {
+      "reference": "urn:uuid:b3f2ad62-f7cb-486a-b347-b6aeee369e63"
+    }
+  ],
+  "conclusion": "1.Fortbestehender Vitamin-D-Mangel, Therapieempfehlung 1000 IE täglich für 200 Tage.\r\n2. Guter Testosteronspiegel, alle 11 Wochen weiter i.m. Substitution.\r\n3. Leberwerte leicht erhöht.\r\n4. Gerinnungstatus zeitnah überprüfen!"
+}

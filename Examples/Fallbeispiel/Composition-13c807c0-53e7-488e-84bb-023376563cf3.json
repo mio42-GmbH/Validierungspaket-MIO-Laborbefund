@@ -1,0 +1,52 @@
+{
+  "resourceType": "Composition",
+  "id": "13c807c0-53e7-488e-84bb-023376563cf3",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Composition|1.0.0-kommentierung.2"
+    ]
+  },
+  "title": "Laboratory Report",
+  "type": {
+    "coding": [
+      {
+        "code": "4241000179101",
+        "system": "http://snomed.info/sct",
+        "display": "Laboratory report (record artifact)",
+        "version": "http://snomed.info/sct/11000274103/version/20240515"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7d"
+  },
+  "author": [
+    {
+      "reference": "urn:uuid:2b946366-cf18-4d89-a29c-00bf69ac90f6"
+    }
+  ],
+  "date": "2022-03-23",
+  "section": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "18725-2",
+            "system": "http://loinc.org",
+            "display": "Microbiology studies (set)"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "reference": "urn:uuid:f3ca255e-5d78-4fad-abd3-b2563d96094a"
+        },
+        {
+          "reference": "urn:uuid:f3ca255e-5d78-4fad-abd3-b2563d96194a"
+        }
+      ],
+      "title": "test"
+    }
+  ]
+}

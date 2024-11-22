@@ -9,9 +9,9 @@ Alternatively, the dependencies can also be found here:
 - de.basisprofil.r4 1.4.0: https://simplifier.net/packages/de.basisprofil.r4/1.4.0
 - kbv.basis 1.5.0: https://simplifier.net/packages/kbv.basis/1.5.0
 
-The version of the validator, which was used by the mio42 GmbH is 6.4.0 and can be found here:
+The version of the validator, which was used by the mio42 GmbH is 6.4.3 and can be found here:
 
-- https://github.com/hapifhir/org.hl7.fhir.core/releases/tag/6.4.0
+- https://github.com/hapifhir/org.hl7.fhir.core/releases/tag/6.4.3
 
 If the version provided should cause any problems, you may also use the most recent one. All releases can be found here:
 
@@ -24,9 +24,21 @@ For a thorough documentation on the use of the validator, please follow this lin
 You can use the following command to validate the examples:
 
 Fallbeispiel:
+```
+java -jar validator_cli.jar .\Examples\Fallbeispiel -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.5.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\hl7.fhir.eu.extensions-0.1.0 -ig .\hl7.fhir.eu.laboratory-0.1.0 -ig .\hl7.fhir.uv.extensions.r5-5.1.0 -ig .\FHIR-Specification\StructureDefinitions -ig .\FHIR-Specification\Terminologien -recurse
+```
+																										 
+Technical-Examples
 
-java -jar validator_cli.jar .\Examples\Fallbeispiel.xml -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.4.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\dvmd.kdl.r4.2022 -ig .\FHIR-Specification\ -recurse
+Max: 
+```
+java -jar validator_cli.jar .\Examples\Technical-Examples\Max -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.5.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\hl7.fhir.eu.extensions-0.1.0 -ig .\hl7.fhir.eu.laboratory-0.1.0 -ig .\hl7.fhir.uv.extensions.r5-5.1.0 -ig .\FHIR-Specification\StructureDefinitions -ig .\FHIR-Specification\Terminologien -recurse
+```
 
+Min:
+```
+java -jar validator_cli.jar .\Examples\Technical-Examples\Min -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.5.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\hl7.fhir.eu.extensions-0.1.0 -ig .\hl7.fhir.eu.laboratory-0.1.0 -ig .\hl7.fhir.uv.extensions.r5-5.1.0 -ig .\FHIR-Specification\StructureDefinitions -ig .\FHIR-Specification\Terminologien -recurse
+```
 
 # Validierungspaket-MIO-Laborbefund Update
 Disclaimer: Der Service zur Validierung erhebt keinen Anspruch auf Vollständigkeit, Korrektheit sowie Verbindlichkeit.
@@ -38,9 +50,9 @@ Die Dependencies finden Sie alternativ unter folgenden links:
 - de.basisprofil.r4 1.4.0: https://simplifier.net/packages/de.basisprofil.r4/1.4.0
 - kbv.basis 1.5.0: https://simplifier.net/packages/kbv.basis/1.5.0
   
-Die Version des Validators, welche von der mio42 GmbH für die Validierung verwendet wurde ist 6.4.0 und kann hier abgerufen werden:
+Die Version des Validators, welche von der mio42 GmbH für die Validierung verwendet wurde ist 6.4.3 und kann hier abgerufen werden:
 
-- https://github.com/hapifhir/org.hl7.fhir.core/releases/tag/6.4.0
+- https://github.com/hapifhir/org.hl7.fhir.core/releases/tag/6.4.3
   
 Sollte diese zu Prolemen führen, können Sie auch die aktuelle Version des Validators nutzen. Alle Releases finden Sie unter:
 
@@ -53,6 +65,20 @@ Eine Ausführliche Dokumentation zur Verwendung des Validators finden Sie hier:
 Zur Validierung der Beispiele können Sie folgenden Aufruf verwenden:
 
 Fallbeispiel:
+```
+java -jar validator_cli.jar .\Examples\Fallbeispiel -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.5.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\hl7.fhir.eu.extensions-0.1.0 -ig .\hl7.fhir.eu.laboratory-0.1.0 -ig .\hl7.fhir.uv.extensions.r5-5.1.0 -ig .\FHIR-Specification\StructureDefinitions -ig .\FHIR-Specification\Terminologien -recurse
+```
+																										 
+Technical-Examples
 
+Max: 
+```
+java -jar validator_cli.jar .\Examples\Technical-Examples\Max -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.5.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\hl7.fhir.eu.extensions-0.1.0 -ig .\hl7.fhir.eu.laboratory-0.1.0 -ig .\hl7.fhir.uv.extensions.r5-5.1.0 -ig .\FHIR-Specification\StructureDefinitions -ig .\FHIR-Specification\Terminologien -recurse
+```
+
+Min:
+```
+java -jar validator_cli.jar .\Examples\Technical-Examples\Min -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.5.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\hl7.fhir.eu.extensions-0.1.0 -ig .\hl7.fhir.eu.laboratory-0.1.0 -ig .\hl7.fhir.uv.extensions.r5-5.1.0 -ig .\FHIR-Specification\StructureDefinitions -ig .\FHIR-Specification\Terminologien -recurse
+```
 
 Weitere Voraussetzung ist eine aktuelle Java Version.

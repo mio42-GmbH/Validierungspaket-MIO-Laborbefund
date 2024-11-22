@@ -1,0 +1,237 @@
+{
+  "resourceType": "Patient",
+  "id": "b65dfcca-c6ce-4dac-8742-8da00c192c7d",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient|1.0.0-kommentierung.2"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2023-05-03T11:15:00+01:00"
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">John Doe</div>"
+  },
+  "extension": [
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Sex_for_Clinical_Use",
+      "valueCoding": {
+        "system": "http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use",
+        "code": "female-typical",
+        "display": "Apply female-typical setting or reference range"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "display": "Medical record number",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR",
+            "version": "v2-0203"
+          }
+        ]
+      },
+      "system": "http://www.acmedasdd.com/identifiers/patient",
+      "value": "123456"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "display": "Gesetzliche Krankenversicherung",
+            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
+            "code": "GKV",
+            "version": "1.5.0"
+          }
+        ]
+      },
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "G123456789"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "display": "Private Krankenversicherung",
+            "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_Base_identifier_type",
+            "code": "pkv-nr"
+          },
+          {
+            "display": "Private Krankenversicherung",
+            "code": "PKV",
+            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+          }
+        ]
+      },
+      "system": "http://www.acmedasdd.com/identifiers/patient",
+      "value": "1234567890",
+      "assigner": {
+        "reference": "urn:uuid:86d0ed84-c2b8-4177-b56b-92f893492d9f",
+        "display": "KK"
+      }
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "display": "Passport number",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "PPN",
+            "version": "v2-0203"
+          }
+        ]
+      },
+      "system": "http://www.acmedasdd.com/identifiers/patient",
+      "value": "123456"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "display": "Krankenversichertenkarte",
+            "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_Base_identifier_type",
+            "code": "kvk",
+            "version": "1.5.0"
+          }
+        ]
+      },
+      "system": "http://fhir.de/sid/gkv/kvk-versichertennummer",
+      "value": "123456"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "prefix": [
+        "Dr"
+      ],
+      "_prefix": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode": "AC"
+            }
+          ]
+        }
+      ],
+      "text": "Dr. Hans Glücklich",
+      "family": "Hans",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Glücklich"
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+            "valueString": "Prinz"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+            "valueString": "von"
+          }
+        ]
+      },
+      "given": [
+        "Hans"
+      ]
+    }
+  ],
+  "address": [
+    {
+      "type": "both",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct",
+          "valueString": "Schöneberg"
+        }
+      ],
+      "line": [
+        "Mittestr 43"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Mittestr"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "43"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+              "valueString": "Nebenhaus"
+            }
+          ]
+        }
+      ],
+      "city": "Berlin",
+      "postalCode": "12015",
+      "country": "D"
+    },
+    {
+      "type": "postal",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct",
+          "valueString": "Schöneberg"
+        }
+      ],
+      "line": [
+        "Mittestr"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
+              "valueString": "Mittestr"
+            }
+          ]
+        }
+      ],
+      "city": "Berlin",
+      "postalCode": "12015",
+      "country": "D"
+    }
+  ],
+  "birthDate": "2022-03-01",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "12123455"
+    }
+  ],
+  "gender": "other",
+  "_gender": {
+    "extension": [
+      {
+        "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
+        "valueCoding": {
+          "system": "http://fhir.de/CodeSystem/gender-amtlich-de",
+          "code": "X",
+          "display": "unbestimmt"
+        }
+      }
+    ]
+  },
+  "communication": [
+    {
+      "language": {
+        "coding": [
+          {
+            "system": "urn:ietf:bcp:47",
+            "code": "uk",
+            "display": "Ukrainian"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,753 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "KBV-PR-MIO-LAB-ServiceRequest",
+  "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_ServiceRequest",
+  "version": "1.0.0-kommentierung.2",
+  "name": "KBV_PR_MIO_LAB_ServiceRequest",
+  "title": "KBV_PR_MIO_LAB_ServiceRequest",
+  "status": "draft",
+  "publisher": "Kassenärztliche Bundesvereinigung (KBV)",
+  "description": "Dieses Profil bildet die Laborauftragsinformation ab.",
+  "copyright": "Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health - ICF, herausgegeben durch die Weltgesundheitsorganisation.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest",
+        "path": "ServiceRequest",
+        "definition": "Dieses Profil bildet die Laborauftragsinformation ab."
+      },
+      {
+        "id": "ServiceRequest.meta",
+        "path": "ServiceRequest.meta",
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.meta.versionId",
+        "path": "ServiceRequest.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.meta.lastUpdated",
+        "path": "ServiceRequest.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.meta.source",
+        "path": "ServiceRequest.meta.source",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.meta.profile",
+        "path": "ServiceRequest.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.meta.profile:mioProfile",
+        "path": "ServiceRequest.meta.profile",
+        "sliceName": "mioProfile",
+        "min": 1,
+        "max": "1",
+        "patternCanonical": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_ServiceRequest|1.0.0-kommentierung.2"
+      },
+      {
+        "id": "ServiceRequest.meta.security",
+        "path": "ServiceRequest.meta.security",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.meta.tag",
+        "path": "ServiceRequest.meta.tag",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.implicitRules",
+        "path": "ServiceRequest.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.text",
+        "path": "ServiceRequest.text",
+        "definition": "In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."
+      },
+      {
+        "id": "ServiceRequest.text.status",
+        "path": "ServiceRequest.text.status",
+        "fixedCode": "extensions"
+      },
+      {
+        "id": "ServiceRequest.contained",
+        "path": "ServiceRequest.contained",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.extension",
+        "path": "ServiceRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.extension:empfaengerLaborbefund",
+        "path": "ServiceRequest.extension",
+        "sliceName": "empfaengerLaborbefund",
+        "definition": "In diesem Profil kann ein Empfänger eines Laborbefunds dokumentiert werden.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Recipient_Laboratory_Report"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier",
+        "path": "ServiceRequest.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "type"
+            }
+          ],
+          "rules": "closed"
+        },
+        "definition": "In der Labordatenkommunikation kann sowohl von der einsendenden Einrichtung/Person wie auch vom auftragsnehmenden Labor ein auftragsbezogener Identifikator zugeordnet werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender",
+        "path": "ServiceRequest.identifier",
+        "sliceName": "auftragsnummerEinsender",
+        "definition": "Auftragsnummer, die der auftraggebende Einsender vergibt und führt.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender.use",
+        "path": "ServiceRequest.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender.type",
+        "path": "ServiceRequest.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "AE",
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Laboratory_Identificator",
+              "display": "Auftragsnummer des Einsenders",
+              "version": "1.0.0-kommentierung.2"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender.type.coding",
+        "path": "ServiceRequest.identifier.type.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender.type.coding.system",
+        "path": "ServiceRequest.identifier.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender.type.coding.version",
+        "path": "ServiceRequest.identifier.type.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender.type.coding.code",
+        "path": "ServiceRequest.identifier.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender.type.coding.display",
+        "path": "ServiceRequest.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender.type.coding.userSelected",
+        "path": "ServiceRequest.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender.type.text",
+        "path": "ServiceRequest.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender.system",
+        "path": "ServiceRequest.identifier.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender.value",
+        "path": "ServiceRequest.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender.period",
+        "path": "ServiceRequest.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.identifier:auftragsnummerEinsender.assigner",
+        "path": "ServiceRequest.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation",
+        "path": "ServiceRequest.identifier",
+        "sliceName": "nachforderungsidentifikation",
+        "definition": "Nachforderungs-ID - Eine Nachforderung ist eine ergänzende Anforderung von Laboruntersuchungen zu einem bereits bestehenden Überweisungsauftrag.",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation.use",
+        "path": "ServiceRequest.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation.type",
+        "path": "ServiceRequest.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "NI",
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Laboratory_Identificator",
+              "display": "Nachforderungsidentifikation",
+              "version": "1.0.0-kommentierung.2"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation.type.coding",
+        "path": "ServiceRequest.identifier.type.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation.type.coding.system",
+        "path": "ServiceRequest.identifier.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation.type.coding.version",
+        "path": "ServiceRequest.identifier.type.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation.type.coding.code",
+        "path": "ServiceRequest.identifier.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation.type.coding.display",
+        "path": "ServiceRequest.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation.type.coding.userSelected",
+        "path": "ServiceRequest.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation.type.text",
+        "path": "ServiceRequest.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation.system",
+        "path": "ServiceRequest.identifier.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation.value",
+        "path": "ServiceRequest.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation.period",
+        "path": "ServiceRequest.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.identifier:nachforderungsidentifikation.assigner",
+        "path": "ServiceRequest.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.instantiatesCanonical",
+        "path": "ServiceRequest.instantiatesCanonical",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.instantiatesUri",
+        "path": "ServiceRequest.instantiatesUri",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.basedOn",
+        "path": "ServiceRequest.basedOn",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.replaces",
+        "path": "ServiceRequest.replaces",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.requisition",
+        "path": "ServiceRequest.requisition",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.category",
+        "path": "ServiceRequest.category",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.priority",
+        "path": "ServiceRequest.priority",
+        "definition": "Die im Laborauftrag formulierte Dringlichkeit von Laboruntersuchungen",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.doNotPerform",
+        "path": "ServiceRequest.doNotPerform",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "definition": "Vorgegebener Code für die Laborauftrag-Information",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "721965002",
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/sct/11000274103/version/20240515",
+              "display": "Laboratory order (record artifact)"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code.coding",
+        "path": "ServiceRequest.code.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code.coding.system",
+        "path": "ServiceRequest.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code.coding.version",
+        "path": "ServiceRequest.code.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code.coding.code",
+        "path": "ServiceRequest.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code.coding.display",
+        "path": "ServiceRequest.code.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code.coding.userSelected",
+        "path": "ServiceRequest.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.orderDetail",
+        "path": "ServiceRequest.orderDetail",
+        "definition": "Freitext-Formulierung des Laborauftrags.",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.orderDetail.coding",
+        "path": "ServiceRequest.orderDetail.coding",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.orderDetail.text",
+        "path": "ServiceRequest.orderDetail.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.quantity[x]",
+        "path": "ServiceRequest.quantity[x]",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.subject",
+        "path": "ServiceRequest.subject",
+        "definition": "In diesem Element wird die betroffene versichterte Person referenziert.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.subject.reference",
+        "path": "ServiceRequest.subject.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.subject.type",
+        "path": "ServiceRequest.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.subject.identifier",
+        "path": "ServiceRequest.subject.identifier",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.subject.display",
+        "path": "ServiceRequest.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.encounter",
+        "path": "ServiceRequest.encounter",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.occurrence[x]",
+        "path": "ServiceRequest.occurrence[x]",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.asNeeded[x]",
+        "path": "ServiceRequest.asNeeded[x]",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.authoredOn",
+        "path": "ServiceRequest.authoredOn",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.requester",
+        "path": "ServiceRequest.requester",
+        "definition": "Auftraggeber:in bzw. Einsender:in des Laborauftrags",
+        "comment": "Vorgabe\nVon den Unterstrukturen darf Identifikator einmal vorkommen UND entweder Behandelnde Person oder Einrichtung/Organisationseinheit oder die Kombination Behandelnde Person/Einrichtung oder PatientIn",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient|1.0.0-kommentierung.2",
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_PractitionerRole|1.0.0-kommentierung.2",
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Practitioner|1.0.0-kommentierung.2",
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Organization|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requester.reference",
+        "path": "ServiceRequest.requester.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requester.type",
+        "path": "ServiceRequest.requester.type",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.requester.identifier",
+        "path": "ServiceRequest.requester.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requester.identifier.use",
+        "path": "ServiceRequest.requester.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.requester.identifier.type",
+        "path": "ServiceRequest.requester.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.requester.identifier.system",
+        "path": "ServiceRequest.requester.identifier.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requester.identifier.value",
+        "path": "ServiceRequest.requester.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requester.identifier.period",
+        "path": "ServiceRequest.requester.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.requester.identifier.assigner",
+        "path": "ServiceRequest.requester.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.requester.display",
+        "path": "ServiceRequest.requester.display",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.performerType",
+        "path": "ServiceRequest.performerType",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.performer",
+        "path": "ServiceRequest.performer",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.locationCode",
+        "path": "ServiceRequest.locationCode",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.locationReference",
+        "path": "ServiceRequest.locationReference",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.reasonCode",
+        "path": "ServiceRequest.reasonCode",
+        "definition": "Fragestellung/Begründung. Hier können Anlass und Veranlassungsgrund angegeben werden.",
+        "max": "2",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonCode.extension",
+        "path": "ServiceRequest.reasonCode.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonCode.extension:begruendungsArt",
+        "path": "ServiceRequest.reasonCode.extension",
+        "sliceName": "begruendungsArt",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Reason_Type"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonCode.text",
+        "path": "ServiceRequest.reasonCode.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonReference",
+        "path": "ServiceRequest.reasonReference",
+        "definition": "Hier besteht die Option, die Diagnose aus dem Laborauftrag mitzuführen. Die Übernahme eines Diagnose-Codes geschieht in Abhängigkeit von den Auftragsdaten. Das setzt voraus, dass die Diagnose in den Auftragsdaten codiert übergeben worden ist.\r\nUnter Eigenschaften sind mögliche Werte gelistet, als Beispiel für Inhalte, die in diese Datenstruktur hineinpassen könnten bzw. auch übernommen werden könnten. Angaben zur Auftragsdiagnose können beispielsweise in Muster 10 vorkommen oder über den Labordatentransfer (LDT) übermittelt werden.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Condition_Diagnosis|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonReference.reference",
+        "path": "ServiceRequest.reasonReference.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonReference.type",
+        "path": "ServiceRequest.reasonReference.type",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.reasonReference.identifier",
+        "path": "ServiceRequest.reasonReference.identifier",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.reasonReference.display",
+        "path": "ServiceRequest.reasonReference.display",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.insurance",
+        "path": "ServiceRequest.insurance",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.supportingInfo",
+        "path": "ServiceRequest.supportingInfo",
+        "definition": "Freitextfeld für klinische bzw. anamnestische Angaben, die im Zusammenhang mit der Laboruntersuchung stehen oder in Bezug auf den Gesamtzustand des/der Patienten/Patientin zu beachten sind.",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.supportingInfo.reference",
+        "path": "ServiceRequest.supportingInfo.reference",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.supportingInfo.type",
+        "path": "ServiceRequest.supportingInfo.type",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.supportingInfo.identifier",
+        "path": "ServiceRequest.supportingInfo.identifier",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.supportingInfo.display",
+        "path": "ServiceRequest.supportingInfo.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.specimen",
+        "path": "ServiceRequest.specimen",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.bodySite",
+        "path": "ServiceRequest.bodySite",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.note",
+        "path": "ServiceRequest.note",
+        "definition": "Auftragsbezogene Hinweise bzw. ergänzende Angaben zum Auftrag, z. B. Institutionsspezifische administrative Zuordnung",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.note.author[x]",
+        "path": "ServiceRequest.note.author[x]",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.note.time",
+        "path": "ServiceRequest.note.time",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.note.text",
+        "path": "ServiceRequest.note.text",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.patientInstruction",
+        "path": "ServiceRequest.patientInstruction",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.relevantHistory",
+        "path": "ServiceRequest.relevantHistory",
+        "max": "0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "cbb0a107-ebd2-4f84-b7eb-66966236d4a8",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_ServiceRequest|1.0.0-kommentierung.2"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2024-05-15T19:19:00+01:00"
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "721965002",
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "display": "Laboratory order (record artifact)"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Recipient_Laboratory_Report",
+      "extension": [
+        {
+          "url": "practitionerRole",
+          "valueReference": {
+            "reference": "urn:uuid:122fa5c5-f1f9-4406-9b8f-f6e451ca62af"
+          }
+        },
+        {
+          "url": "patient",
+          "valueReference": {
+            "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c452c7f"
+          }
+        }
+      ]
+    }
+  ],
+  "reasonCode": [
+    {
+      "extension": [
+        {
+          "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Reason_Type",
+          "valueString": "Veranlassungsgrund"
+        }
+      ],
+      "coding": [
+        {
+          "code": "E23.0",
+          "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "display": "Isolierter Gonadotropinmangel"
+        }
+      ],
+      "text": "Therapiekontrolle"
+    }
+  ],
+  "language": "de",
+  "status": "completed",
+  "intent": "plan",
+  "subject": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c452c7f"
+  },
+  "requester": {
+    "reference": "urn:uuid:122fa5c5-f1f9-4406-9b8f-f6e451ca62af"
+  }
+}

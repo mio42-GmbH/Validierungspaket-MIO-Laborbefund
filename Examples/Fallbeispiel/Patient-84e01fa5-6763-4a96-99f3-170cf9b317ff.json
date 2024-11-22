@@ -1,0 +1,36 @@
+{
+  "resourceType": "Patient",
+  "id": "84e01fa5-6763-4a96-99f3-170cf9b317ff",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient|1.0.0-kommentierung.2"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "display": "Medical record number",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR",
+            "version": "v2-0203"
+          }
+        ]
+      },
+      "system": "http://www.acmedasdd.com/identifiers/patient",
+      "value": "123456"
+    }
+  ],
+  "name": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+          "valueCode": "unknown"
+        }
+      ]
+    }
+  ],
+  "birthDate": "2022-03-01"
+}

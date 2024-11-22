@@ -1,0 +1,18 @@
+{
+  "resourceType": "Substance",
+  "id": "4153de68-1124-4c02-a8a3-98f4c312f075",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Substance|1.0.0-kommentierung.2"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "ACDA",
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0371",
+        "display": "ACD Solution A"
+      }
+    ]
+  }
+}

@@ -1,0 +1,952 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "KBV-PR-MIO-LAB-Composition",
+  "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Composition",
+  "version": "1.0.0-kommentierung.2",
+  "name": "KBV_PR_MIO_LAB_Composition",
+  "title": "KBV_PR_MIO_LAB_Composition",
+  "status": "draft",
+  "publisher": "Kassenärztliche Bundesvereinigung (KBV)",
+  "description": "Dieses Profil bildet das aus dem Laborbefund resultierende Dokument ab.",
+  "copyright": "Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health - ICF, herausgegeben durch die Weltgesundheitsorganisation.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition",
+        "path": "Composition",
+        "definition": "Dieses Profil bündelt die Informationen zum Laborbefund"
+      },
+      {
+        "id": "Composition.meta",
+        "path": "Composition.meta",
+        "min": 1
+      },
+      {
+        "id": "Composition.meta.versionId",
+        "path": "Composition.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.meta.lastUpdated",
+        "path": "Composition.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.meta.source",
+        "path": "Composition.meta.source",
+        "max": "0"
+      },
+      {
+        "id": "Composition.meta.profile",
+        "path": "Composition.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Composition.meta.profile:mioProfile",
+        "path": "Composition.meta.profile",
+        "sliceName": "mioProfile",
+        "min": 1,
+        "max": "1",
+        "patternCanonical": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Composition|1.0.0-kommentierung.2"
+      },
+      {
+        "id": "Composition.meta.security",
+        "path": "Composition.meta.security",
+        "max": "0"
+      },
+      {
+        "id": "Composition.meta.tag",
+        "path": "Composition.meta.tag",
+        "max": "0"
+      },
+      {
+        "id": "Composition.implicitRules",
+        "path": "Composition.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Composition.text",
+        "path": "Composition.text",
+        "definition": "In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."
+      },
+      {
+        "id": "Composition.text.status",
+        "path": "Composition.text.status",
+        "fixedCode": "extensions"
+      },
+      {
+        "id": "Composition.contained",
+        "path": "Composition.contained",
+        "max": "0"
+      },
+      {
+        "id": "Composition.extension",
+        "path": "Composition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.extension:basedOn-order-or-requisition",
+        "path": "Composition.extension",
+        "sliceName": "basedOn-order-or-requisition",
+        "definition": "Referenz auf die Laborauftrag-Informationen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.extension:basedOn-order-or-requisition.value[x]",
+        "path": "Composition.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.extension:basedOn-order-or-requisition.value[x]:valueReference",
+        "path": "Composition.extension.value[x]",
+        "sliceName": "valueReference",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_ServiceRequest"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.extension:basedOn-order-or-requisition.value[x]:valueReference.id",
+        "path": "Composition.extension.value[x].id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.extension:basedOn-order-or-requisition.value[x]:valueReference.reference",
+        "path": "Composition.extension.value[x].reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.extension:basedOn-order-or-requisition.value[x]:valueReference.type",
+        "path": "Composition.extension.value[x].type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.extension:basedOn-order-or-requisition.value[x]:valueReference.identifier",
+        "path": "Composition.extension.value[x].identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.extension:basedOn-order-or-requisition.value[x]:valueReference.display",
+        "path": "Composition.extension.value[x].display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.extension:diagnosticReport-reference",
+        "path": "Composition.extension",
+        "sliceName": "diagnosticReport-reference",
+        "definition": "Referenz auf den Laborgesamtbefund",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-diagnosticReportReference"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.extension:diagnosticReport-reference.value[x]",
+        "path": "Composition.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.extension:diagnosticReport-reference.value[x]:valueReference",
+        "path": "Composition.extension.value[x]",
+        "sliceName": "valueReference",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DiagnosticReport"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.extension:diagnosticReport-reference.value[x]:valueReference.id",
+        "path": "Composition.extension.value[x].id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.extension:diagnosticReport-reference.value[x]:valueReference.reference",
+        "path": "Composition.extension.value[x].reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.extension:diagnosticReport-reference.value[x]:valueReference.type",
+        "path": "Composition.extension.value[x].type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.extension:diagnosticReport-reference.value[x]:valueReference.identifier",
+        "path": "Composition.extension.value[x].identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.extension:diagnosticReport-reference.value[x]:valueReference.display",
+        "path": "Composition.extension.value[x].display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.identifier",
+        "path": "Composition.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "definition": "Hier wird angegeben, ob ein vorläufiger oder endgültiger digitaler Laborbefund erstellt wird.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type",
+        "path": "Composition.type",
+        "definition": "Hier ist ein Code enthalten, welcher Beschreibt, dass es sich um einen Laborbefund handelt.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding",
+        "path": "Composition.type.coding",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "4241000179101",
+          "system": "http://snomed.info/sct",
+          "display": "Laboratory report (record artifact)"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding.system",
+        "path": "Composition.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding.version",
+        "path": "Composition.type.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding.code",
+        "path": "Composition.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding.display",
+        "path": "Composition.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding.userSelected",
+        "path": "Composition.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.type.text",
+        "path": "Composition.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.category",
+        "path": "Composition.category",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "definition": "Hier wird die zu behandelnde Person referenziert.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.reference",
+        "path": "Composition.subject.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.type",
+        "path": "Composition.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.identifier",
+        "path": "Composition.subject.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.display",
+        "path": "Composition.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.encounter",
+        "path": "Composition.encounter",
+        "max": "0"
+      },
+      {
+        "id": "Composition.date",
+        "path": "Composition.date",
+        "definition": "Erstellungszeitpunkt.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author",
+        "path": "Composition.author",
+        "definition": "Hier können ein Autor oder mehrere Autoren des Laborbefundes abgebildet werden",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Practitioner",
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Organization",
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_PractitionerRole"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author.reference",
+        "path": "Composition.author.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author.type",
+        "path": "Composition.author.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier",
+        "path": "Composition.author.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.display",
+        "path": "Composition.author.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.title",
+        "path": "Composition.title",
+        "definition": "Hier wird dem Dokument ein lesbarer Name gegeben.",
+        "patternString": "Laboratory Report",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.confidentiality",
+        "path": "Composition.confidentiality",
+        "max": "0"
+      },
+      {
+        "id": "Composition.attester",
+        "path": "Composition.attester",
+        "max": "0"
+      },
+      {
+        "id": "Composition.custodian",
+        "path": "Composition.custodian",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo",
+        "path": "Composition.relatesTo",
+        "definition": "Hier kann eine DEMIS Melde-ID angegeben werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.relatesTo.code",
+        "path": "Composition.relatesTo.code",
+        "patternCode": "appends",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.relatesTo.target[x]",
+        "path": "Composition.relatesTo.target[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Composition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.relatesTo.target[x]:targetReference",
+        "path": "Composition.relatesTo.target[x]",
+        "sliceName": "targetReference",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Composition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.relatesTo.target[x]:targetReference.type",
+        "path": "Composition.relatesTo.target[x].type",
+        "min": 1,
+        "patternUri": "Composition",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.relatesTo.target[x]:targetReference.identifier",
+        "path": "Composition.relatesTo.target[x].identifier",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.relatesTo.target[x]:targetReference.identifier.use",
+        "path": "Composition.relatesTo.target[x].identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo.target[x]:targetReference.identifier.type",
+        "path": "Composition.relatesTo.target[x].identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo.target[x]:targetReference.identifier.system",
+        "path": "Composition.relatesTo.target[x].identifier.system",
+        "min": 1,
+        "patternUri": "https://demis.rki.de/fhir/NamingSystem/NotificationId",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.relatesTo.target[x]:targetReference.identifier.value",
+        "path": "Composition.relatesTo.target[x].identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.relatesTo.target[x]:targetReference.identifier.period",
+        "path": "Composition.relatesTo.target[x].identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo.target[x]:targetReference.identifier.assigner",
+        "path": "Composition.relatesTo.target[x].identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo.target[x]:targetReference.display",
+        "path": "Composition.relatesTo.target[x].display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event",
+        "path": "Composition.event",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section",
+        "path": "Composition.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "exists",
+              "path": "$this.entry"
+            },
+            {
+              "type": "exists",
+              "path": "$this.title"
+            }
+          ],
+          "rules": "closed",
+          "ordered": false
+        },
+        "definition": "The \\\"body\\\" of the report is organized as a tree of up to two levels of sections: top level sections represent laboratory specialties. A top level section SHALL contain either one text block carrying all the text results produced for this specialty along with Laboratory Data Entries or a set of Laboratory Report Item Sections. In the first case the specialty section happens to also be a leaf section. In the latter case, each (second level) leaf section contained in the (top level) specialty section represents a Report Item: i.e., a battery, a specimen study (especially in microbiology), or an individual test. In addition, any leaf section SHALL contain a Laboratory Data Entries containing the observations of that section in a machine-readable format.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:anhaenge",
+        "path": "Composition.section",
+        "sliceName": "anhaenge",
+        "comment": "Vorgabe\nInhalte von \"Ergänzende Dokumente\" werden im \"Anhang-Laborgesamtbefund\" (PresentedForm), welcher alle medizinischen Daten inkludiert, mit aufgeführt.\r\n",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:anhaenge.title",
+        "path": "Composition.section.title",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:anhaenge.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:anhaenge.code.coding",
+        "path": "Composition.section.code.coding",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "371524004",
+          "system": "http://snomed.info/sct",
+          "display": "Clinical report (record artifact)"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:anhaenge.code.coding.system",
+        "path": "Composition.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:anhaenge.code.coding.version",
+        "path": "Composition.section.code.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:anhaenge.code.coding.code",
+        "path": "Composition.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:anhaenge.code.coding.display",
+        "path": "Composition.section.code.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:anhaenge.code.coding.userSelected",
+        "path": "Composition.section.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:anhaenge.code.text",
+        "path": "Composition.section.code.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:anhaenge.author",
+        "path": "Composition.section.author",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:anhaenge.focus",
+        "path": "Composition.section.focus",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:anhaenge.text.status",
+        "path": "Composition.section.text.status",
+        "patternCode": "extensions"
+      },
+      {
+        "id": "Composition.section:anhaenge.mode",
+        "path": "Composition.section.mode",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:anhaenge.orderedBy",
+        "path": "Composition.section.orderedBy",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:anhaenge.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DocumentReference"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:anhaenge.entry.reference",
+        "path": "Composition.section.entry.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:anhaenge.entry.type",
+        "path": "Composition.section.entry.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:anhaenge.entry.identifier",
+        "path": "Composition.section.entry.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:anhaenge.entry.display",
+        "path": "Composition.section.entry.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:anhaenge.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:anhaenge.section",
+        "path": "Composition.section.section",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:lab-no-subsections",
+        "path": "Composition.section",
+        "sliceName": "lab-no-subsections",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Laboratory_Specialties_LOINC|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.code.coding",
+        "path": "Composition.section.code.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.code.coding.system",
+        "path": "Composition.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.code.coding.version",
+        "path": "Composition.section.code.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.code.coding.code",
+        "path": "Composition.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.code.coding.display",
+        "path": "Composition.section.code.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.code.coding.userSelected",
+        "path": "Composition.section.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.author",
+        "path": "Composition.section.author",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.focus",
+        "path": "Composition.section.focus",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.text",
+        "path": "Composition.section.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.text.status",
+        "path": "Composition.section.text.status",
+        "patternCode": "extensions"
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.mode",
+        "path": "Composition.section.mode",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.orderedBy",
+        "path": "Composition.section.orderedBy",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Observation_Laboratory_Study_Group"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.entry.reference",
+        "path": "Composition.section.entry.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.entry.type",
+        "path": "Composition.section.entry.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.entry.identifier",
+        "path": "Composition.section.entry.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.entry.display",
+        "path": "Composition.section.entry.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:lab-no-subsections.section",
+        "path": "Composition.section.section",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:annotations",
+        "path": "Composition.section",
+        "sliceName": "annotations",
+        "comment": "Vorgabe\nInhalte von \"Ergänzende Angaben\" werden im \"Anhang-Laborgesamtbefund\" (PresentedForm), welcher alle medizinischen Daten inkludiert, mit aufgeführt.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:annotations.title",
+        "path": "Composition.section.title",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:annotations.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:annotations.code.coding",
+        "path": "Composition.section.code.coding",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "48767-8",
+          "system": "http://loinc.org",
+          "display": "Annotation comment [Interpretation] Narrative"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:annotations.code.coding.system",
+        "path": "Composition.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:annotations.code.coding.version",
+        "path": "Composition.section.code.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:annotations.code.coding.code",
+        "path": "Composition.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:annotations.code.coding.display",
+        "path": "Composition.section.code.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:annotations.code.coding.userSelected",
+        "path": "Composition.section.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:annotations.code.text",
+        "path": "Composition.section.code.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:annotations.author",
+        "path": "Composition.section.author",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:annotations.focus",
+        "path": "Composition.section.focus",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:annotations.text",
+        "path": "Composition.section.text",
+        "min": 1
+      },
+      {
+        "id": "Composition.section:annotations.text.status",
+        "path": "Composition.section.text.status",
+        "patternCode": "additional"
+      },
+      {
+        "id": "Composition.section:annotations.mode",
+        "path": "Composition.section.mode",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:annotations.orderedBy",
+        "path": "Composition.section.orderedBy",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:annotations.entry",
+        "path": "Composition.section.entry",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:annotations.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:annotations.section",
+        "path": "Composition.section.section",
+        "max": "0"
+      }
+    ]
+  }
+}

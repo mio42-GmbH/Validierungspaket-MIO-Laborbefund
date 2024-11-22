@@ -1,0 +1,130 @@
+{
+  "resourceType": "Observation",
+  "id": "105a4f91-a73b-4c46-af28-40731bf97c36",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Observation_Laboratory_Study|1.0.0-kommentierung.2"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2024-05-15T19:19:00+01:00"
+  },
+  "category": [
+    {
+      "extension": [
+        {
+          "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Diskriminator",
+          "valueString": "laboratory"
+        }
+      ],
+      "coding": [
+        {
+          "code": "laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Laboratory"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Diskriminator",
+          "valueString": "laborbereich"
+        }
+      ],
+      "text": "Klin.Chemie"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.73",
+        "code": "3091-6",
+        "display": "Harnstoff [Masse/Volumen] in Serum oder Plasma"
+      }
+    ],
+    "text": "Harnstoff"
+  },
+  "extension": [
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Sorting_Number",
+      "valueInteger": 8
+    },
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Accredited_Service",
+      "valueBoolean": true
+    },
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_zlog",
+      "valueDecimal": 0.3
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "OBI",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display": "Observation Instance Identifier",
+            "version": "2.9"
+          }
+        ]
+      },
+      "value": "20240515-42-005-008"
+    }
+  ],
+  "valueQuantity": {
+    "system": "http://unitsofmeasure.org",
+    "value": 25,
+    "code": "mg/dL",
+    "unit": "mg/dL"
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "version": "4.0.1",
+          "code": "N",
+          "display": "Normal"
+        }
+      ]
+    }
+  ],
+  "referenceRange": [
+    {
+      "low": {
+        "system": "http://unitsofmeasure.org",
+        "value": 10,
+        "unit": "mg/dL",
+        "code": "mg/dL"
+      },
+      "high": {
+        "system": "http://unitsofmeasure.org",
+        "value": 50,
+        "unit": "mg/dL",
+        "code": "mg/dL"
+      },
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+            "code": "normal",
+            "display": "Normal Range"
+          }
+        ]
+      }
+    }
+  ],
+  "language": "de",
+  "status": "final",
+  "subject": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c452c7f"
+  },
+  "effectiveDateTime": "2024-05-15T08:08:00+01:00",
+  "issued": "2024-05-15T12:12:00+01:00",
+  "specimen": {
+    "reference": "urn:uuid:42280bb7-d444-4fd7-a3ef-0a1184ae5833"
+  }
+}

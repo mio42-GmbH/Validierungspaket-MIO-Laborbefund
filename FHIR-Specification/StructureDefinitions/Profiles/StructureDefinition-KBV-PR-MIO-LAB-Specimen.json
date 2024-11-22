@@ -1,0 +1,961 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "KBV-PR-MIO-LAB-Specimen",
+  "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Specimen",
+  "version": "1.0.0-kommentierung.2",
+  "name": "KBV_PR_MIO_LAB_Specimen",
+  "title": "KBV_PR_MIO_LAB_Specimen",
+  "status": "draft",
+  "publisher": "Kassenärztliche Bundesvereinigung (KBV)",
+  "description": "Dieses Profil bildet eine Probe ab.",
+  "copyright": "Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health - ICF, herausgegeben durch die Weltgesundheitsorganisation.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Specimen",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Specimen",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Specimen",
+        "path": "Specimen",
+        "definition": "Dieses Profil bildet eine Probe ab.",
+        "comment": "Vorgabe\r\n                Die Verpflichtung zur Angabe der Probe ist vom Anwendungsfall abhängig:\r\n\r\n                Bei einer messenden Laboruntersuchung muss eine Probe zugeordnet sein.\r\n                Falls eine Berechnung vorliegt, so wird hier keine Probe angegeben. Stattdessen können die Berechnungsgrundlagen unter \"Zugrunde liegende Messung\" referenziert werden.",
+        "constraint": [
+          {
+            "key": "spec-1",
+            "severity": "error",
+            "human": "A precise dateTime is needed",
+            "expression": "(collection.collectedDateTime.toString().length() >= 10) or ((collection.collectedPeriod.start.toString().length() >= 16) and (collection.collectedPeriod.end.toString().length() >= 16))",
+            "source": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Specimen"
+          }
+        ]
+      },
+      {
+        "id": "Specimen.meta",
+        "path": "Specimen.meta",
+        "min": 1
+      },
+      {
+        "id": "Specimen.meta.versionId",
+        "path": "Specimen.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.meta.lastUpdated",
+        "path": "Specimen.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.meta.source",
+        "path": "Specimen.meta.source",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.meta.profile",
+        "path": "Specimen.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Specimen.meta.profile:mioProfile",
+        "path": "Specimen.meta.profile",
+        "sliceName": "mioProfile",
+        "min": 1,
+        "max": "1",
+        "patternCanonical": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Specimen|1.0.0-kommentierung.2"
+      },
+      {
+        "id": "Specimen.meta.security",
+        "path": "Specimen.meta.security",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.meta.tag",
+        "path": "Specimen.meta.tag",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.implicitRules",
+        "path": "Specimen.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.text",
+        "path": "Specimen.text",
+        "definition": "In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."
+      },
+      {
+        "id": "Specimen.text.status",
+        "path": "Specimen.text.status",
+        "fixedCode": "extensions"
+      },
+      {
+        "id": "Specimen.contained",
+        "path": "Specimen.contained",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.identifier",
+        "path": "Specimen.identifier",
+        "definition": "Identifikator der Probe, vom Einsender erzeugte Kennung der Probe. Proben müssen zweifelsfrei auf einen identifizierten Patienten zurückverfolgbar sein.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.identifier.use",
+        "path": "Specimen.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.identifier.type",
+        "path": "Specimen.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.identifier.system",
+        "path": "Specimen.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.identifier.value",
+        "path": "Specimen.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.identifier.period",
+        "path": "Specimen.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.identifier.assigner",
+        "path": "Specimen.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.accessionIdentifier",
+        "path": "Specimen.accessionIdentifier",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.status",
+        "path": "Specimen.status",
+        "definition": "Hier wird ein Code für den Probenstatus vor der Messung angegeben",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.type",
+        "path": "Specimen.type",
+        "definition": "Probenart, ergänzende Spezifizierung Code/Bezeichnung",
+        "comment": "Vorgabe\nWenn möglich, sollte die Probenart mit dem SNOMED-Code ausreichend präzise spezifiziert sein. Die ergänzende Spezifizierung ist eine Ausnahme-Option.",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.type.coding",
+        "path": "Specimen.type.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.type.coding:snomed",
+        "path": "Specimen.type.coding",
+        "sliceName": "snomed",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Specimen_Type_SNOMED_CT|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "Specimen.type.coding:snomed.system",
+        "path": "Specimen.type.coding.system",
+        "min": 1,
+        "patternUri": "http://snomed.info/sct",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.type.coding:snomed.version",
+        "path": "Specimen.type.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.type.coding:snomed.code",
+        "path": "Specimen.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.type.coding:snomed.display",
+        "path": "Specimen.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.type.coding:snomed.userSelected",
+        "path": "Specimen.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.type.text",
+        "path": "Specimen.type.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.subject",
+        "path": "Specimen.subject",
+        "definition": "Hier kann die betroffene versicherte Person referenziert werden.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.subject.reference",
+        "path": "Specimen.subject.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.subject.type",
+        "path": "Specimen.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.subject.identifier",
+        "path": "Specimen.subject.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.subject.display",
+        "path": "Specimen.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.receivedTime",
+        "path": "Specimen.receivedTime",
+        "definition": "Zeitpunkt des Eingangs der Probe im Labor",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.parent",
+        "path": "Specimen.parent",
+        "definition": "Ausgangsmaterial für eine Sekundärprobe. Die Sekundärprobe existiert nur auf Basis einer Primärprobe. Wenn eine Sekundärprobe abgebildet wird, dann ist das Ausgangsmaterial verpflichtend anzugeben, damit der Bezug hergestellt werden kann.",
+        "comment": "Vorgabe\nWenn diese Probe aus einer Primärprobe gewonnen wurde und als Sekundärprobe dokumentiert wird, dann muss das Ausgangsmaterial als Primärprobe angegeben werden. Wenn es sich bei dieser Probe um eine Primärprobe handelt, ist das Element Ausgangsmaterial nicht erlaubt.",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Specimen|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.request",
+        "path": "Specimen.request",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.collection",
+        "path": "Specimen.collection",
+        "definition": "Optionale Angaben zur Probengewinnung, dazu gehören: Zeitangabe, Methode der Probengewinnung, Entnahmeort, Angabe zum Nüchternstatus.",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.extension",
+        "path": "Specimen.collection.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.extension:bodySite",
+        "path": "Specimen.collection.extension",
+        "sliceName": "bodySite",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/bodySite"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.extension:bodySite.id",
+        "path": "Specimen.collection.extension.id",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.collection.extension:bodySite.value[x]",
+        "path": "Specimen.collection.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_BodyStructure|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.extension:bodySite.value[x]:valueReference",
+        "path": "Specimen.collection.extension.value[x]",
+        "sliceName": "valueReference",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_BodyStructure|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.extension:ausserkoerperlicheQuelle",
+        "path": "Specimen.collection.extension",
+        "sliceName": "ausserkoerperlicheQuelle",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Extracorporeal_Source"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.extension:ausserkoerperlicheQuelle.value[x]",
+        "path": "Specimen.collection.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.collector",
+        "path": "Specimen.collection.collector",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.collection.collected[x]",
+        "path": "Specimen.collection.collected[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "comment": "Vorgabe\n Die Zeitangabe für die Probengewinnung ist entweder ein konkreter Zeitpunkt oder ein konkreter Zeitraum. Alternativ oder zusätzlich kann eine Zeitdauer (Quantität mit zeitbezogener UCUM-Einheit) angegeben werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.collected[x]:collectedDateTime",
+        "path": "Specimen.collection.collected[x]",
+        "sliceName": "collectedDateTime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.collected[x]:collectedPeriod",
+        "path": "Specimen.collection.collected[x]",
+        "sliceName": "collectedPeriod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.collected[x]:collectedPeriod.start",
+        "path": "Specimen.collection.collected[x].start",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.collected[x]:collectedPeriod.end",
+        "path": "Specimen.collection.collected[x].end",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.duration",
+        "path": "Specimen.collection.duration",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.duration.value",
+        "path": "Specimen.collection.duration.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.duration.comparator",
+        "path": "Specimen.collection.duration.comparator",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.duration.unit",
+        "path": "Specimen.collection.duration.unit",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.duration.system",
+        "path": "Specimen.collection.duration.system",
+        "min": 1,
+        "patternUri": "http://unitsofmeasure.org",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.duration.code",
+        "path": "Specimen.collection.duration.code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/duration-units"
+        }
+      },
+      {
+        "id": "Specimen.collection.quantity",
+        "path": "Specimen.collection.quantity",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.collection.method",
+        "path": "Specimen.collection.method",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.method.coding",
+        "path": "Specimen.collection.method.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.method.coding:snomed",
+        "path": "Specimen.collection.method.coding",
+        "sliceName": "snomed",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Specimen_Collection_Method_SNOMED_CT|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "Specimen.collection.method.coding:snomed.system",
+        "path": "Specimen.collection.method.coding.system",
+        "min": 1,
+        "patternUri": "http://snomed.info/sct",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.method.coding:snomed.version",
+        "path": "Specimen.collection.method.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.method.coding:snomed.code",
+        "path": "Specimen.collection.method.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.method.coding:snomed.display",
+        "path": "Specimen.collection.method.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.method.coding:snomed.userSelected",
+        "path": "Specimen.collection.method.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.collection.method.text",
+        "path": "Specimen.collection.method.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.bodySite",
+        "path": "Specimen.collection.bodySite",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]",
+        "path": "Specimen.collection.fastingStatus[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusCodeableConcept",
+        "path": "Specimen.collection.fastingStatus[x]",
+        "sliceName": "fastingStatusCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusCodeableConcept.coding",
+        "path": "Specimen.collection.fastingStatus[x].coding",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusCodeableConcept.coding.system",
+        "path": "Specimen.collection.fastingStatus[x].coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusCodeableConcept.coding.version",
+        "path": "Specimen.collection.fastingStatus[x].coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusCodeableConcept.coding.code",
+        "path": "Specimen.collection.fastingStatus[x].coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusCodeableConcept.coding.display",
+        "path": "Specimen.collection.fastingStatus[x].coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusCodeableConcept.coding.userSelected",
+        "path": "Specimen.collection.fastingStatus[x].coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusCodeableConcept.text",
+        "path": "Specimen.collection.fastingStatus[x].text",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusDuration",
+        "path": "Specimen.collection.fastingStatus[x]",
+        "sliceName": "fastingStatusDuration",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Duration"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusDuration.value",
+        "path": "Specimen.collection.fastingStatus[x].value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusDuration.comparator",
+        "path": "Specimen.collection.fastingStatus[x].comparator",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusDuration.unit",
+        "path": "Specimen.collection.fastingStatus[x].unit",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusDuration.system",
+        "path": "Specimen.collection.fastingStatus[x].system",
+        "min": 1,
+        "patternUri": "http://unitsofmeasure.org",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.fastingStatus[x]:fastingStatusDuration.code",
+        "path": "Specimen.collection.fastingStatus[x].code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/duration-units"
+        }
+      },
+      {
+        "id": "Specimen.processing",
+        "path": "Specimen.processing",
+        "definition": "Optionale Angaben zur Probenverarbeitung, dazu gehören: Zeitangabe, Additiva und ggf. beschreibender Text.",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.processing.description",
+        "path": "Specimen.processing.description",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.processing.procedure",
+        "path": "Specimen.processing.procedure",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.processing.additive",
+        "path": "Specimen.processing.additive",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Substance|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.processing.time[x]",
+        "path": "Specimen.processing.time[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "comment": "Vorgabe\nDie Zeitangabe für die Probenverarbeitung ist entweder ein konkreter Zeitpunkt oder ein konkreter Zeitraum.",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.processing.time[x]:timeDateTime",
+        "path": "Specimen.processing.time[x]",
+        "sliceName": "timeDateTime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.processing.time[x]:timePeriod",
+        "path": "Specimen.processing.time[x]",
+        "sliceName": "timePeriod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.processing.time[x]:timePeriod.start",
+        "path": "Specimen.processing.time[x].start",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.processing.time[x]:timePeriod.end",
+        "path": "Specimen.processing.time[x].end",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.container",
+        "path": "Specimen.container",
+        "definition": "Optionale Angaben zum Behältnis, in dem sich die Probe befindet. Hierzu kann angegeben werden, um welche Art Behältnis es sich handelt, welche Zusätze es enthält und welche Menge an Probenmaterial es enthält.",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.container.extension",
+        "path": "Specimen.container.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.container.extension:SpecimenContainerDeviceR5",
+        "path": "Specimen.container.extension",
+        "sliceName": "SpecimenContainerDeviceR5",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.container.device"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.container.extension:SpecimenContainerDeviceR5.value[x]",
+        "path": "Specimen.container.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed",
+          "ordered": false
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.container.extension:SpecimenContainerDeviceR5.value[x]:valueReference",
+        "path": "Specimen.container.extension.value[x]",
+        "sliceName": "valueReference",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Device_Specimen_Container|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.container.extension:SpecimenContainerDeviceR5.value[x]:valueReference.id",
+        "path": "Specimen.container.extension.value[x].id",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.container.extension:SpecimenContainerDeviceR5.value[x]:valueReference.reference",
+        "path": "Specimen.container.extension.value[x].reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.container.extension:SpecimenContainerDeviceR5.value[x]:valueReference.type",
+        "path": "Specimen.container.extension.value[x].type",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.container.extension:SpecimenContainerDeviceR5.value[x]:valueReference.identifier",
+        "path": "Specimen.container.extension.value[x].identifier",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.container.extension:SpecimenContainerDeviceR5.value[x]:valueReference.display",
+        "path": "Specimen.container.extension.value[x].display",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.container.identifier",
+        "path": "Specimen.container.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.container.description",
+        "path": "Specimen.container.description",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.container.type",
+        "path": "Specimen.container.type",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.container.capacity",
+        "path": "Specimen.container.capacity",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.container.specimenQuantity",
+        "path": "Specimen.container.specimenQuantity",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.container.specimenQuantity.value",
+        "path": "Specimen.container.specimenQuantity.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.container.specimenQuantity.unit",
+        "path": "Specimen.container.specimenQuantity.unit",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.container.specimenQuantity.system",
+        "path": "Specimen.container.specimenQuantity.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.container.specimenQuantity.code",
+        "path": "Specimen.container.specimenQuantity.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.container.additive[x]",
+        "path": "Specimen.container.additive[x]",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.condition",
+        "path": "Specimen.condition",
+        "definition": "Hier kann eine Angabe zum Zustand der Probe gemacht werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.condition.coding",
+        "path": "Specimen.condition.coding",
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Specimen_Condition|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "Specimen.condition.text",
+        "path": "Specimen.condition.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.note",
+        "path": "Specimen.note",
+        "definition": "Ergänzende Freitext Angaben zum Probenmaterial",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.note.author[x]",
+        "path": "Specimen.note.author[x]",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.note.time",
+        "path": "Specimen.note.time",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.note.text",
+        "path": "Specimen.note.text",
+        "mustSupport": true
+      }
+    ]
+  }
+}

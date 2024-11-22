@@ -1,0 +1,54 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "a6f3d3de-0857-45ed-916e-087d84391bc3",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DiagnosticReport|1.0.0-kommentierung.2"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition",
+      "valueReference": {
+        "reference": "urn:uuid:2ba497bf-8615-4efc-a9c7-7fa9a4185334"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:123456"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "11502-2",
+        "system": "http://loinc.org",
+        "display": "Laboratory report",
+        "version": "2.73"
+      }
+    ],
+    "text": "Laborbeispielbefund"
+  },
+  "basedOn": [
+    {
+      "reference": "urn:uuid:22493d10-8b86-40ae-93eb-605365c8baf4"
+    }
+  ],
+  "status": "registered",
+  "subject": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7d"
+  },
+  "performer": [
+    {
+      "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7d"
+    }
+  ],
+  "result": [
+    {
+      "reference": "urn:uuid:54f8aa9c-c91f-4d0a-8ab0-ad6cf50d4908"
+    }
+  ],
+  "issued": "2022-08-09T12:00:00Z"
+}

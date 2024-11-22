@@ -1,0 +1,1948 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "KBV-PR-MIO-LAB-Observation-Laboratory-Study",
+  "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Observation_Laboratory_Study",
+  "version": "1.0.0-kommentierung.2",
+  "name": "KBV_PR_MIO_LAB_Observation_Laboratory_Study",
+  "title": "KBV_PR_MIO_LAB_Observation_Laboratory_Study",
+  "status": "draft",
+  "publisher": "Kassenärztliche Bundesvereinigung (KBV)",
+  "description": "Dieses Profil bildet eine Laboruntersuchung ab.",
+  "copyright": "Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health - ICF, herausgegeben durch die Weltgesundheitsorganisation.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "definition": "Dieses Profil bildet eine Laboruntersuchung ab."
+      },
+      {
+        "id": "Observation.meta",
+        "path": "Observation.meta",
+        "min": 1
+      },
+      {
+        "id": "Observation.meta.versionId",
+        "path": "Observation.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta.lastUpdated",
+        "path": "Observation.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta.source",
+        "path": "Observation.meta.source",
+        "max": "0"
+      },
+      {
+        "id": "Observation.meta.profile",
+        "path": "Observation.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.meta.profile:mioProfile",
+        "path": "Observation.meta.profile",
+        "sliceName": "mioProfile",
+        "min": 1,
+        "max": "1",
+        "patternCanonical": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Observation_Laboratory_Study|1.0.0-kommentierung.2"
+      },
+      {
+        "id": "Observation.meta.security",
+        "path": "Observation.meta.security",
+        "max": "0"
+      },
+      {
+        "id": "Observation.meta.tag",
+        "path": "Observation.meta.tag",
+        "max": "0"
+      },
+      {
+        "id": "Observation.implicitRules",
+        "path": "Observation.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Observation.text",
+        "path": "Observation.text",
+        "definition": "In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."
+      },
+      {
+        "id": "Observation.text.status",
+        "path": "Observation.text.status",
+        "fixedCode": "extensions"
+      },
+      {
+        "id": "Observation.contained",
+        "path": "Observation.contained",
+        "max": "0"
+      },
+      {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.extension:sortiernummerUntersuchung",
+        "path": "Observation.extension",
+        "sliceName": "sortiernummerUntersuchung",
+        "definition": "Laboruntersuchungen werden innerhalb einer Gruppe mittels Nummerierung sortiert.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Sorting_Number"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.extension:fremdleistung",
+        "path": "Observation.extension",
+        "sliceName": "fremdleistung",
+        "definition": "Dieses Kennzeichen wird gesetzt, wenn die Laboruntersuchung von einem anderen Labor durchgeführt wird.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_External_Service"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.extension:verbundleistung",
+        "path": "Observation.extension",
+        "sliceName": "verbundleistung",
+        "definition": "Dieses Kennzeichen wird gesetzt, wenn die \"Fremdleistung\" von einem anderen Labor aus dem eigenen Verbund durchgeführt wird und diese Information aus administrativen Gründen zusätzlich benötigt wird.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Association_Service"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.extension:akkreditierteUntersuchung",
+        "path": "Observation.extension",
+        "sliceName": "akkreditierteUntersuchung",
+        "definition": "Diese Angabe betrifft akkreditierte Labore. Basierend auf der Akreditierung ist gefordert, dass nicht akkreditierte Leistungen gekennzeichnet werden, auch im Laborbefund.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Accredited_Service"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.extension:sekundaerProbe",
+        "path": "Observation.extension",
+        "sliceName": "sekundaerProbe",
+        "definition": "Als Sekundärprobe gilt eine Probe, die aus einer Primärprobe gewonnen wurde.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Secondary_Specimen"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.extension:zlog-Wert",
+        "path": "Observation.extension",
+        "sliceName": "zlog-Wert",
+        "definition": "Der zlog-Wert ist ein Relativwert, der auf einer logarithmischen Skala angibt, um wie viele Standardabweichungen ein Messwert vom Mittelwert des Referenzkollektivs abweicht.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_zlog"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier",
+        "path": "Observation.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "type"
+            }
+          ],
+          "rules": "closed"
+        },
+        "max": "2",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:untersuchungsID",
+        "path": "Observation.identifier",
+        "sliceName": "untersuchungsID",
+        "definition": "Eindeutige ID zur Identifizierung der jeweiligen einzelnen Laboruntersuchung. Sie wird durch das auftragnehmende Laboratorium generiert.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:untersuchungsID.use",
+        "path": "Observation.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Observation.identifier:untersuchungsID.type",
+        "path": "Observation.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "OBI",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "display": "Observation Instance Identifier",
+              "version": "2.9"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:untersuchungsID.type.coding",
+        "path": "Observation.identifier.type.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:untersuchungsID.type.coding.system",
+        "path": "Observation.identifier.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:untersuchungsID.type.coding.version",
+        "path": "Observation.identifier.type.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:untersuchungsID.type.coding.code",
+        "path": "Observation.identifier.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:untersuchungsID.type.coding.display",
+        "path": "Observation.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:untersuchungsID.type.coding.userSelected",
+        "path": "Observation.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.identifier:untersuchungsID.type.text",
+        "path": "Observation.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Observation.identifier:untersuchungsID.system",
+        "path": "Observation.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:untersuchungsID.value",
+        "path": "Observation.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:untersuchungsID.period",
+        "path": "Observation.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Observation.identifier:GTIN",
+        "path": "Observation.identifier",
+        "sliceName": "GTIN",
+        "definition": "Mit der GTIN (kurz für Global Trade Item Number) kann jeder Artikel, jedes Produkt oder jede Produktvariante weltweit überschneidungsfrei identifiziert werden. Sie fungiert als Zugriffsschlüssel auf in Datenbanken hinterlegte Produktinformationen.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:GTIN.use",
+        "path": "Observation.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Observation.identifier:GTIN.type",
+        "path": "Observation.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "UDI",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "display": "Universal Device Identifier",
+              "version": "2.9"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:GTIN.type.coding",
+        "path": "Observation.identifier.type.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:GTIN.type.coding.system",
+        "path": "Observation.identifier.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:GTIN.type.coding.version",
+        "path": "Observation.identifier.type.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:GTIN.type.coding.code",
+        "path": "Observation.identifier.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:GTIN.type.coding.display",
+        "path": "Observation.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:GTIN.type.coding.userSelected",
+        "path": "Observation.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.identifier:GTIN.type.text",
+        "path": "Observation.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Observation.identifier:GTIN.system",
+        "path": "Observation.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:GTIN.value",
+        "path": "Observation.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:GTIN.period",
+        "path": "Observation.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Observation.basedOn",
+        "path": "Observation.basedOn",
+        "max": "0"
+      },
+      {
+        "id": "Observation.partOf",
+        "path": "Observation.partOf",
+        "max": "0"
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "definition": "Bearbeitungs-Status der einzelnen Laboruntersuchung.",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "extension.value"
+            }
+          ],
+          "rules": "closed"
+        },
+        "definition": "Gruppenbezogene fachliche Bezeichner, abgeleitet aus der zugehörigen Untersuchungsgruppe.",
+        "comment": "Vorgabe\nDie Inhalte für die Kategorie der Einzeluntersuchung müssen identisch sein mit Untersuchungsgruppe\\Fachliches Gruppierungsmerkmal der jeweiligen zugehörigen Untersuchungsgruppe und leiten sich daraus ab.",
+        "min": 1,
+        "max": "3",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory",
+        "path": "Observation.category",
+        "sliceName": "laboratory",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "laboratory",
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.extension",
+        "path": "Observation.category.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.extension:laboratory",
+        "path": "Observation.category.extension",
+        "sliceName": "laboratory",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Diskriminator"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.extension:laboratory.value[x]:valueString",
+        "path": "Observation.category.extension.value[x]",
+        "sliceName": "valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "patternString": "laboratory",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.coding",
+        "path": "Observation.category.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.coding.system",
+        "path": "Observation.category.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.coding.version",
+        "path": "Observation.category.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.coding.code",
+        "path": "Observation.category.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.coding.display",
+        "path": "Observation.category.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.coding.userSelected",
+        "path": "Observation.category.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.category:laboratory.text",
+        "path": "Observation.category.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich",
+        "path": "Observation.category",
+        "sliceName": "laborbereich",
+        "definition": "Hier kann die fachspezifische Eingrenzung innerhalb der Laboratoriumsmedizin anhand entsprechender Kategorie-Codes angegeben werden.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.extension",
+        "path": "Observation.category.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.extension:laborbereich",
+        "path": "Observation.category.extension",
+        "sliceName": "laborbereich",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Diskriminator"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.extension:laborbereich.value[x]:valueString",
+        "path": "Observation.category.extension.value[x]",
+        "sliceName": "valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "patternString": "laborbereich",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.coding",
+        "path": "Observation.category.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.coding:loinc",
+        "path": "Observation.category.coding",
+        "sliceName": "loinc",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://loinc.org"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Laboratory_Specialties_LOINC|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "Observation.category:laborbereich.coding:loinc.system",
+        "path": "Observation.category.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.coding:loinc.version",
+        "path": "Observation.category.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.coding:loinc.code",
+        "path": "Observation.category.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.coding:loinc.display",
+        "path": "Observation.category.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.coding:loinc.userSelected",
+        "path": "Observation.category.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.category:laborbereich.text",
+        "path": "Observation.category.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil",
+        "path": "Observation.category",
+        "sliceName": "testProfil",
+        "definition": "Test-Kategorien oder Panele für fachliche Gruppierung. Test-Panele (z.B. LOINC® Panels) gruppieren Laboruntersuchungen nach medizinischen Kategorien unterschiedlicher Differenzierungstiefe.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.extension",
+        "path": "Observation.category.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.extension:testProfil",
+        "path": "Observation.category.extension",
+        "sliceName": "testProfil",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Diskriminator"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.extension:testProfil.value[x]:valueString",
+        "path": "Observation.category.extension.value[x]",
+        "sliceName": "valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "patternString": "testProfil",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.coding",
+        "path": "Observation.category.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.coding:loinc",
+        "path": "Observation.category.coding",
+        "sliceName": "loinc",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://loinc.org"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Test_Panel_LOINC|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "Observation.category:testProfil.coding:loinc.system",
+        "path": "Observation.category.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.coding:loinc.version",
+        "path": "Observation.category.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.coding:loinc.code",
+        "path": "Observation.category.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.coding:loinc.display",
+        "path": "Observation.category.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.coding:loinc.userSelected",
+        "path": "Observation.category.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.category:testProfil.text",
+        "path": "Observation.category.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "definition": "Die Spezifikation der Laboruntersuchung wird durch semantische Codierung und ggf. ergänzende Spezifizierungen präzise dokumentiert.",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "comment": "Vorgabe\nNach Möglichkeit soll die Laboruntersuchung mit dem LOINC®-Code präzise spezifiziert sein, so dass auf ergänzende Spezifizierungen verzichtet werden kann. Als Anzeigename soll der Long Common Name (LCN) mitgegeben werden. Dies ist Standard-Vorgehen in FHIR® Spezifikationen.",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://loinc.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding.system",
+        "path": "Observation.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding.version",
+        "path": "Observation.code.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding.code",
+        "path": "Observation.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding.display",
+        "path": "Observation.code.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding.userSelected",
+        "path": "Observation.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.code.text",
+        "path": "Observation.code.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "definition": "Hier kann die betroffene versicherte Person referenziert werden.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.subject.reference",
+        "path": "Observation.subject.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.subject.type",
+        "path": "Observation.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "Observation.subject.identifier",
+        "path": "Observation.subject.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Observation.subject.display",
+        "path": "Observation.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "Observation.focus",
+        "path": "Observation.focus",
+        "max": "0"
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "max": "0"
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "definition": "Klinisches/r Bezugsdatum/-zeitpunkt",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]:effectiveDateTime",
+        "path": "Observation.effective[x]",
+        "sliceName": "effectiveDateTime",
+        "comment": "Vorgabe\nEine Laboruntersuchung bezieht sich eindeutig auf ein Probenmaterial, zu dem der (1.) Entnahmezeitpunkt bekannt sein sollte/kann und (2.) der Laboreingangszeitpunkt bekannt sein muss. Verbindliche Regel zur Ableitung des klinischen Bezugszeitpunkts:\r\n                                WENN der Entnahmezeitpunkt des Probenmaterials angeben ist, so gilt der Entnahmezeitpunkt;WENN der Sammelzeitraum, bis angegeben ist, so gilt der bis-Zeitpunkt;SONST gilt der Laboreingangszeitpunkt.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.issued",
+        "path": "Observation.issued",
+        "definition": "Zeitstempel oder Zeitangabe zur Dokumentation der einzelnen Laboruntersuchung.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.performer",
+        "path": "Observation.performer",
+        "definition": "Durchführendes Labor. Wenn das auftragnehmende Labor die Laborleistung nicht in Eigenleistung erbringt sondern an an ein Speziallabor weiterleitet, kann dieses hier benannt werden.",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Practitioner",
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Organization",
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_PractitionerRole"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.performer.reference",
+        "path": "Observation.performer.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.performer.type",
+        "path": "Observation.performer.type",
+        "max": "0"
+      },
+      {
+        "id": "Observation.performer.identifier",
+        "path": "Observation.performer.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Observation.performer.display",
+        "path": "Observation.performer.display",
+        "max": "0"
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "definition": "Messergebnisse können quantitativ oder qualitativ sein.",
+        "comment": "Vorgabe\nDie Angabe eines Messergebnisses ist gefordert (\"required\"). Wenn kein Messergebnis zur Verfügung steht, muss in der FHIR Struktur ein \"data absend reason\" angegeben werden.",
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity",
+        "path": "Observation.value[x]",
+        "sliceName": "valueQuantity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity.value",
+        "path": "Observation.value[x].value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity.comparator",
+        "path": "Observation.value[x].comparator",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity.unit",
+        "path": "Observation.value[x].unit",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity.system",
+        "path": "Observation.value[x].system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity.code",
+        "path": "Observation.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept",
+        "path": "Observation.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.coding",
+        "path": "Observation.value[x].coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.coding:snomed",
+        "path": "Observation.value[x].coding",
+        "sliceName": "snomed",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Presence_Ordinal_SNOMED_CT|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.coding:snomed.system",
+        "path": "Observation.value[x].coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.coding:snomed.version",
+        "path": "Observation.value[x].coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.coding:snomed.code",
+        "path": "Observation.value[x].coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.coding:snomed.display",
+        "path": "Observation.value[x].coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.coding:snomed.userSelected",
+        "path": "Observation.value[x].coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.text",
+        "path": "Observation.value[x].text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRatio",
+        "path": "Observation.value[x]",
+        "sliceName": "valueRatio",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Ratio"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRatio.numerator",
+        "path": "Observation.value[x].numerator",
+        "min": 1,
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRatio.numerator.value",
+        "path": "Observation.value[x].numerator.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRatio.numerator.comparator",
+        "path": "Observation.value[x].numerator.comparator",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRatio.numerator.unit",
+        "path": "Observation.value[x].numerator.unit",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRatio.numerator.system",
+        "path": "Observation.value[x].numerator.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRatio.numerator.code",
+        "path": "Observation.value[x].numerator.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRatio.denominator",
+        "path": "Observation.value[x].denominator",
+        "min": 1,
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRatio.denominator.value",
+        "path": "Observation.value[x].denominator.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRatio.denominator.comparator",
+        "path": "Observation.value[x].denominator.comparator",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRatio.denominator.unit",
+        "path": "Observation.value[x].denominator.unit",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRatio.denominator.system",
+        "path": "Observation.value[x].denominator.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRatio.denominator.code",
+        "path": "Observation.value[x].denominator.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRange",
+        "path": "Observation.value[x]",
+        "sliceName": "valueRange",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Range"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRange.low",
+        "path": "Observation.value[x].low",
+        "min": 1,
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRange.low.value",
+        "path": "Observation.value[x].low.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRange.low.unit",
+        "path": "Observation.value[x].low.unit",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRange.low.system",
+        "path": "Observation.value[x].low.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRange.low.code",
+        "path": "Observation.value[x].low.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRange.high",
+        "path": "Observation.value[x].high",
+        "min": 1,
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRange.high.value",
+        "path": "Observation.value[x].high.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRange.high.unit",
+        "path": "Observation.value[x].high.unit",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRange.high.system",
+        "path": "Observation.value[x].high.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueRange.high.code",
+        "path": "Observation.value[x].high.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.dataAbsentReason",
+        "path": "Observation.dataAbsentReason",
+        "definition": "Begründung für die Nicht-Verfügbarkeit eines Messergebnisses",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.dataAbsentReason.coding",
+        "path": "Observation.dataAbsentReason.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.dataAbsentReason.coding.system",
+        "path": "Observation.dataAbsentReason.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.dataAbsentReason.coding.version",
+        "path": "Observation.dataAbsentReason.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.dataAbsentReason.coding.code",
+        "path": "Observation.dataAbsentReason.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.dataAbsentReason.coding.display",
+        "path": "Observation.dataAbsentReason.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.dataAbsentReason.coding.userSelected",
+        "path": "Observation.dataAbsentReason.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.dataAbsentReason.text",
+        "path": "Observation.dataAbsentReason.text",
+        "max": "0"
+      },
+      {
+        "id": "Observation.interpretation",
+        "path": "Observation.interpretation",
+        "definition": "Medizinisch relevante Bewertung zur Laboruntersuchung. Die Interpretation kann als Code und/oder Text vorliegen.",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding",
+        "path": "Observation.interpretation.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:hl7Interpretation",
+        "path": "Observation.interpretation.coding",
+        "sliceName": "hl7Interpretation",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "version": "4.0.1"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+        }
+      },
+      {
+        "id": "Observation.interpretation.coding:hl7Interpretation.system",
+        "path": "Observation.interpretation.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:hl7Interpretation.version",
+        "path": "Observation.interpretation.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:hl7Interpretation.code",
+        "path": "Observation.interpretation.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:hl7Interpretation.display",
+        "path": "Observation.interpretation.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:hl7Interpretation.userSelected",
+        "path": "Observation.interpretation.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.interpretation.coding:snomed",
+        "path": "Observation.interpretation.coding",
+        "sliceName": "snomed",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Result_Interpretation_SNOMED_CT|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "Observation.interpretation.coding:snomed.system",
+        "path": "Observation.interpretation.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:snomed.version",
+        "path": "Observation.interpretation.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:snomed.code",
+        "path": "Observation.interpretation.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:snomed.display",
+        "path": "Observation.interpretation.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:snomed.userSelected",
+        "path": "Observation.interpretation.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.interpretation.text",
+        "path": "Observation.interpretation.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.note",
+        "path": "Observation.note",
+        "definition": "Die ergänzende Angabe bezieht sich genau auf diese Untersuchung. Sie kann beispielsweise medizinisch relevante Anmerkungen, Angaben zur Validität oder Empfehlungen für Folgeaktivitäten enthalten.",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.note.author[x]",
+        "path": "Observation.note.author[x]",
+        "max": "0"
+      },
+      {
+        "id": "Observation.note.time",
+        "path": "Observation.note.time",
+        "max": "0"
+      },
+      {
+        "id": "Observation.note.text",
+        "path": "Observation.note.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "max": "0"
+      },
+      {
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "definition": "Der LOINC®-Code impliziert über die LOINC®-Achse METHOD bereits eine Untersuchungsmethode, unter der Voraussetzung, dass der Part-METHOD einen Wert beinhaltet. \r\nAusnahme kann die Ergänzende Spezifizierung Methode in Bezug auf die LOINC®-spezifizierte Laboruntersuchung ergänzt werden, falls der Wert für die LOINC®-Achse METHOD nicht ausreichend spezifisch ist oder gar nicht vorhanden ist. Es kommt vor, dass eine LOINC®-Codierung die Methode nicht ausreichend feingranular differenziert. Einige gebräuchliche chemische und hämatologische Tests werden (LOINC®)codiert, ohne dass damit eine Methode definiert ist.",
+        "comment": "Vorgabe\nWenn möglich, soll Untersuchungsmethode mit dem LOINC®-Code ausreichend präzise spezifiziert sein und auf die ergänzende Spezifizierung verzichtet werden. Die ergänzende Spezifizierung ist eine Ausnahme-Option.",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.method.coding",
+        "path": "Observation.method.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.method.coding.system",
+        "path": "Observation.method.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.method.coding.version",
+        "path": "Observation.method.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.method.coding.code",
+        "path": "Observation.method.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.method.coding.display",
+        "path": "Observation.method.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.method.coding.userSelected",
+        "path": "Observation.method.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.method.text",
+        "path": "Observation.method.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "definition": "Als Primärprobe wird die Probe bezeichnet, die das Labor erreicht.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Specimen|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.specimen.reference",
+        "path": "Observation.specimen.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.specimen.type",
+        "path": "Observation.specimen.type",
+        "max": "0"
+      },
+      {
+        "id": "Observation.specimen.identifier",
+        "path": "Observation.specimen.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Observation.specimen.display",
+        "path": "Observation.specimen.display",
+        "max": "0"
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "definition": "Hier wird das Gerät bzw. Medizinprodukt referenziert, mit dem die Laboruntersuchung durchgeführt wird.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Device|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.device.reference",
+        "path": "Observation.device.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.device.type",
+        "path": "Observation.device.type",
+        "max": "0"
+      },
+      {
+        "id": "Observation.device.identifier",
+        "path": "Observation.device.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Observation.device.display",
+        "path": "Observation.device.display",
+        "max": "0"
+      },
+      {
+        "id": "Observation.referenceRange",
+        "path": "Observation.referenceRange",
+        "definition": "Richtgrenzen oder Bewertungsgrenzen zu einer Laboruntersuchung",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.extension",
+        "path": "Observation.referenceRange.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.extension:quelleRichtgrenzen",
+        "path": "Observation.referenceRange.extension",
+        "sliceName": "quelleRichtgrenzen",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Source_Reference_Range"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.extension:keinLinearerReferenzbereich",
+        "path": "Observation.referenceRange.extension",
+        "sliceName": "keinLinearerReferenzbereich",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_No_Linear_Reference_Range"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.low",
+        "path": "Observation.referenceRange.low",
+        "comment": "Vorgabe\nEs muss mindestens eine obere oder eine untere Referenzgrenze angegeben werden.",
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.low.value",
+        "path": "Observation.referenceRange.low.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.low.unit",
+        "path": "Observation.referenceRange.low.unit",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.low.system",
+        "path": "Observation.referenceRange.low.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.low.code",
+        "path": "Observation.referenceRange.low.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.high",
+        "path": "Observation.referenceRange.high",
+        "comment": "Vorgabe\nEs muss mindestens eine obere oder eine untere Referenzgrenze angegeben werden.",
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.high.value",
+        "path": "Observation.referenceRange.high.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.high.unit",
+        "path": "Observation.referenceRange.high.unit",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.high.system",
+        "path": "Observation.referenceRange.high.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.high.code",
+        "path": "Observation.referenceRange.high.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.type",
+        "path": "Observation.referenceRange.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.type.coding",
+        "path": "Observation.referenceRange.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.type.coding.system",
+        "path": "Observation.referenceRange.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.type.coding.version",
+        "path": "Observation.referenceRange.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.type.coding.code",
+        "path": "Observation.referenceRange.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.type.coding.display",
+        "path": "Observation.referenceRange.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.type.coding.userSelected",
+        "path": "Observation.referenceRange.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.referenceRange.type.text",
+        "path": "Observation.referenceRange.type.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.appliesTo",
+        "path": "Observation.referenceRange.appliesTo",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.appliesTo.text",
+        "path": "Observation.referenceRange.appliesTo.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange.age",
+        "path": "Observation.referenceRange.age",
+        "max": "0"
+      },
+      {
+        "id": "Observation.referenceRange.text",
+        "path": "Observation.referenceRange.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "max": "0"
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "definition": "Laboruntersuchungen, die als Berechnung erstellt werden, können auf Laboruntersuchungen beruhen, die hier referenziert werden können.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Observation_Laboratory_Study"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.derivedFrom.reference",
+        "path": "Observation.derivedFrom.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.derivedFrom.type",
+        "path": "Observation.derivedFrom.type",
+        "max": "0"
+      },
+      {
+        "id": "Observation.derivedFrom.identifier",
+        "path": "Observation.derivedFrom.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Observation.derivedFrom.display",
+        "path": "Observation.derivedFrom.display",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "definition": "Ein Untersuchungsbild-Anhang wird in einer Component abgebildet.",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.id",
+        "path": "Observation.component.id",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.extension",
+        "path": "Observation.component.extension",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.extension:value-r5",
+        "path": "Observation.component.extension",
+        "sliceName": "value-r5",
+        "short": "only for result of type Attachment",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]",
+        "path": "Observation.component.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "path": "$this",
+              "type": "type"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment",
+        "path": "Observation.component.extension.value[x]",
+        "sliceName": "valueAttachment",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.contentType",
+        "path": "Observation.component.extension.value[x].contentType",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_MIME_Types|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.language",
+        "path": "Observation.component.extension.value[x].language",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.data",
+        "path": "Observation.component.extension.value[x].data",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.url",
+        "path": "Observation.component.extension.value[x].url",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.size",
+        "path": "Observation.component.extension.value[x].size",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.hash",
+        "path": "Observation.component.extension.value[x].hash",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.title",
+        "path": "Observation.component.extension.value[x].title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.creation",
+        "path": "Observation.component.extension.value[x].creation",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "bild-anhang",
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_mio42",
+              "display": "Bild-Anhang",
+              "version": "1.0.0-kommentierung.2"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component.code.coding.version",
+        "path": "Observation.component.code.coding.version",
+        "min": 1
+      },
+      {
+        "id": "Observation.component.code.text",
+        "path": "Observation.component.code.text",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.value[x]",
+        "path": "Observation.component.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.dataAbsentReason",
+        "path": "Observation.component.dataAbsentReason",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "not-permitted",
+              "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+              "display": "Not Permitted"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component.interpretation",
+        "path": "Observation.component.interpretation",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "max": "0"
+      }
+    ]
+  }
+}

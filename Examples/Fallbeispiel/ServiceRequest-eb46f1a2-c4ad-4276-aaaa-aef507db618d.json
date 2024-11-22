@@ -1,0 +1,45 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "eb46f1a2-c4ad-4276-aaaa-aef507db618d",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_ServiceRequest|1.0.0-kommentierung.2"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "721965002",
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "display": "Laboratory order (record artifact)"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Recipient_Laboratory_Report",
+      "extension": [
+        {
+          "url": "practitionerRole",
+          "valueReference": {
+            "reference": "urn:uuid:122fa5c5-f1f9-4406-9b8f-f6e451ca62ad"
+          }
+        }
+      ]
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "subject": {
+    "reference": "urn:uuid:84e01fa5-6763-4a96-99f3-170cf9b317ff"
+  },
+  "requester": {
+    "reference": "urn:uuid:24435567-fed3-43f8-8fc8-954f68df7fce"
+  },
+  "performer": [
+    {
+      "reference": "urn:uuid:2110eb93-f57f-4f17-8e80-b76bc98d2c6a"
+    }
+  ]
+}

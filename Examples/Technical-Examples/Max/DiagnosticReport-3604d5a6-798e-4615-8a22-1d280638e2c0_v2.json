@@ -1,0 +1,104 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "3604d5a6-798e-4615-8a22-1d280638e2c0",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DiagnosticReport|1.0.0-kommentierung.2"
+    ],
+    "versionId": "2",
+    "lastUpdated": "2023-06-03T11:15:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition",
+      "valueReference": {
+        "reference": "urn:uuid:2ba497bf-8615-4efc-a9c7-7fa9a4185334"
+      }
+    },
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Pseudonymized_Result",
+      "valueBoolean": true
+    },
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Critical_Result",
+      "valueBoolean": true
+    },
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Secondary_Status",
+      "valueCoding": {
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Secondary_Status",
+        "code": "Korrigiert",
+        "display": "Korrigiert"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:123456"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "AL",
+            "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Laboratory_Identificator",
+            "display": "Auftragsnummer des Labors",
+            "version": "1.0.0-kommentierung.2"
+          }
+        ]
+      },
+      "system": "http://www.acmedasdd.com/identifiers/patient",
+      "value": "123456"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "11502-2",
+        "system": "http://loinc.org",
+        "display": "Laboratory report",
+        "version": "2.73"
+      }
+    ],
+    "text": "test"
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">John Doe</div>"
+  },
+  "basedOn": [
+    {
+      "reference": "urn:uuid:22493d10-8b86-40ae-93eb-605365c8baf4"
+    }
+  ],
+  "status": "registered",
+  "subject": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7d"
+  },
+  "issued": "2022-08-09T12:00:00Z",
+  "performer": [
+    {
+      "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7d"
+    }
+  ],
+  "specimen": [
+    {
+      "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192b9o"
+    }
+  ],
+  "result": [
+    {
+      "reference": "urn:uuid:54f8aa9c-c91f-4d0a-8ab0-ad6cf50d4908"
+    }
+  ],
+  "conclusion": "test",
+  "presentedForm": [
+    {
+      "contentType": "application/pdf",
+      "data": "dGVzdA==",
+      "title": "Anhang",
+      "creation": "2022-05-06"
+    }
+  ]
+}

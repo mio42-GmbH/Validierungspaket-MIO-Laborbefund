@@ -1,0 +1,3168 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <id value="KBV-CM-MIO-LAB-Overview"/>
+    <url value="https://fhir.kbv.de/ConceptMap/KBV_CM_MIO_LAB_Overview"/>
+    <version value="1.0.0-kommentierung.2"/>
+    <name value="KBV_CM_MIO_LAB_Overview"/>
+    <title value="KBV_CM_MIO_LAB_Overview"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Diese Conceptmap verknüpft die Codes für KBV_CM_MIO_LAB_Overview mit deutschen Bezeichnungen."/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <group>
+        <source value="urn:ietf:bcp:47"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_CommonLanguages_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="tr-TR"/>
+            <display value="Turkish"/>
+            <target>
+                <code value="Tuerkisch"/>
+                <display value="Türkisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="uk"/>
+            <display value="Ukrainian"/>
+            <target>
+                <code value="Ukrainisch"/>
+                <display value="Ukrainisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://snomed.info/sct"/>
+        <sourceVersion value="http://snomed.info/sct/900000000000207008/version/20230731"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Nursing_Professions_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="224570006"/>
+            <display value="Clinical nurse specialist (occupation)"/>
+            <target>
+                <code value="PflegeexperteAPNAdvancedPracticeNurses"/>
+                <display value="Pflegeexperte APN (Advanced Practice Nurses)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="26369006"/>
+            <display value="Public health nurse (occupation)"/>
+            <target>
+                <code value="CommunityHealthNurseCHN"/>
+                <display value="Community Health Nurse (CHN)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://snomed.info/sct"/>
+        <sourceVersion value="http://snomed.info/sct/900000000000207008/version/20230731"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Practitioner_Speciality_SNOMED_CT_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="309343006"/>
+            <display value="Physician (occupation)"/>
+            <target>
+                <code value="AerztinArzt"/>
+                <display value="Ärztin/Arzt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://hl7.org/fhir/administrative-gender"/>
+        <sourceVersion value="4.0.1"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_AdministrativeGender_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="female"/>
+            <display value="Female"/>
+            <target>
+                <code value="weiblich"/>
+                <display value="weiblich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="male"/>
+            <display value="Male"/>
+            <target>
+                <code value="maennlich"/>
+                <display value="männlich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="unknown"/>
+            <display value="Unknown"/>
+            <target>
+                <code value="unbekannt"/>
+                <display value="unbekannt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="urn:ietf:bcp:47"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_CommonLanguages_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="ar"/>
+            <display value="Arabic"/>
+            <target>
+                <code value="Arabisch"/>
+                <display value="Arabisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="bn"/>
+            <display value="Bengali"/>
+            <target>
+                <code value="Bengalisch"/>
+                <display value="Bengalisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="cs"/>
+            <display value="Czech"/>
+            <target>
+                <code value="Tschechisch"/>
+                <display value="Tschechisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="da"/>
+            <display value="Danish"/>
+            <target>
+                <code value="Daenisch"/>
+                <display value="Dänisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="de"/>
+            <display value="German"/>
+            <target>
+                <code value="Deutsch"/>
+                <display value="Deutsch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="de-AT"/>
+            <display value="German (Austria)"/>
+            <target>
+                <code value="DeutschOesterreich"/>
+                <display value="Deutsch (Österreich)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="de-CH"/>
+            <display value="German (Switzerland)"/>
+            <target>
+                <code value="DeutschSchweiz"/>
+                <display value="Deutsch (Schweiz)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="de-DE"/>
+            <display value="German (Germany)"/>
+            <target>
+                <code value="DeutschDeutschland"/>
+                <display value="Deutsch (Deutschland)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="el"/>
+            <display value="Greek"/>
+            <target>
+                <code value="Griechisch"/>
+                <display value="Griechisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="en"/>
+            <display value="English"/>
+            <target>
+                <code value="Englisch"/>
+                <display value="Englisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="en-AU"/>
+            <display value="English (Australia)"/>
+            <target>
+                <code value="EnglischAustralien"/>
+                <display value="Englisch (Australien)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="en-CA"/>
+            <display value="English (Canada)"/>
+            <target>
+                <code value="EnglischKanada"/>
+                <display value="Englisch (Kanada)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="en-GB"/>
+            <display value="English (Great Britain)"/>
+            <target>
+                <code value="EnglischGrossbritannien"/>
+                <display value="Englisch (Großbritannien)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="en-IN"/>
+            <display value="English (India)"/>
+            <target>
+                <code value="EnglischIndien"/>
+                <display value="Englisch (Indien)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="en-NZ"/>
+            <display value="English (New Zeland)"/>
+            <target>
+                <code value="EnglischNeuseeland"/>
+                <display value="Englisch (Neuseeland)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="en-SG"/>
+            <display value="English (Singapore)"/>
+            <target>
+                <code value="EnglischSingapur"/>
+                <display value="Englisch (Singapur)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="en-US"/>
+            <display value="English (United States)"/>
+            <target>
+                <code value="EnglischUSA"/>
+                <display value="Englisch (USA)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="es"/>
+            <display value="Spanish"/>
+            <target>
+                <code value="Spanisch"/>
+                <display value="Spanisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="es-AR"/>
+            <display value="Spanish (Argentina)"/>
+            <target>
+                <code value="SpanischArgentinien"/>
+                <display value="Spanisch (Argentinien)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="es-ES"/>
+            <display value="Spanish (Spain)"/>
+            <target>
+                <code value="SpanischSpanien"/>
+                <display value="Spanisch (Spanien)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="es-UY"/>
+            <display value="Spanish (Uruguay)"/>
+            <target>
+                <code value="SpanischUruguay"/>
+                <display value="Spanisch (Uruguay)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="fi"/>
+            <display value="Finnish"/>
+            <target>
+                <code value="Finnisch"/>
+                <display value="Finnisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="fr"/>
+            <display value="French"/>
+            <target>
+                <code value="Franzoesisch"/>
+                <display value="Französisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="fr-BE"/>
+            <display value="French (Belgium)"/>
+            <target>
+                <code value="FranzoesischBelgien"/>
+                <display value="Französisch (Belgien)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="fr-CH"/>
+            <display value="French (Switzerland)"/>
+            <target>
+                <code value="FranzoesischSchweiz"/>
+                <display value="Französisch (Schweiz)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="fr-FR"/>
+            <display value="French (France)"/>
+            <target>
+                <code value="FranzoesischFrankreich"/>
+                <display value="Französisch (Frankreich)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="fy"/>
+            <display value="Frysian"/>
+            <target>
+                <code value="Friesisch"/>
+                <display value="Friesisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="fy-NL"/>
+            <display value="Frysian (Netherlands)"/>
+            <target>
+                <code value="FriesischNiederlande"/>
+                <display value="Friesisch (Niederlande)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="hr"/>
+            <display value="Croatian"/>
+            <target>
+                <code value="Kroatisch"/>
+                <display value="Kroatisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="it"/>
+            <display value="Italian"/>
+            <target>
+                <code value="Italienisch"/>
+                <display value="Italienisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="it-CH"/>
+            <display value="Italian (Switzerland)"/>
+            <target>
+                <code value="ItalienischSchweiz"/>
+                <display value="Italienisch (Schweiz)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="it-IT"/>
+            <display value="Italian (Italy)"/>
+            <target>
+                <code value="ItalienischItalien"/>
+                <display value="Italienisch (Italien)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ja"/>
+            <display value="Japanese"/>
+            <target>
+                <code value="Japanisch"/>
+                <display value="Japanisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ko"/>
+            <display value="Korean"/>
+            <target>
+                <code value="Koreanisch"/>
+                <display value="Koreanisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="nl"/>
+            <display value="Dutch"/>
+            <target>
+                <code value="Niederlaendisch"/>
+                <display value="Niederländisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="nl-BE"/>
+            <display value="Dutch (Belgium)"/>
+            <target>
+                <code value="NiederlaendischBelgien"/>
+                <display value="Niederländisch (Belgien)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="nl-NL"/>
+            <display value="Dutch (Netherlands)"/>
+            <target>
+                <code value="NiederlaendischNiederlande"/>
+                <display value="Niederländisch (Niederlande)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="no"/>
+            <display value="Norwegian"/>
+            <target>
+                <code value="Norwegisch"/>
+                <display value="Norwegisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="no-NO"/>
+            <display value="Norwegian (Norway)"/>
+            <target>
+                <code value="NorwegischNorwegen"/>
+                <display value="Norwegisch (Norwegen)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="pl"/>
+            <display value="Polish"/>
+            <target>
+                <code value="Polnisch"/>
+                <display value="Polnisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="pt"/>
+            <display value="Portuguese"/>
+            <target>
+                <code value="Portugiesisch"/>
+                <display value="Portugiesisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="pt-BR"/>
+            <display value="Portuguese (Brazil)"/>
+            <target>
+                <code value="PortugiesischBrasilien"/>
+                <display value="Portugiesisch (Brasilien)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ru"/>
+            <display value="Russian"/>
+            <target>
+                <code value="Russisch"/>
+                <display value="Russisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ru-RU"/>
+            <display value="Russian (Russia)"/>
+            <target>
+                <code value="RussischRussland"/>
+                <display value="Russisch (Russland)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="sr"/>
+            <display value="Serbian"/>
+            <target>
+                <code value="Serbisch"/>
+                <display value="Serbisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="sr-RS"/>
+            <display value="Serbian (Serbia)"/>
+            <target>
+                <code value="SerbischSerbien"/>
+                <display value="Serbisch (Serbien)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="sv"/>
+            <display value="Swedish"/>
+            <target>
+                <code value="Schwedisch"/>
+                <display value="Schwedisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="sv-SE"/>
+            <display value="Swedish (Sweden)"/>
+            <target>
+                <code value="SchwedischSchweden"/>
+                <display value="Schwedisch (Schweden)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="te"/>
+            <display value="Telegu"/>
+            <target>
+                <code value="Telugu"/>
+                <display value="Telugu"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="zh"/>
+            <display value="Chinese"/>
+            <target>
+                <code value="Chinesisch"/>
+                <display value="Chinesisch"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="zh-CN"/>
+            <display value="Chinese (China)"/>
+            <target>
+                <code value="ChinesischChina"/>
+                <display value="Chinesisch (China)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="zh-HK"/>
+            <display value="Chinese (Hong Kong)"/>
+            <target>
+                <code value="ChinesischHongKong"/>
+                <display value="Chinesisch (Hong Kong)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="zh-SG"/>
+            <display value="Chinese (Singapore)"/>
+            <target>
+                <code value="ChinesischSingapur"/>
+                <display value="Chinesisch (Singapur)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="zh-TW"/>
+            <display value="Chinese (Taiwan)"/>
+            <target>
+                <code value="ChinesischTaiwan"/>
+                <display value="Chinesisch (Taiwan)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://unitsofmeasure.org"/>
+        <sourceVersion value="2.1"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_CommonUCUMCodesForDuration_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="a"/>
+            <display value="years"/>
+            <target>
+                <code value="a"/>
+                <display value="a"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="d"/>
+            <display value="days"/>
+            <target>
+                <code value="d"/>
+                <display value="d"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="h"/>
+            <display value="hours"/>
+            <target>
+                <code value="h"/>
+                <display value="h"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="min"/>
+            <display value="minutes"/>
+            <target>
+                <code value="min"/>
+                <display value="min"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="mo"/>
+            <display value="months"/>
+            <target>
+                <code value="mo"/>
+                <display value="mo"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ms"/>
+            <display value="milliseconds"/>
+            <target>
+                <code value="ms"/>
+                <display value="ms"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="s"/>
+            <display value="seconds"/>
+            <target>
+                <code value="s"/>
+                <display value="s"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="wk"/>
+            <display value="weeks"/>
+            <target>
+                <code value="wk"/>
+                <display value="wk"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://hl7.org/fhir/contact-point-system"/>
+        <sourceVersion value="4.0.1"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_ContactPointSystem_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="email"/>
+            <display value="Email"/>
+            <target>
+                <code value="EMail"/>
+                <display value="E-Mail"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="other"/>
+            <display value="Other"/>
+            <target>
+                <code value="Sonstiges"/>
+                <display value="Sonstiges"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="phone"/>
+            <display value="Phone"/>
+            <target>
+                <code value="Telefon"/>
+                <display value="Telefon"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+        <sourceVersion value="4.0.1"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_DataAbsentReason_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="as-text"/>
+            <display value="As Text"/>
+            <target>
+                <code value="AlsText"/>
+                <display value="Als Text"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="asked-declined"/>
+            <display value="Asked But Declined"/>
+            <target>
+                <code value="Gefragtaberabgelehnt"/>
+                <display value="Gefragt, aber abgelehnt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="asked-unknown"/>
+            <display value="Asked But Unknown"/>
+            <target>
+                <code value="Gefragtabernichtbekannt"/>
+                <display value="Gefragt, aber nicht bekannt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="error"/>
+            <display value="Error"/>
+            <target>
+                <code value="Fehler"/>
+                <display value="Fehler"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="masked"/>
+            <display value="Masked"/>
+            <target>
+                <code value="Verdeckt"/>
+                <display value="Verdeckt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="negative-infinity"/>
+            <display value="Negative Infinity (NINF)"/>
+            <target>
+                <code value="NegativeUnendlichkeit"/>
+                <display value="Negative Unendlichkeit"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="not-a-number"/>
+            <display value="Not a Number (NaN)"/>
+            <target>
+                <code value="KeineZahlNaN"/>
+                <display value="Keine Zahl (NaN)"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="not-applicable"/>
+            <display value="Not Applicable"/>
+            <target>
+                <code value="Nichtzutreffend"/>
+                <display value="Nicht zutreffend"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="not-asked"/>
+            <display value="Not Asked"/>
+            <target>
+                <code value="Nichtangefragt"/>
+                <display value="Nicht angefragt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="not-performed"/>
+            <display value="Not Performed"/>
+            <target>
+                <code value="Wirdnichtausgefuehrt"/>
+                <display value="Wird nicht ausgeführt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="not-permitted"/>
+            <display value="Not Permitted"/>
+            <target>
+                <code value="Unzulaessig"/>
+                <display value="Unzulässig"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="positive-infinity"/>
+            <display value="Positive Infinity (PINF)"/>
+            <target>
+                <code value="PositiveUnendlichkeit"/>
+                <display value="Positive Unendlichkeit"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="temp-unknown"/>
+            <display value="Temporarily Unknown"/>
+            <target>
+                <code value="Derzeitunbekannt"/>
+                <display value="Derzeit unbekannt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="unknown"/>
+            <display value="Unknown"/>
+            <target>
+                <code value="Unbekannt"/>
+                <display value="Unbekannt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="unsupported"/>
+            <display value="Unsupported"/>
+            <target>
+                <code value="Nichtunterstuetzt"/>
+                <display value="Nicht unterstützt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://hl7.org/fhir/device-nametype"/>
+        <sourceVersion value="4.0.1"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_DeviceNameType_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="manufacturer-name"/>
+            <display value="Manufacturer name"/>
+            <target>
+                <code value="Herstellername"/>
+                <display value="Herstellername"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="model-name"/>
+            <display value="Model name"/>
+            <target>
+                <code value="Modellname"/>
+                <display value="Modellname"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="other"/>
+            <display value="other"/>
+            <target>
+                <code value="Sonstige"/>
+                <display value="Sonstige"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="patient-reported-name"/>
+            <display value="Patient Reported name"/>
+            <target>
+                <code value="PatientInberichteterName"/>
+                <display value="PatientInberichteter Name"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="udi-label-name"/>
+            <display value="UDI Label name"/>
+            <target>
+                <code value="UDIKennzeichnungsname"/>
+                <display value="UDI Kennzeichnungsname"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="user-friendly-name"/>
+            <display value="User Friendly name"/>
+            <target>
+                <code value="BenutzerfreundlicherName"/>
+                <display value="Benutzerfreundlicher Name"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://hl7.org/fhir/diagnostic-report-status"/>
+        <sourceVersion value="5.0.0"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Diagnostic_ReportStatus_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="cancelled"/>
+            <display value="Cancelled"/>
+            <target>
+                <code value="Storniert"/>
+                <display value="Storniert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="entered-in-error"/>
+            <display value="Entered in Error"/>
+            <target>
+                <code value="IrrtuemlicheEingabe"/>
+                <display value="Irrtümliche Eingabe"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="final"/>
+            <display value="Final"/>
+            <target>
+                <code value="Abgeschlossen"/>
+                <display value="Abgeschlossen"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="partial"/>
+            <display value="Partial"/>
+            <target>
+                <code value="Nichtvollstaendig"/>
+                <display value="Nicht vollständig"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="preliminary"/>
+            <display value="Preliminary"/>
+            <target>
+                <code value="Vorlaeufig"/>
+                <display value="Vorläufig"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="registered"/>
+            <display value="Registered"/>
+            <target>
+                <code value="Registriert"/>
+                <display value="Registriert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://terminology.hl7.org/CodeSystem/v2-0916"/>
+        <sourceVersion value="2.0.0"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Hl7VSRelevantClincialInformation_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="F"/>
+            <display value="Patient was fasting prior to the procedure."/>
+            <target>
+                <code value="Nuechtern"/>
+                <display value="Nüchtern"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="FNA"/>
+            <display value="Fasting not asked of the patient at time of procedure."/>
+            <target>
+                <code value="AufforderungzurNuechternheitnichterfolgt"/>
+                <display value="Aufforderung zur Nüchternheit nicht erfolgt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="NF"/>
+            <display value="The patient indicated they did not fast prior to the procedure."/>
+            <target>
+                <code value="Nichtnuechtern"/>
+                <display value="Nicht nüchtern"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="NG"/>
+            <display value="Not Given - Patient was not asked at the time of the procedure."/>
+            <target>
+                <code value="Nuechternstatusnichtabgefragt"/>
+                <display value="Nüchternstatus nicht abgefragt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://snomed.info/sct"/>
+        <sourceVersion value="http://snomed.info/sct/11000274103/version/20240515"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Laterality_Body_Structure_SNOMED_CT_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="24028007"/>
+            <display value="Right (qualifier value)"/>
+            <target>
+                <code value="Rechts"/>
+                <display value="Rechts"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="51440002"/>
+            <display value="Right and left (qualifier value)"/>
+            <target>
+                <code value="Bilateral"/>
+                <display value="Bilateral"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="7771000"/>
+            <display value="Left (qualifier value)"/>
+            <target>
+                <code value="Links"/>
+                <display value="Links"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://snomed.info/sct"/>
+        <sourceVersion value="http://snomed.info/sct/11000274103/version/20240515"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Localisation_Body_Strucutre_SNOMED_CT_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="24028007"/>
+            <display value="Right (qualifier value)"/>
+            <target>
+                <code value="Rechts"/>
+                <display value="Rechts"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="255480002"/>
+            <display value="Left lower quadrant (qualifier value)"/>
+            <target>
+                <code value="LinkeruntererQuadrant"/>
+                <display value="Linker unterer Quadrant"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="255481003"/>
+            <display value="Left upper quadrant (qualifier value)"/>
+            <target>
+                <code value="LinkerobererQuadrant"/>
+                <display value="Linker oberer Quadrant"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="255495000"/>
+            <display value="Right lower quadrant (qualifier value)"/>
+            <target>
+                <code value="RechteruntererQuadrant"/>
+                <display value="Rechter unterer Quadrant"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="255497008"/>
+            <display value="Right upper quadrant (qualifier value)"/>
+            <target>
+                <code value="RechterobererQuadrant"/>
+                <display value="Rechter oberer Quadrant"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="255549009"/>
+            <display value="Anterior (qualifier value)"/>
+            <target>
+                <code value="Anterior"/>
+                <display value="Anterior"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="255551008"/>
+            <display value="Posterior (qualifier value)"/>
+            <target>
+                <code value="Posterior"/>
+                <display value="Posterior"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="255554000"/>
+            <display value="Dorsal (qualifier value)"/>
+            <target>
+                <code value="Dorsal"/>
+                <display value="Dorsal"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="255561001"/>
+            <display value="Medial (qualifier value)"/>
+            <target>
+                <code value="Medial"/>
+                <display value="Medial"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260318004"/>
+            <display value="1 o'clock position (qualifier value)"/>
+            <target>
+                <code value="1UhrPosition"/>
+                <display value="1-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260319007"/>
+            <display value="1.30 o'clock position (qualifier value)"/>
+            <target>
+                <code value="0130UhrPosition"/>
+                <display value="01:30-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260322009"/>
+            <display value="10 o'clock position (qualifier value)"/>
+            <target>
+                <code value="10UhrPosition"/>
+                <display value="10-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260323004"/>
+            <display value="10.30 o'clock position (qualifier value)"/>
+            <target>
+                <code value="1030UhrPosition"/>
+                <display value="10:30-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260324005"/>
+            <display value="11 o'clock position (qualifier value)"/>
+            <target>
+                <code value="11UhrPosition"/>
+                <display value="11-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260325006"/>
+            <display value="11.30 o'clock position (qualifier value)"/>
+            <target>
+                <code value="1130UhrPosition"/>
+                <display value="11:30-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260326007"/>
+            <display value="12 o'clock position (qualifier value)"/>
+            <target>
+                <code value="12UhrPosition"/>
+                <display value="12-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260327003"/>
+            <display value="12.30 o'clock position (qualifier value)"/>
+            <target>
+                <code value="1230UhrPosition"/>
+                <display value="12:30-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260328008"/>
+            <display value="2 o'clock position (qualifier value)"/>
+            <target>
+                <code value="2UhrPosition"/>
+                <display value="2-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260329000"/>
+            <display value="2.30 o'clock position (qualifier value)"/>
+            <target>
+                <code value="0230UhrPosition"/>
+                <display value="02:30-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260330005"/>
+            <display value="3 o'clock position (qualifier value)"/>
+            <target>
+                <code value="3UhrPosition"/>
+                <display value="3-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260331009"/>
+            <display value="3.30 o'clock position (qualifier value)"/>
+            <target>
+                <code value="0330UhrPosition"/>
+                <display value="03:30-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260333007"/>
+            <display value="4 o'clock position (qualifier value)"/>
+            <target>
+                <code value="4UhrPosition"/>
+                <display value="4-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260334001"/>
+            <display value="4.30 o'clock position (qualifier value)"/>
+            <target>
+                <code value="0430UhrPosition"/>
+                <display value="04:30-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260335000"/>
+            <display value="5 o'clock position (qualifier value)"/>
+            <target>
+                <code value="5UhrPosition"/>
+                <display value="5-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260336004"/>
+            <display value="5.30 o'clock position (qualifier value)"/>
+            <target>
+                <code value="0530UhrPosition"/>
+                <display value="05:30-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260337008"/>
+            <display value="6 o'clock position (qualifier value)"/>
+            <target>
+                <code value="6UhrPosition"/>
+                <display value="6-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260338003"/>
+            <display value="6.30 o'clock position (qualifier value)"/>
+            <target>
+                <code value="0630UhrPosition"/>
+                <display value="06:30-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260339006"/>
+            <display value="7 o'clock position (qualifier value)"/>
+            <target>
+                <code value="7UhrPosition"/>
+                <display value="7-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260340008"/>
+            <display value="7.30 o'clock position (qualifier value)"/>
+            <target>
+                <code value="0730UhrPosition"/>
+                <display value="07:30-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260341007"/>
+            <display value="8 o'clock position (qualifier value)"/>
+            <target>
+                <code value="8UhrPosition"/>
+                <display value="8-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260342000"/>
+            <display value="8.30 o'clock position (qualifier value)"/>
+            <target>
+                <code value="0830UhrPosition"/>
+                <display value="08:30-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260343005"/>
+            <display value="9 o'clock position (qualifier value)"/>
+            <target>
+                <code value="9UhrPosition"/>
+                <display value="9-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260344004"/>
+            <display value="9.30 o'clock position (qualifier value)"/>
+            <target>
+                <code value="0930UhrPosition"/>
+                <display value="09:30-Uhr-Position"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="261089000"/>
+            <display value="Inferior (qualifier value)"/>
+            <target>
+                <code value="Inferior"/>
+                <display value="Inferior"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="261122009"/>
+            <display value="Lower (qualifier value)"/>
+            <target>
+                <code value="Unterer"/>
+                <display value="Untere:r"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="261183002"/>
+            <display value="Upper (qualifier value)"/>
+            <target>
+                <code value="Oberer"/>
+                <display value="Obere:r"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="26283006"/>
+            <display value="Superficial (qualifier value)"/>
+            <target>
+                <code value="Superficial"/>
+                <display value="Superficial"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="264217000"/>
+            <display value="Superior (qualifier value)"/>
+            <target>
+                <code value="Superior"/>
+                <display value="Superior"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="351726001"/>
+            <display value="Below (qualifier value)"/>
+            <target>
+                <code value="Infra"/>
+                <display value="Infra"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="352730000"/>
+            <display value="Supra- (qualifier value)"/>
+            <target>
+                <code value="Supra"/>
+                <display value="Supra"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="3583002"/>
+            <display value="Caudal (qualifier value)"/>
+            <target>
+                <code value="Caudal"/>
+                <display value="Caudal"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="40415009"/>
+            <display value="Proximal (qualifier value)"/>
+            <target>
+                <code value="Proximal"/>
+                <display value="Proximal"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="46053002"/>
+            <display value="Distal (qualifier value)"/>
+            <target>
+                <code value="Distal"/>
+                <display value="Distal"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="49370004"/>
+            <display value="Lateral (qualifier value)"/>
+            <target>
+                <code value="Lateral"/>
+                <display value="Lateral"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="57195005"/>
+            <display value="Basal (qualifier value)"/>
+            <target>
+                <code value="Basal"/>
+                <display value="Basal"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="66787007"/>
+            <display value="Cephalic (qualifier value)"/>
+            <target>
+                <code value="Cranial"/>
+                <display value="Cranial"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="7771000"/>
+            <display value="Left (qualifier value)"/>
+            <target>
+                <code value="Links"/>
+                <display value="Links"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="795002"/>
+            <display value="Deep (qualifier value)"/>
+            <target>
+                <code value="Profund"/>
+                <display value="Profund"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="urn:ietf:bcp:13"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_MIME_Types_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="application/pdf"/>
+            <display value="pdf"/>
+            <target>
+                <code value="PDFDatei"/>
+                <display value="PDF-Datei"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="image/bmp"/>
+            <display value="bmp"/>
+            <target>
+                <code value="BMPDatei"/>
+                <display value="BMP-Datei"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="image/gif"/>
+            <display value="gif"/>
+            <target>
+                <code value="GIFDatei"/>
+                <display value="GIF-Datei"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="image/jpeg"/>
+            <display value="jpeg"/>
+            <target>
+                <code value="JPEGDatei"/>
+                <display value="JPEG-Datei"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="image/png"/>
+            <display value="png"/>
+            <target>
+                <code value="PNGDatei"/>
+                <display value="PNG-Datei"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="image/svg+xml"/>
+            <display value="svg+xml"/>
+            <target>
+                <code value="SVGXMLDatei"/>
+                <display value="SVG-XML-Datei"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="image/tiff"/>
+            <display value="tiff"/>
+            <target>
+                <code value="TIFFDatei"/>
+                <display value="TIFF-Datei"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="image/wmf"/>
+            <display value="wmf"/>
+            <target>
+                <code value="WMFDatei"/>
+                <display value="WMF-Datei"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="text/plain"/>
+            <display value="text/plain"/>
+            <target>
+                <code value="TextPlainDatei"/>
+                <display value="Text/Plain-Datei"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+        <sourceVersion value="2018-08-12"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_ObservationInterpretationCodes_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="&lt;"/>
+            <display value="Off scale low"/>
+            <target>
+                <code value="UnterhalbderanalytischenGrenze"/>
+                <display value="Unterhalb der analytischen Grenze"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="&gt;"/>
+            <display value="Off scale high"/>
+            <target>
+                <code value="OberhalbderanalytischenGrenze"/>
+                <display value="Oberhalb der analytischen Grenze"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="AA"/>
+            <display value="Critical abnormal"/>
+            <target>
+                <code value="Kritischabnormal"/>
+                <display value="Kritisch abnormal"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="AC"/>
+            <display value="Anti-complementary substances present"/>
+            <target>
+                <code value="VorhandeneantikomplementaereSubstanzen"/>
+                <display value="Vorhandene antikomplementäre Substanzen"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="B"/>
+            <display value="Better"/>
+            <target>
+                <code value="Besser"/>
+                <display value="Besser"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="CAR"/>
+            <display value="Carrier"/>
+            <target>
+                <code value="Anlagetraeger"/>
+                <display value="Anlageträger"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="Carrier"/>
+            <display value="Carrier"/>
+            <target>
+                <code value="Anlagetraeger"/>
+                <display value="Anlageträger"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="D"/>
+            <display value="Significant change down"/>
+            <target>
+                <code value="SignifikanterRueckgang"/>
+                <display value="Signifikanter Rückgang"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="DET"/>
+            <display value="Detected"/>
+            <target>
+                <code value="Nachgewiesen"/>
+                <display value="Nachgewiesen"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="E"/>
+            <display value="Equivocal"/>
+            <target>
+                <code value="Uneindeutig"/>
+                <display value="Uneindeutig"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="EX"/>
+            <display value="outside threshold"/>
+            <target>
+                <code value="InterpretationausserhalbdesGrenzwertes"/>
+                <display value="Interpretation außerhalb des Grenzwertes"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="EXP"/>
+            <display value="Expected"/>
+            <target>
+                <code value="Erwartet"/>
+                <display value="Erwartet"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="H"/>
+            <display value="High"/>
+            <target>
+                <code value="Erhoeht"/>
+                <display value="Erhöht"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="H&gt;"/>
+            <display value="Significantly high"/>
+            <target>
+                <code value="Signifikanterhoeht"/>
+                <display value="Signifikant erhöht"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="HH"/>
+            <display value="Critical high"/>
+            <target>
+                <code value="Kritischerhoeht"/>
+                <display value="Kritisch erhöht"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="HM"/>
+            <display value="Hold for Medical Review"/>
+            <target>
+                <code value="ZurmedizinischenUeberpruefungzurueckhalten"/>
+                <display value="Zur medizinischen Überprüfung zurückhalten"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="HU"/>
+            <display value="Significantly high"/>
+            <target>
+                <code value="Signifikanterhoeht"/>
+                <display value="Signifikant erhöht"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="HX"/>
+            <display value="above high threshold"/>
+            <target>
+                <code value="OberhalbdesoberenGrenzwert"/>
+                <display value="Oberhalb des oberen Grenzwert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="I"/>
+            <display value="Intermediate"/>
+            <target>
+                <code value="MittlereEmpfindlichkeit"/>
+                <display value="Mittlere Empfindlichkeit"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="IE"/>
+            <display value="Insufficient evidence"/>
+            <target>
+                <code value="Evidenzunzureichend"/>
+                <display value="Evidenz unzureichend"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="IND"/>
+            <display value="Indeterminate"/>
+            <target>
+                <code value="Unbestimmbar"/>
+                <display value="Unbestimmbar"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="L"/>
+            <display value="Low"/>
+            <target>
+                <code value="Erniedrigt"/>
+                <display value="Erniedrigt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="L&lt;"/>
+            <display value="Significantly low"/>
+            <target>
+                <code value="Signifikantniedrig"/>
+                <display value="Signifikant niedrig"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="LL"/>
+            <display value="Critical low"/>
+            <target>
+                <code value="Kritischerniedrigt"/>
+                <display value="Kritisch erniedrigt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="LU"/>
+            <display value="Significantly low"/>
+            <target>
+                <code value="Signifikantniedrig"/>
+                <display value="Signifikant niedrig"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="LX"/>
+            <display value="below low threshold"/>
+            <target>
+                <code value="UnterhalbdesunterenGrenzwert"/>
+                <display value="Unterhalb des unteren Grenzwert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="MS"/>
+            <display value="moderately susceptible"/>
+            <target>
+                <code value="MittlereEmpfindlichkeit"/>
+                <display value="Mittlere Empfindlichkeit"/>
+                <equivalence value="wider"/>
+            </target>
+        </element>
+        <element>
+            <code value="NCL"/>
+            <display value="No CLSI defined breakpoint"/>
+            <target>
+                <code value="KeinCLSIdefinierterSchwellenwertfuerEmpfindlichkeitverfuegbar"/>
+                <display value="Kein CLSI definierter Schwellenwert  für Empfindlichkeit verfügbar"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ND"/>
+            <display value="Not detected"/>
+            <target>
+                <code value="Nichtnachgewiesen"/>
+                <display value="Nicht nachgewiesen"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="NEG"/>
+            <display value="Negative"/>
+            <target>
+                <code value="Negativ"/>
+                <display value="Negativ"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="NR"/>
+            <display value="Non-reactive"/>
+            <target>
+                <code value="Nichtreaktiv"/>
+                <display value="Nicht reaktiv"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="NS"/>
+            <display value="Non-susceptible"/>
+            <target>
+                <code value="Nichtempfindlich"/>
+                <display value="Nicht empfindlich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="OBX"/>
+            <display value="Interpretation qualifiers in separate OBX segments"/>
+            <target>
+                <code value="DolmetscherkennzeicheninseparatenOBXSegmenten"/>
+                <display value="Dolmetscherkennzeichen in separaten OBX-Segmenten"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ObservationInterpretationDetection"/>
+            <display value="ObservationInterpretationDetection"/>
+            <target>
+                <code value="Feststellungsinterpretation"/>
+                <display value="Feststellungsinterpretation"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ObservationInterpretationExpectation"/>
+            <display value="ObservationInterpretationExpectation"/>
+            <target>
+                <code value="Erwartungsinterpretation"/>
+                <display value="Erwartungsinterpretation"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="POS"/>
+            <display value="Positive"/>
+            <target>
+                <code value="Positiv"/>
+                <display value="Positiv"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="QCF"/>
+            <display value="Quality control failure"/>
+            <target>
+                <code value="VersagenderQualitaetskontrolle"/>
+                <display value="Versagen der Qualitätskontrolle"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="R"/>
+            <display value="Resistant"/>
+            <target>
+                <code value="Resistent"/>
+                <display value="Resistent"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="RR"/>
+            <display value="Reactive"/>
+            <target>
+                <code value="Reaktiv"/>
+                <display value="Reaktiv"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ReactivityObservationInterpretation"/>
+            <display value="ReactivityObservationInterpretation"/>
+            <target>
+                <code value="Reaktivitaetsinterpretation"/>
+                <display value="Reaktivitätsinterpretation"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="S"/>
+            <display value="Susceptible"/>
+            <target>
+                <code value="Empfindlich"/>
+                <display value="Empfindlich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="SDD"/>
+            <display value="Susceptible-dose dependent"/>
+            <target>
+                <code value="DosisKonzentrationsabhaengigeEmpfindlichkeit"/>
+                <display value="Dosis-/Konzentrationsabhängige Empfindlichkeit"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="SYN-R"/>
+            <display value="Synergy - resistant"/>
+            <target>
+                <code value="ResistentgegenueberSubstanzkombination"/>
+                <display value="Resistent  gegenüber Substanzkombination"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="SYN-S"/>
+            <display value="Synergy - susceptible"/>
+            <target>
+                <code value="EmpfindlichgegenueberSubstanzkombination"/>
+                <display value="Empfindlich  gegenüber Substanzkombination"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="TOX"/>
+            <display value="Cytotoxic substance present"/>
+            <target>
+                <code value="ZytotoxischeSubstanzvorhanden"/>
+                <display value="Zytotoxische Substanz vorhanden"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="U"/>
+            <display value="Significant change up"/>
+            <target>
+                <code value="SignifikanterAnstieg"/>
+                <display value="Signifikanter Anstieg"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="UNE"/>
+            <display value="Unexpected"/>
+            <target>
+                <code value="Unerwartet"/>
+                <display value="Unerwartet"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="VS"/>
+            <display value="very susceptible"/>
+            <target>
+                <code value="Sehrempfindlich"/>
+                <display value="Sehr empfindlich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="W"/>
+            <display value="Worse"/>
+            <target>
+                <code value="Schlechter"/>
+                <display value="Schlechter"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="WR"/>
+            <display value="Weakly reactive"/>
+            <target>
+                <code value="Schwachreaktiv"/>
+                <display value="Schwach reaktiv"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="_GeneticObservationInterpretation"/>
+            <display value="GeneticObservationInterpretation"/>
+            <target>
+                <code value="InterpretationdergenetischenAnalyse"/>
+                <display value="Interpretation der genetischen Analyse"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="_ObservationInterpretationChange"/>
+            <display value="ObservationInterpretationChange"/>
+            <target>
+                <code value="Aenderungsverlauf"/>
+                <display value="Änderungsverlauf"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="_ObservationInterpretationExceptions"/>
+            <display value="ObservationInterpretationExceptions"/>
+            <target>
+                <code value="Ausnahmewertinterpretation"/>
+                <display value="Ausnahmewertinterpretation"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="_ObservationInterpretationNormality"/>
+            <display value="ObservationInterpretationNormality"/>
+            <target>
+                <code value="Normalitaetsinterpretation"/>
+                <display value="Normalitätsinterpretation"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="_ObservationInterpretationSusceptibility"/>
+            <display value="ObservationInterpretationSusceptibility"/>
+            <target>
+                <code value="InterpretationderantimikrobiellenResistenztestung"/>
+                <display value="Interpretation der antimikrobiellen Resistenztestung"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+        <sourceVersion value="2018-08-12"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_ObservationInterpretationCodes_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="&lt;"/>
+            <display value="Off scale low"/>
+            <target>
+                <code value="UnterhalbderanalytischenGrenze"/>
+                <display value="Unterhalb der analytischen Grenze"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="&gt;"/>
+            <display value="Off scale high"/>
+            <target>
+                <code value="OberhalbderanalytischenGrenze"/>
+                <display value="Oberhalb der analytischen Grenze"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="AA"/>
+            <display value="Critical abnormal"/>
+            <target>
+                <code value="Kritischabnormal"/>
+                <display value="Kritisch abnormal"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="AC"/>
+            <display value="Anti-complementary substances present"/>
+            <target>
+                <code value="VorhandeneantikomplementaereSubstanzen"/>
+                <display value="Vorhandene antikomplementäre Substanzen"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="B"/>
+            <display value="Better"/>
+            <target>
+                <code value="Besser"/>
+                <display value="Besser"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="CAR"/>
+            <display value="Carrier"/>
+            <target>
+                <code value="Anlagetraeger"/>
+                <display value="Anlageträger"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="Carrier"/>
+            <display value="Carrier"/>
+            <target>
+                <code value="Anlagetraeger"/>
+                <display value="Anlageträger"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="D"/>
+            <display value="Significant change down"/>
+            <target>
+                <code value="SignifikanterRueckgang"/>
+                <display value="Signifikanter Rückgang"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="DET"/>
+            <display value="Detected"/>
+            <target>
+                <code value="Nachgewiesen"/>
+                <display value="Nachgewiesen"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="E"/>
+            <display value="Equivocal"/>
+            <target>
+                <code value="Uneindeutig"/>
+                <display value="Uneindeutig"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="EX"/>
+            <display value="outside threshold"/>
+            <target>
+                <code value="InterpretationausserhalbdesGrenzwertes"/>
+                <display value="Interpretation außerhalb des Grenzwertes"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="EXP"/>
+            <display value="Expected"/>
+            <target>
+                <code value="Erwartet"/>
+                <display value="Erwartet"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="H"/>
+            <display value="High"/>
+            <target>
+                <code value="Erhoeht"/>
+                <display value="Erhöht"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="H&gt;"/>
+            <display value="Significantly high"/>
+            <target>
+                <code value="Signifikanterhoeht"/>
+                <display value="Signifikant erhöht"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="HH"/>
+            <display value="Critical high"/>
+            <target>
+                <code value="Kritischerhoeht"/>
+                <display value="Kritisch erhöht"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="HM"/>
+            <display value="Hold for Medical Review"/>
+            <target>
+                <code value="ZurmedizinischenUeberpruefungzurueckhalten"/>
+                <display value="Zur medizinischen Überprüfung zurückhalten"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="HU"/>
+            <display value="Significantly high"/>
+            <target>
+                <code value="Signifikanterhoeht"/>
+                <display value="Signifikant erhöht"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="HX"/>
+            <display value="above high threshold"/>
+            <target>
+                <code value="OberhalbdesoberenGrenzwert"/>
+                <display value="Oberhalb des oberen Grenzwert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="I"/>
+            <display value="Intermediate"/>
+            <target>
+                <code value="MittlereEmpfindlichkeit"/>
+                <display value="Mittlere Empfindlichkeit"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="IE"/>
+            <display value="Insufficient evidence"/>
+            <target>
+                <code value="Evidenzunzureichend"/>
+                <display value="Evidenz unzureichend"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="IND"/>
+            <display value="Indeterminate"/>
+            <target>
+                <code value="Unbestimmbar"/>
+                <display value="Unbestimmbar"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="L"/>
+            <display value="Low"/>
+            <target>
+                <code value="Erniedrigt"/>
+                <display value="Erniedrigt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="L&lt;"/>
+            <display value="Significantly low"/>
+            <target>
+                <code value="Signifikantniedrig"/>
+                <display value="Signifikant niedrig"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="LL"/>
+            <display value="Critical low"/>
+            <target>
+                <code value="Kritischerniedrigt"/>
+                <display value="Kritisch erniedrigt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="LU"/>
+            <display value="Significantly low"/>
+            <target>
+                <code value="Signifikantniedrig"/>
+                <display value="Signifikant niedrig"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="LX"/>
+            <display value="below low threshold"/>
+            <target>
+                <code value="UnterhalbdesunterenGrenzwert"/>
+                <display value="Unterhalb des unteren Grenzwert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="MS"/>
+            <display value="moderately susceptible"/>
+            <target>
+                <code value="MittlereEmpfindlichkeit"/>
+                <display value="Mittlere Empfindlichkeit"/>
+                <equivalence value="wider"/>
+            </target>
+        </element>
+        <element>
+            <code value="NCL"/>
+            <display value="No CLSI defined breakpoint"/>
+            <target>
+                <code value="KeinCLSIdefinierterSchwellenwertfuerEmpfindlichkeitverfuegbar"/>
+                <display value="Kein CLSI definierter Schwellenwert  für Empfindlichkeit verfügbar"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ND"/>
+            <display value="Not detected"/>
+            <target>
+                <code value="Nichtnachgewiesen"/>
+                <display value="Nicht nachgewiesen"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="NEG"/>
+            <display value="Negative"/>
+            <target>
+                <code value="Negativ"/>
+                <display value="Negativ"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="NR"/>
+            <display value="Non-reactive"/>
+            <target>
+                <code value="Nichtreaktiv"/>
+                <display value="Nicht reaktiv"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="NS"/>
+            <display value="Non-susceptible"/>
+            <target>
+                <code value="Nichtempfindlich"/>
+                <display value="Nicht empfindlich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="OBX"/>
+            <display value="Interpretation qualifiers in separate OBX segments"/>
+            <target>
+                <code value="DolmetscherkennzeicheninseparatenOBXSegmenten"/>
+                <display value="Dolmetscherkennzeichen in separaten OBX-Segmenten"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ObservationInterpretationDetection"/>
+            <display value="ObservationInterpretationDetection"/>
+            <target>
+                <code value="Feststellungsinterpretation"/>
+                <display value="Feststellungsinterpretation"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ObservationInterpretationExpectation"/>
+            <display value="ObservationInterpretationExpectation"/>
+            <target>
+                <code value="Erwartungsinterpretation"/>
+                <display value="Erwartungsinterpretation"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="POS"/>
+            <display value="Positive"/>
+            <target>
+                <code value="Positiv"/>
+                <display value="Positiv"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="QCF"/>
+            <display value="Quality control failure"/>
+            <target>
+                <code value="VersagenderQualitaetskontrolle"/>
+                <display value="Versagen der Qualitätskontrolle"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="R"/>
+            <display value="Resistant"/>
+            <target>
+                <code value="Resistent"/>
+                <display value="Resistent"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="RR"/>
+            <display value="Reactive"/>
+            <target>
+                <code value="Reaktiv"/>
+                <display value="Reaktiv"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ReactivityObservationInterpretation"/>
+            <display value="ReactivityObservationInterpretation"/>
+            <target>
+                <code value="Reaktivitaetsinterpretation"/>
+                <display value="Reaktivitätsinterpretation"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="S"/>
+            <display value="Susceptible"/>
+            <target>
+                <code value="Empfindlich"/>
+                <display value="Empfindlich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="SDD"/>
+            <display value="Susceptible-dose dependent"/>
+            <target>
+                <code value="DosisKonzentrationsabhaengigeEmpfindlichkeit"/>
+                <display value="Dosis-/Konzentrationsabhängige Empfindlichkeit"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="SYN-R"/>
+            <display value="Synergy - resistant"/>
+            <target>
+                <code value="ResistentgegenueberSubstanzkombination"/>
+                <display value="Resistent gegenüber Substanzkombination"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="SYN-S"/>
+            <display value="Synergy - susceptible"/>
+            <target>
+                <code value="EmpfindlichgegenueberSubstanzkombination"/>
+                <display value="Empfindlich  gegenüber Substanzkombination"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="TOX"/>
+            <display value="Cytotoxic substance present"/>
+            <target>
+                <code value="ZytotoxischeSubstanzvorhanden"/>
+                <display value="Zytotoxische Substanz vorhanden"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="U"/>
+            <display value="Significant change up"/>
+            <target>
+                <code value="SignifikanterAnstieg"/>
+                <display value="Signifikanter Anstieg"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="UNE"/>
+            <display value="Unexpected"/>
+            <target>
+                <code value="Unerwartet"/>
+                <display value="Unerwartet"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="VS"/>
+            <display value="very susceptible"/>
+            <target>
+                <code value="Sehrempfindlich"/>
+                <display value="Sehr empfindlich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="W"/>
+            <display value="Worse"/>
+            <target>
+                <code value="Schlechter"/>
+                <display value="Schlechter"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="WR"/>
+            <display value="Weakly reactive"/>
+            <target>
+                <code value="Schwachreaktiv"/>
+                <display value="Schwach reaktiv"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="_GeneticObservationInterpretation"/>
+            <display value="GeneticObservationInterpretation"/>
+            <target>
+                <code value="InterpretationdergenetischenAnalyse"/>
+                <display value="Interpretation der genetischen Analyse"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="_ObservationInterpretationChange"/>
+            <display value="ObservationInterpretationChange"/>
+            <target>
+                <code value="Aenderungsverlauf"/>
+                <display value="Änderungsverlauf"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="_ObservationInterpretationExceptions"/>
+            <display value="ObservationInterpretationExceptions"/>
+            <target>
+                <code value="Ausnahmewertinterpretation"/>
+                <display value="Ausnahmewertinterpretation"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="_ObservationInterpretationNormality"/>
+            <display value="ObservationInterpretationNormality"/>
+            <target>
+                <code value="Normalitaetsinterpretation"/>
+                <display value="Normalitätsinterpretation"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="_ObservationInterpretationSusceptibility"/>
+            <display value="ObservationInterpretationSusceptibility"/>
+            <target>
+                <code value="InterpretationderantimikrobiellenResistenztestung"/>
+                <display value="Interpretation der antimikrobiellen Resistenztestung"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+        <sourceVersion value="4.0.1"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_ObservationReferenceRangeMeaningCodes_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="endocrine"/>
+            <display value="Endocrine"/>
+            <target>
+                <code value="Endokrinologischadaptiert"/>
+                <display value="Endokrinologisch adaptiert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="follicular"/>
+            <display value="Follicular Stage"/>
+            <target>
+                <code value="ErwartungsbereichimfollikulaerenStadium"/>
+                <display value="Erwartungsbereich im follikulären Stadium"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="luteal"/>
+            <display value="Luteal"/>
+            <target>
+                <code value="ErwartungsbereichinderlutealenPhase"/>
+                <display value="Erwartungsbereich in der lutealen Phase"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="midcycle"/>
+            <display value="MidCycle"/>
+            <target>
+                <code value="ErwartungsbereichinderZyklusmitte"/>
+                <display value="Erwartungsbereich in der Zyklusmitte"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="normal"/>
+            <display value="Normal Range"/>
+            <target>
+                <code value="Referenzbereich"/>
+                <display value="Referenzbereich"/>
+                <equivalence value="wider"/>
+            </target>
+        </element>
+        <element>
+            <code value="post"/>
+            <display value="Post Therapeutic Desired Level"/>
+            <target>
+                <code value="PosttherapeutischerZielbereich"/>
+                <display value="Posttherapeutischer Zielbereich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="postmenopausal"/>
+            <display value="Post-Menopause"/>
+            <target>
+                <code value="Erwartungsbereichpostmenopausal"/>
+                <display value="Erwartungsbereich postmenopausal"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="pre"/>
+            <display value="Pre Therapeutic Desired Level"/>
+            <target>
+                <code value="PraetherapeutischerZielbereich"/>
+                <display value="Prätherapeutischer Zielbereich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="pre-puberty"/>
+            <display value="Pre-Puberty"/>
+            <target>
+                <code value="Erwartungsbereichpraepubertaer"/>
+                <display value="Erwartungsbereich präpubertär"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="recommended"/>
+            <display value="Recommended Range"/>
+            <target>
+                <code value="EntscheidungsgrenzeBewertungsgrenze"/>
+                <display value="Entscheidungsgrenze, Bewertungsgrenze"/>
+                <equivalence value="wider"/>
+            </target>
+        </element>
+        <element>
+            <code value="therapeutic"/>
+            <display value="Therapeutic Desired Level"/>
+            <target>
+                <code value="TherapeutischerZielbereich"/>
+                <display value="Therapeutischer Zielbereich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="treatment"/>
+            <display value="Treatment Range"/>
+            <target>
+                <code value="TherapeutischerBereich"/>
+                <display value="Therapeutischer Bereich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="type"/>
+            <display value="Type"/>
+            <target>
+                <code value="Generell"/>
+                <display value="Generell"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://hl7.org/fhir/observation-status"/>
+        <sourceVersion value="5.0.0"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Observation_Status_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="amended"/>
+            <display value="Amended"/>
+            <target>
+                <code value="Geaendert"/>
+                <display value="Geändert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="cancelled"/>
+            <display value="Cancelled"/>
+            <target>
+                <code value="Storniert"/>
+                <display value="Storniert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="corrected"/>
+            <display value="Corrected"/>
+            <target>
+                <code value="Korrigiert"/>
+                <display value="Korrigiert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="entered-in-error"/>
+            <display value="Entered in Error"/>
+            <target>
+                <code value="IrrtuemlicheEingabe"/>
+                <display value="Irrtümliche Eingabe"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="final"/>
+            <display value="Final"/>
+            <target>
+                <code value="Abgeschlossen"/>
+                <display value="Abgeschlossen"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="preliminary"/>
+            <display value="Preliminary"/>
+            <target>
+                <code value="Vorlaeufig"/>
+                <display value="Vorläufig"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="registered"/>
+            <display value="Registered"/>
+            <target>
+                <code value="Registriert"/>
+                <display value="Registriert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://snomed.info/sct"/>
+        <sourceVersion value="http://snomed.info/sct/11000274103/version/20240515"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Presence_Ordinal_SNOMED_CT_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="260347006"/>
+            <display value="Present + out of ++++ (qualifier value)"/>
+            <target>
+                <code value="Vorhandenaus"/>
+                <display value="Vorhanden + aus ++++"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260348001"/>
+            <display value="Present ++ out of ++++ (qualifier value)"/>
+            <target>
+                <code value="Vorhandenaus"/>
+                <display value="Vorhanden ++ aus ++++"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260349009"/>
+            <display value="Present +++ out of ++++ (qualifier value)"/>
+            <target>
+                <code value="Vorhandenaus"/>
+                <display value="Vorhanden +++ aus ++++"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260350009"/>
+            <display value="Present ++++ out of ++++ (qualifier value)"/>
+            <target>
+                <code value="Vorhandenaus"/>
+                <display value="Vorhanden ++++ aus ++++"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="260405006"/>
+            <display value="Trace (qualifier value)"/>
+            <target>
+                <code value="Nachweis"/>
+                <display value="Nachweis"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="410594000"/>
+            <display value="Definitely not present (qualifier value)"/>
+            <target>
+                <code value="Eindeutignichtvorhanden"/>
+                <display value="Eindeutig nicht vorhanden"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="441517005"/>
+            <display value="Present two plus out of three plus (qualifier value)"/>
+            <target>
+                <code value="Vorhandeneinausdrei"/>
+                <display value="Vorhanden ein ++ aus drei +++"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="441521003"/>
+            <display value="Present three plus out of three plus (qualifier value)"/>
+            <target>
+                <code value="Vorhandeneinausdrei"/>
+                <display value="Vorhanden ein +++ aus drei +++"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="441614007"/>
+            <display value="Present one plus out of three plus (qualifier value)"/>
+            <target>
+                <code value="Vorhandeneinausdrei"/>
+                <display value="Vorhanden ein + aus drei +++"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://hl7.org/fhir/quantity-comparator"/>
+        <sourceVersion value="4.0.1"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_QuantityComparator_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="&lt;"/>
+            <display value="Less than"/>
+            <target>
+                <code value="Kleiner"/>
+                <display value="Kleiner"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="&lt;="/>
+            <display value="Less or Equal to"/>
+            <target>
+                <code value="Kleinerodergleich"/>
+                <display value="Kleiner oder gleich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="&gt;"/>
+            <display value="Greater than"/>
+            <target>
+                <code value="Groesser"/>
+                <display value="Größer"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="&gt;="/>
+            <display value="Greater or Equal to"/>
+            <target>
+                <code value="Groesserodergleich"/>
+                <display value="Größer oder gleich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://hl7.org/fhir/request-priority"/>
+        <sourceVersion value="4.0.1"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_RequestPriority_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="asap"/>
+            <display value="ASAP"/>
+            <target>
+                <code value="Baldmoeglichst"/>
+                <display value="Baldmöglichst"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="stat"/>
+            <display value="STAT"/>
+            <target>
+                <code value="SofortNotfall"/>
+                <display value="Sofort/Notfall"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="urgent"/>
+            <display value="Urgent"/>
+            <target>
+                <code value="Dringend"/>
+                <display value="Dringend"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+        <sourceVersion value="0.1.0"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_SexParameterForClinicalUse_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="unknown"/>
+            <display value="Unknown"/>
+            <target>
+                <code value="Unbekannt"/>
+                <display value="Unbekannt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"/>
+        <sourceVersion value="1.0.0"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_SexParameterForClinicalUse_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="female-typical"/>
+            <display value="Apply female-typical setting or reference range"/>
+            <target>
+                <code value="Biologischweiblich"/>
+                <display value="Biologisch weiblich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="male-typical"/>
+            <display value="Apply male-typical setting or reference range"/>
+            <target>
+                <code value="Biologischmaennlich"/>
+                <display value="Biologisch männlich"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="specified"/>
+            <display value="Apply specified setting or reference range"/>
+            <target>
+                <code value="Divers"/>
+                <display value="Divers"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://hl7.org/fhir/specimen-status"/>
+        <sourceVersion value="4.0.1"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_SpecimenStatus_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="available"/>
+            <display value="Available"/>
+            <target>
+                <code value="Verfuegbar"/>
+                <display value="Verfügbar"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="entered-in-error"/>
+            <display value="Entered in Error"/>
+            <target>
+                <code value="IrrtuermlicheEingabe"/>
+                <display value="Irrtürmliche Eingabe"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="unavailable"/>
+            <display value="Unavailable"/>
+            <target>
+                <code value="Nichtverfuegbar"/>
+                <display value="Nicht verfügbar"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="unsatisfactory"/>
+            <display value="Unsatisfactory"/>
+            <target>
+                <code value="Nichtgeeignet"/>
+                <display value="Nicht geeignet"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://snomed.info/sct"/>
+        <sourceVersion value="http://snomed.info/sct/11000274103/version/20240515"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Specimen_Condition_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="373881006"/>
+            <display value="Unsatisfactory for evaluation due to lack of patient identification on specimen and/or requisition form (finding)"/>
+            <target>
+                <code value="FehlendePatientenidentifikation"/>
+                <display value="Fehlende Patientenidentifikation"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="448140007"/>
+            <display value="Specimen unsatisfactory for evaluation due to obscuring lubricant jelly (finding)"/>
+            <target>
+                <code value="Geliert"/>
+                <display value="Geliert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="448141006"/>
+            <display value="Specimen unsatisfactory for evaluation due to marked cellular degeneration (finding)"/>
+            <target>
+                <code value="Zelldegenration"/>
+                <display value="Zelldegenration"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="710070002"/>
+            <display value="Specimen unsatisfactory for evaluation due to broken container (finding)"/>
+            <target>
+                <code value="Probenbehaelterzerbrochen"/>
+                <display value="Probenbehälter zerbrochen"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="712743008"/>
+            <display value="Specimen unsatisfactory for evaluation due to improper storage of sample (finding)"/>
+            <target>
+                <code value="Haemolyse"/>
+                <display value="Hämolyse"/>
+                <equivalence value="wider"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://terminology.hl7.org/CodeSystem/v2-0493"/>
+        <sourceVersion value="2.2.0"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Specimen_Condition_German"/>
+        <targetVersion value="1.0.0-kommentierung.2"/>
+        <element>
+            <code value="AUT"/>
+            <display value="Autolyzed"/>
+            <target>
+                <code value="Autolysiert"/>
+                <display value="Autolysiert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="CFU"/>
+            <display value="Centrifuged"/>
+            <target>
+                <code value="Zentrifugiert"/>
+                <display value="Zentrifugiert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="CLOT"/>
+            <display value="Clotted"/>
+            <target>
+                <code value="Verklumpt"/>
+                <display value="Verklumpt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="CON"/>
+            <display value="Contaminated"/>
+            <target>
+                <code value="Kontaminiert"/>
+                <display value="Kontaminiert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="COOL"/>
+            <display value="Cool"/>
+            <target>
+                <code value="Gekuehlt"/>
+                <display value="Gekühlt"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="FROZ"/>
+            <display value="Frozen"/>
+            <target>
+                <code value="Gefroren"/>
+                <display value="Gefroren"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="HEM"/>
+            <display value="Hemolyzed"/>
+            <target>
+                <code value="Haemolysiert"/>
+                <display value="Hämolysiert"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="LIVE"/>
+            <display value="Live"/>
+            <target>
+                <code value="Lebendig"/>
+                <display value="Lebendig"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="ROOM"/>
+            <display value="Room Temperature"/>
+            <target>
+                <code value="Raumtemperatur"/>
+                <display value="Raumtemperatur"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="SNR"/>
+            <display value="Sample not received"/>
+            <target>
+                <code value="Probenichterhalten"/>
+                <display value="Probe nicht erhalten"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+</ConceptMap>

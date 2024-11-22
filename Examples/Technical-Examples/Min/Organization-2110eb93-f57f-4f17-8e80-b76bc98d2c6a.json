@@ -1,0 +1,10 @@
+{
+  "resourceType": "Organization",
+  "id": "2110eb93-f57f-4f17-8e80-b76bc98d2c6a",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Organization|1.0.0-kommentierung.2"
+    ]
+  },
+  "name": "Praxis"
+}

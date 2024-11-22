@@ -1,0 +1,1089 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "KBV-PR-MIO-LAB-Observation-Laboratory-Study-Group",
+  "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Observation_Laboratory_Study_Group",
+  "version": "1.0.0-kommentierung.2",
+  "name": "KBV_PR_MIO_LAB_Observation_Laboratory_Study_Group",
+  "title": "KBV_PR_MIO_LAB_Observation_Laboratory_Study_Group",
+  "status": "draft",
+  "publisher": "Kassenärztliche Bundesvereinigung (KBV)",
+  "description": "Dieses Profil bildet eine Untersuchungsgruppe ab.",
+  "copyright": "Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health - ICF, herausgegeben durch die Weltgesundheitsorganisation.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "definition": "Dieses Profil bildet eine Untersuchungsgruppe ab.",
+        "constraint": [
+          {
+            "key": "eu-lab-1",
+            "human": "If observation status is other then \"registered\" or \"cancelled\", at least one of these Observation elements shall be provided:  \"value\", \"dataAbsentReason\", \"hasMember\" or \"component\"",
+            "source": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Observation_Laboratory_Study_Group",
+            "severity": "error",
+            "expression": "(status in ('registered'|'cancelled')) or value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
+          }
+        ]
+      },
+      {
+        "id": "Observation.meta",
+        "path": "Observation.meta",
+        "min": 1
+      },
+      {
+        "id": "Observation.meta.versionId",
+        "path": "Observation.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta.lastUpdated",
+        "path": "Observation.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta.source",
+        "path": "Observation.meta.source",
+        "max": "0"
+      },
+      {
+        "id": "Observation.meta.profile",
+        "path": "Observation.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.meta.profile:mioProfile",
+        "path": "Observation.meta.profile",
+        "sliceName": "mioProfile",
+        "min": 1,
+        "max": "1",
+        "patternCanonical": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Observation_Laboratory_Study_Group|1.0.0-kommentierung.2"
+      },
+      {
+        "id": "Observation.meta.security",
+        "path": "Observation.meta.security",
+        "max": "0"
+      },
+      {
+        "id": "Observation.meta.tag",
+        "path": "Observation.meta.tag",
+        "max": "0"
+      },
+      {
+        "id": "Observation.implicitRules",
+        "path": "Observation.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Observation.text",
+        "path": "Observation.text",
+        "definition": "In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."
+      },
+      {
+        "id": "Observation.text.status",
+        "path": "Observation.text.status",
+        "fixedCode": "extensions"
+      },
+      {
+        "id": "Observation.contained",
+        "path": "Observation.contained",
+        "max": "0"
+      },
+      {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        }
+      },
+      {
+        "id": "Observation.extension:sortiernummerGruppe",
+        "path": "Observation.extension",
+        "sliceName": "sortiernummerGruppe",
+        "definition": "Die Untersuchungsgruppen können mittels Nummerierung sortiert werden.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Sorting_Number"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier",
+        "path": "Observation.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Observation.basedOn",
+        "path": "Observation.basedOn",
+        "max": "0"
+      },
+      {
+        "id": "Observation.partOf",
+        "path": "Observation.partOf",
+        "max": "0"
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "patternCode": "final"
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "extension.value"
+            }
+          ],
+          "rules": "closed"
+        },
+        "definition": "Zur jeweiligen Gruppe kann es gruppenbezogene fachliche Bezeichner geben.",
+        "comment": "Vorgabe\nDie Inhalte aus Untersuchungsgruppe\\Fachliches Gruppierungsmerkmal Auswahl werden als jeweilige Kategorie der Einzeluntersuchung (Laboruntersuchung\\Fachliches Gruppierungsmerkmal Auswahl) übernommen. Die Inhalte aus der Untersuchungsgruppe sind diesbezüglich führend.",
+        "min": 1,
+        "max": "3",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory",
+        "path": "Observation.category",
+        "sliceName": "laboratory",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "laboratory",
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.extension",
+        "path": "Observation.category.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.extension:laboratory",
+        "path": "Observation.category.extension",
+        "sliceName": "laboratory",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Diskriminator"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.extension:laboratory.value[x]:valueString",
+        "path": "Observation.category.extension.value[x]",
+        "sliceName": "valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "patternString": "laboratory",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.coding",
+        "path": "Observation.category.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.coding.system",
+        "path": "Observation.category.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.coding.version",
+        "path": "Observation.category.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.coding.code",
+        "path": "Observation.category.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.coding.display",
+        "path": "Observation.category.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory.coding.userSelected",
+        "path": "Observation.category.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.category:laboratory.text",
+        "path": "Observation.category.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich",
+        "path": "Observation.category",
+        "sliceName": "laborbereich",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.extension",
+        "path": "Observation.category.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.extension:laborbereich",
+        "path": "Observation.category.extension",
+        "sliceName": "laborbereich",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Diskriminator"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.extension:laborbereich.value[x]:valueString",
+        "path": "Observation.category.extension.value[x]",
+        "sliceName": "valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "patternString": "laborbereich",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.coding",
+        "path": "Observation.category.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.coding:loinc",
+        "path": "Observation.category.coding",
+        "sliceName": "loinc",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://loinc.org"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Laboratory_Specialties_LOINC|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "Observation.category:laborbereich.coding:loinc.system",
+        "path": "Observation.category.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.coding:loinc.version",
+        "path": "Observation.category.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.coding:loinc.code",
+        "path": "Observation.category.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.coding:loinc.display",
+        "path": "Observation.category.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laborbereich.coding:loinc.userSelected",
+        "path": "Observation.category.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.category:laborbereich.text",
+        "path": "Observation.category.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil",
+        "path": "Observation.category",
+        "sliceName": "testProfil",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.extension",
+        "path": "Observation.category.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.extension:testProfil",
+        "path": "Observation.category.extension",
+        "sliceName": "testProfil",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Diskriminator"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.extension:testProfil.value[x]:valueString",
+        "path": "Observation.category.extension.value[x]",
+        "sliceName": "valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "patternString": "testProfil",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.coding",
+        "path": "Observation.category.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.coding:loinc",
+        "path": "Observation.category.coding",
+        "sliceName": "loinc",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://loinc.org"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Test_Panel_LOINC|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "Observation.category:testProfil.coding:loinc.system",
+        "path": "Observation.category.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.coding:loinc.version",
+        "path": "Observation.category.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.coding:loinc.code",
+        "path": "Observation.category.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.coding:loinc.display",
+        "path": "Observation.category.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:testProfil.coding:loinc.userSelected",
+        "path": "Observation.category.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.category:testProfil.text",
+        "path": "Observation.category.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "definition": "Dieses Element ist vorhanden, um die Laboruntersuchungsgruppe FHIR-konform abzubilden.",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "laboruntersuchungsgruppe",
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_mio42",
+              "display": "Laboruntersuchungsgruppe",
+              "version": "1.0.0-kommentierung.2"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding.system",
+        "path": "Observation.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding.version",
+        "path": "Observation.code.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding.code",
+        "path": "Observation.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding.display",
+        "path": "Observation.code.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding.userSelected",
+        "path": "Observation.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.code.text",
+        "path": "Observation.code.text",
+        "max": "0"
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "definition": "In diesem Element wird die betroffene versicherte Person referenziert.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.subject.reference",
+        "path": "Observation.subject.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.subject.type",
+        "path": "Observation.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "Observation.subject.identifier",
+        "path": "Observation.subject.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Observation.subject.display",
+        "path": "Observation.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "Observation.focus",
+        "path": "Observation.focus",
+        "max": "0"
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "max": "0"
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "definition": "Dieses Element wird lediglich mit einem data-absent-reason Code befüllt.",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x].extension",
+        "path": "Observation.effective[x].extension",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.effective[x].extension:data-absent-reason",
+        "path": "Observation.effective[x].extension",
+        "sliceName": "data-absent-reason",
+        "short": "effective[x] absence reason",
+        "definition": "Provides a reason why the effectiveTime is missing.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x].extension:data-absent-reason.value[x]",
+        "path": "Observation.effective[x].extension.value[x]",
+        "patternCode": "not-permitted",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]:effectiveDateTime",
+        "path": "Observation.effective[x]",
+        "sliceName": "effectiveDateTime",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]:effectiveDateTime.extension:data-absent-reason",
+        "path": "Observation.effective[x].extension",
+        "sliceName": "data-absent-reason",
+        "short": "effective[x] absence reason",
+        "definition": "Provides a reason why the effectiveTime is missing.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]:effectiveDateTime.value",
+        "path": "Observation.effective[x].value",
+        "max": "0"
+      },
+      {
+        "id": "Observation.issued",
+        "path": "Observation.issued",
+        "max": "0"
+      },
+      {
+        "id": "Observation.performer",
+        "path": "Observation.performer",
+        "definition": "In diesem Element kann die durchführende Person referenziert werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Observation.dataAbsentReason",
+        "path": "Observation.dataAbsentReason",
+        "max": "0"
+      },
+      {
+        "id": "Observation.interpretation",
+        "path": "Observation.interpretation",
+        "definition": "Medizinisch relevante Bewertung zur Untersuchungsgruppe. Die Interpretation kann als Code und/oder Text vorliegen.",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding",
+        "path": "Observation.interpretation.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:hl7Interpretation",
+        "path": "Observation.interpretation.coding",
+        "sliceName": "hl7Interpretation",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+        }
+      },
+      {
+        "id": "Observation.interpretation.coding:hl7Interpretation.system",
+        "path": "Observation.interpretation.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:hl7Interpretation.version",
+        "path": "Observation.interpretation.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:hl7Interpretation.code",
+        "path": "Observation.interpretation.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:hl7Interpretation.display",
+        "path": "Observation.interpretation.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:hl7Interpretation.userSelected",
+        "path": "Observation.interpretation.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.interpretation.coding:snomed",
+        "path": "Observation.interpretation.coding",
+        "sliceName": "snomed",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Result_Interpretation_SNOMED_CT|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "Observation.interpretation.coding:snomed.system",
+        "path": "Observation.interpretation.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:snomed.version",
+        "path": "Observation.interpretation.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:snomed.code",
+        "path": "Observation.interpretation.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:snomed.display",
+        "path": "Observation.interpretation.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding:snomed.userSelected",
+        "path": "Observation.interpretation.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.interpretation.text",
+        "path": "Observation.interpretation.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.note",
+        "path": "Observation.note",
+        "max": "0"
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "max": "0"
+      },
+      {
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "max": "0"
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "max": "0"
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "max": "0"
+      },
+      {
+        "id": "Observation.referenceRange",
+        "path": "Observation.referenceRange",
+        "max": "0"
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "definition": "Laboruntersuchungen, die in der Untersuchungsgruppe enthalten sind, werden hier referenziert.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Observation_Laboratory_Study|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.hasMember.reference",
+        "path": "Observation.hasMember.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.hasMember.type",
+        "path": "Observation.hasMember.type",
+        "max": "0"
+      },
+      {
+        "id": "Observation.hasMember.identifier",
+        "path": "Observation.hasMember.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Observation.hasMember.display",
+        "path": "Observation.hasMember.display",
+        "max": "0"
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "definition": "Ein Untersuchungsbild-Anhang wird in einer Component abgebildet.",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.id",
+        "path": "Observation.component.id",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.extension",
+        "path": "Observation.component.extension",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.extension:value-r5",
+        "path": "Observation.component.extension",
+        "sliceName": "value-r5",
+        "short": "only for result of type Attachment",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]",
+        "path": "Observation.component.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "path": "$this",
+              "type": "type"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment",
+        "path": "Observation.component.extension.value[x]",
+        "sliceName": "valueAttachment",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.contentType",
+        "path": "Observation.component.extension.value[x].contentType",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_MIME_Types|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.language",
+        "path": "Observation.component.extension.value[x].language",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.data",
+        "path": "Observation.component.extension.value[x].data",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.url",
+        "path": "Observation.component.extension.value[x].url",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.size",
+        "path": "Observation.component.extension.value[x].size",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.hash",
+        "path": "Observation.component.extension.value[x].hash",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.title",
+        "path": "Observation.component.extension.value[x].title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.extension:value-r5.value[x]:valueAttachment.creation",
+        "path": "Observation.component.extension.value[x].creation",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "bild-anhang",
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_mio42",
+              "display": "Bild-Anhang",
+              "version": "1.0.0-kommentierung.2"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component.code.coding",
+        "path": "Observation.component.code.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.code.coding.system",
+        "path": "Observation.component.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.code.coding.version",
+        "path": "Observation.component.code.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.code.coding.code",
+        "path": "Observation.component.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.code.coding.display",
+        "path": "Observation.component.code.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.code.coding.userSelected",
+        "path": "Observation.component.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.code.text",
+        "path": "Observation.component.code.text",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.value[x]",
+        "path": "Observation.component.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.dataAbsentReason",
+        "path": "Observation.component.dataAbsentReason",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "not-permitted",
+              "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+              "display": "Not Permitted"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component.interpretation",
+        "path": "Observation.component.interpretation",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "max": "0"
+      }
+    ]
+  }
+}

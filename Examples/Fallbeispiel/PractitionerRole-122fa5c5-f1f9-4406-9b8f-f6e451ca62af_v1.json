@@ -1,0 +1,30 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "122fa5c5-f1f9-4406-9b8f-f6e451ca62af",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_PractitionerRole|1.0.0-kommentierung.2"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2024-05-15T19:19:00+01:00"
+  },
+  "language": "de",
+  "practitioner": {
+    "reference": "urn:uuid:7ebec426-1315-4188-b8df-a4c96a81943c"
+  },
+  "organization": {
+    "reference": "urn:uuid:427d2124-a4f5-41ea-908e-f7b6729184a0"
+  },
+  "code": [
+    {
+      "coding": [
+        {
+          "code": "API",
+          "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Role_Care",
+          "version": "1.0.0-kommentierung.2",
+          "display": "Ärztliche(r) PraxisinhaberIn"
+        }
+      ]
+    }
+  ]
+}

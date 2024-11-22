@@ -1,0 +1,22 @@
+{
+  "resourceType": "Specimen",
+  "id": "eb7fbea2-95bd-4618-b38d-ce69cde79726",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Specimen|1.0.0-kommentierung.2"
+    ]
+  },
+  "identifier": [
+    {
+      "value": "Test Specimen identifier"
+    }
+  ],
+  "status": "available",
+  "subject": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7d"
+  },
+  "receivedTime": "2021-11-15T16:55:00+01:00",
+  "collection": {
+    "collectedDateTime": "2023-05-03"
+  }
+}

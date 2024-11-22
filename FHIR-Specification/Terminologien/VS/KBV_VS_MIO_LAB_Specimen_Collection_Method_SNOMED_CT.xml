@@ -1,0 +1,846 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="KBV-VS-MIO-LAB-Specimen-Collection-Method-SNOMED-CT"/>
+    <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Specimen_Collection_Method_SNOMED_CT"/>
+    <version value="1.0.0-kommentierung.2"/>
+    <name value="KBV_VS_MIO_LAB_Specimen_Collection_Method_SNOMED_CT"/>
+    <title value="Probenentnahme-Methode SNOMED CT®"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Dieses Valueset enthält die Codes zur Beschreibung von Probenentnahme-Methode SNOMED CT®."/>
+    <immutable value="false"/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <filter>
+                <property value="concept"/>
+                <op value="descendent-of"/>
+                <value value="17636008"/>
+            </filter>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="cc8820e2-7a46-11ef-b8b5-005056ad9fdf"/>
+        <timestamp value="2024-09-24T09:29:56+02:00"/>
+        <total value="135"/>
+        <offset value="0"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="1048003"/>
+            <display value="Capillary specimen collection (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="113031002"/>
+            <display value="Urine specimen collection, 2 hours (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="115985003"/>
+            <display value="Sweat collection by iontophoresis procedure (regime/therapy)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="1202027002"/>
+            <display value="Collection of esophageal cells via swallowable cell collection sponge in capsule (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="1230332003"/>
+            <display value="Collection of blood from umbilical cord immediately after delivery (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="1255865009"/>
+            <display value="Aspiration of seminal fluid from seminal vesicle using ultrasonographic guidance (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="1285339005"/>
+            <display value="Aspiration of seminal fluid from testis (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="13677008"/>
+            <display value="Urine specimen collection, closed drainage (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="16631761000119104"/>
+            <display value="Collection of blood via implanted venous access device (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="174653005"/>
+            <display value="Endoscopic retrograde pancreatography and collection of pancreatic juice (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="19867003"/>
+            <display value="Collection of sputum, Lukens tube (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="21217000"/>
+            <display value="Collection of pinworm specimen (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="225098009"/>
+            <display value="Collection of sample of saliva (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="225105004"/>
+            <display value="Collection of stool specimen (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="225109005"/>
+            <display value="Collection of nephrostomy urine specimen (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="225110000"/>
+            <display value="Collection of ureterostomy urine specimen (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="225111001"/>
+            <display value="Collection of early morning urine specimen (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="225112008"/>
+            <display value="Overnight collection of urine (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="225113003"/>
+            <display value="Timed urine collection (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="225271002"/>
+            <display value="Collection of mid-stream specimen of urine (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="225709000"/>
+            <display value="Taking cough swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="225711009"/>
+            <display value="Collection of nasal pharyngeal aspirate (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="225997002"/>
+            <display value="Taking wound swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="23248003"/>
+            <display value="Taking swab for microbiology (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="235488002"/>
+            <display value="Collection of pancreatic juice (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="235569007"/>
+            <display value="Collection of bile (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="236363003"/>
+            <display value="Semen aspiration (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="236364009"/>
+            <display value="Micro-epididymal spermatozoa aspiration (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="243772004"/>
+            <display value="Thumb-prick sampling (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="243776001"/>
+            <display value="Blood sampling from extracorporeal blood circuit (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="243777005"/>
+            <display value="Blood sampling from hemodialysis circuit (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="243778000"/>
+            <display value="Arterial port blood sampling during hemodialysis (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="243779008"/>
+            <display value="Venous port blood sampling during hemodialysis (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="243780006"/>
+            <display value="Blood sampling from cardiopulmonary bypass circuit (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="243781005"/>
+            <display value="Blood sampling from extracorporeal membrane oxygenation circuit (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="24469009"/>
+            <display value="Collection of routine urine specimen for laboratory (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="2475000"/>
+            <display value="Urine specimen collection, 24 hours (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="276907003"/>
+            <display value="Percutaneous aspiration of spermatozoa (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="278450005"/>
+            <display value="Finger-prick sampling (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="285570007"/>
+            <display value="Taking of swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="285586000"/>
+            <display value="Chlamydia swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="285589007"/>
+            <display value="Endocervical swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="301805004"/>
+            <display value="Taking high vaginal swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="301874004"/>
+            <display value="Taking vaginal swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="304991003"/>
+            <display value="Take mouth swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="310216004"/>
+            <display value="Collection of sample from mouth (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="310217008"/>
+            <display value="Collection of gingival crevicular fluid sample (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="312645003"/>
+            <display value="Percutaneous epididymal aspiration of spermatozoa (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="312855001"/>
+            <display value="Taking conjunctival swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="312873003"/>
+            <display value="Taking vulval swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="312874009"/>
+            <display value="Taking penile swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="312875005"/>
+            <display value="Taking cervical swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="312876006"/>
+            <display value="Taking urethral swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="312877002"/>
+            <display value="Taking low vaginal swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="312878007"/>
+            <display value="Taking postnasal swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="312879004"/>
+            <display value="Taking ear swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="312880001"/>
+            <display value="Taking throat swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="312881002"/>
+            <display value="Taking skin swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="312882009"/>
+            <display value="Taking nasal swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="313273004"/>
+            <display value="Pertussis swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="313274005"/>
+            <display value="Respiratory syncytial virus swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="31507001"/>
+            <display value="Specimen collection for microbiology (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="32564009"/>
+            <display value="Arterial specimen collection for laboratory test (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="34532003"/>
+            <display value="Semen specimen collection (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="37020001"/>
+            <display value="Collection of urine and strain for calculus (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="37705003"/>
+            <display value="Collection of sputum (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="386087005"/>
+            <display value="Collection of aspirated sputum (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="386088000"/>
+            <display value="Collection of induced sputum (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="386089008"/>
+            <display value="Collection of coughed sputum (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="386099003"/>
+            <display value="Spot urine procedure (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="390784004"/>
+            <display value="Endocervical chlamydia swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="390785003"/>
+            <display value="Urethral chlamydia swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="400993006"/>
+            <display value="Gonococcal cervical swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="400994000"/>
+            <display value="Gonococcal swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="401002001"/>
+            <display value="Gonococcal urethral swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="40597003"/>
+            <display value="Urine specimen collection, 12 hours (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="406173008"/>
+            <display value="Phlebotomy: cannulated vessel (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="418622002"/>
+            <display value="Taking oral swab (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="42311007"/>
+            <display value="Radial artery puncture for laboratory test (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="427133003"/>
+            <display value="Endoscopic retrograde cholangiopancreatography and collection of bile (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="439599008"/>
+            <display value="Collection of specimen by device (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="441136006"/>
+            <display value="Collection of specimen by glass slide (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="441266008"/>
+            <display value="Specimen collection by endometrial suction curette (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="441378005"/>
+            <display value="Collection of specimen by culture plate (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="444171005"/>
+            <display value="Collection of biliary drainage by gravity (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="446232000"/>
+            <display value="Collection of bile via biliary T-tube (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="446775007"/>
+            <display value="Collection of urine via indwelling urinary catheter (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="44733008"/>
+            <display value="Collection of string test (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="450874000"/>
+            <display value="Collection of first stream urine specimen (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="45240002"/>
+            <display value="Ear lobe stick (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="472859009"/>
+            <display value="Taking anal swab for chlamydia (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="472860004"/>
+            <display value="Taking anal swab for gonorrhoea (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="472917009"/>
+            <display value="Collection of device for submission as specimen (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="473363001"/>
+            <display value="Taking of culture from cervix (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="50576009"/>
+            <display value="Specimen collection by drainage (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="50753008"/>
+            <display value="Brachial artery puncture for laboratory test (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="57617002"/>
+            <display value="Urine specimen collection (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="58088002"/>
+            <display value="Urine specimen collection, suprapubic (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="64860001"/>
+            <display value="Collection of sweat test (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="66904006"/>
+            <display value="Collection of expired gas, quantitative (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="698007008"/>
+            <display value="Collection of early morning mid stream specimen of urine by clean catch (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="698086002"/>
+            <display value="Collection of urine via pediatric urine collection bag (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="698087006"/>
+            <display value="Collection of urine via indwelling suprapubic catheter (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="699873000"/>
+            <display value="Collection of blood via arterial catheter (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="70347009"/>
+            <display value="Collection of specimen for culture by laboratory (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="705084002"/>
+            <display value="Collection of fluid specimen via closed suction drain (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="705156009"/>
+            <display value="Collection of urine via straight catheter (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="705172001"/>
+            <display value="Collection of cystostomy tube urine specimen (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="707982002"/>
+            <display value="Taking throat swab for chlamydia (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="707983007"/>
+            <display value="Taking throat swab for gonorrhea (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="708015008"/>
+            <display value="Plucking of hair for microscopy and culture (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="709500005"/>
+            <display value="Collection of specimen by cough culture plate (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="71197008"/>
+            <display value="Femoral artery puncture for laboratory test (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="713143008"/>
+            <display value="Collection of arterial blood specimen (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="720450003"/>
+            <display value="Preoperative urine specimen collection (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="722501003"/>
+            <display value="Postoperative urine specimen collection (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="732218007"/>
+            <display value="Urine specimen collection, 8 hours (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="732221009"/>
+            <display value="Urine specimen collection, 48 hours (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="732223007"/>
+            <display value="Urine specimen collection, 72 hours (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="732224001"/>
+            <display value="Timed stool collection (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="732228003"/>
+            <display value="Stool specimen collection, 24 hours (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="732292007"/>
+            <display value="Stool specimen collection, 48 hours (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="733478009"/>
+            <display value="Collection of specimen by adhesive slide (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="733481004"/>
+            <display value="Collection of second void urine specimen (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="73416001"/>
+            <display value="Urine specimen collection, clean catch (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="738796001"/>
+            <display value="Collection of dried blood spot specimen (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="764928002"/>
+            <display value="Collection of fluid specimen (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="764929005"/>
+            <display value="Collection of exhaled breath specimen (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="768966009"/>
+            <display value="Collection of tip of device (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="769401004"/>
+            <display value="Collection of body fluid from surgical drain (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="77262006"/>
+            <display value="Heel stick (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="82078001"/>
+            <display value="Collection of blood specimen for laboratory (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="83917009"/>
+            <display value="Specimen collection for microbiology, anaerobic (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="840566006"/>
+            <display value="Specimen collection for biobank (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="86326008"/>
+            <display value="Collection of sweat test, pediatric overnight (procedure)"/>
+        </contains>
+    </expansion>
+</ValueSet>

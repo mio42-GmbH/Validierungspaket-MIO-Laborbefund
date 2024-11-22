@@ -1,0 +1,87 @@
+{
+  "resourceType": "Patient",
+  "id": "b65dfcca-c6ce-4dac-8742-8da00c452c7f",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient|1.0.0-kommentierung.2"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2024-05-15T19:19:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Sex_for_Clinical_Use",
+      "valueCoding": {
+        "code": "specified",
+        "system": "http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use",
+        "display": "Apply specified setting or reference range"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "display": "Gesetzliche Krankenversicherung",
+            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
+            "code": "GKV",
+            "version": "1.4.0"
+          }
+        ]
+      },
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "A123456789"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": "Brown",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Brown"
+          }
+        ]
+      },
+      "given": [
+        "Paul"
+      ]
+    }
+  ],
+  "address": [
+    {
+      "type": "both",
+      "line": [
+        "Patientstraße 77b"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Patientstraße"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "77b"
+            }
+          ]
+        }
+      ],
+      "city": "Patientenstadt",
+      "postalCode": "77007"
+    }
+  ],
+  "language": "de",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "0123/456789"
+    }
+  ],
+  "birthDate": "1997-03-30",
+  "gender": "male"
+}

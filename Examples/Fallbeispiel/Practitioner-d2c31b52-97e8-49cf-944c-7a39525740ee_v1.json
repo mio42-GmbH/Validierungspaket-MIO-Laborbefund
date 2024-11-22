@@ -1,0 +1,55 @@
+{
+  "resourceType": "Practitioner",
+  "id": "d2c31b52-97e8-49cf-944c-7a39525740ee",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Practitioner|1.0.0-kommentierung.2"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2024-05-15T19:19:00+01:00"
+  },
+  "name": [
+    {
+      "use": "official",
+      "prefix": [
+        "Prof. Dr. med."
+      ],
+      "_prefix": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode": "AC"
+            }
+          ]
+        }
+      ],
+      "family": "Prof. Dr. med. Tanja Trecker",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Trecker"
+          }
+        ]
+      },
+      "given": [
+        "Tanja"
+      ]
+    }
+  ],
+  "language": "de",
+  "qualification": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:1.2.276.0.76.5.514",
+            "code": "171001",
+            "display": "FA Laboratoriumsmedizin"
+          }
+        ]
+      }
+    }
+  ]
+}

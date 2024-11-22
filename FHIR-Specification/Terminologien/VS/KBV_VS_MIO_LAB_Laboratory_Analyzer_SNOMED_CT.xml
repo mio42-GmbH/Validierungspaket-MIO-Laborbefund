@@ -1,0 +1,288 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="KBV-VS-MIO-LAB-Laboratory-Analyzer-SNOMED-CT"/>
+    <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Laboratory_Analyzer_SNOMED_CT"/>
+    <version value="1.0.0-kommentierung.2"/>
+    <name value="KBV_VS_MIO_LAB_Laboratory_Analyzer_SNOMED_CT"/>
+    <title value="Laboranalysegerät SNOMED CT®"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Dieses Valueset enthält die Codes zur Beschreibung von Laboranalysegerät SNOMED CT®."/>
+    <immutable value="false"/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <filter>
+                <property value="concept"/>
+                <op value="is-a"/>
+                <value value="30234008"/>
+            </filter>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="8c2b5197-7a46-11ef-8318-005056ad9fdf"/>
+        <timestamp value="2024-09-24T09:28:08+02:00"/>
+        <total value="42"/>
+        <offset value="0"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="1141644002"/>
+            <display value="Oximetry catheter (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="11987000"/>
+            <display value="Clinical chemistry analyzer, device (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="18153000"/>
+            <display value="Fluorescence immunoassay analyzer, device (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="21079000"/>
+            <display value="Carbon monoxide analyzer, device (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="257434000"/>
+            <display value="Gas analyzer (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="30234008"/>
+            <display value="Medical laboratory analyzer, device (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="33388001"/>
+            <display value="Carbon dioxide analyzer, device (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="448703006"/>
+            <display value="Pulse oximeter (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="462430001"/>
+            <display value="Pulse oximeter, line-powered (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="462739001"/>
+            <display value="Pulse Co-oximeter (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="462858000"/>
+            <display value="Pulmonary artery catheter, oximetric (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="462988005"/>
+            <display value="Pulse oximeter, battery-powered (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="464368002"/>
+            <display value="Tissue saturation oximeter (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="466901004"/>
+            <display value="Telemetric pulse oximeter (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="467946005"/>
+            <display value="Cerebral oximeter (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="468760002"/>
+            <display value="Ethylene oxide monitor (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="468930000"/>
+            <display value="Enclosed-atmosphere inspired oxygen monitor, battery-powered (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="469525004"/>
+            <display value="Intracardiac oximeter (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="469696003"/>
+            <display value="Intravascular oximeter (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="470183007"/>
+            <display value="Fetal pulse oximeter (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="52893008"/>
+            <display value="Blood gas/pH analyzer, device (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="55091003"/>
+            <display value="Blood coagulation analyzer, device (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="59181002"/>
+            <display value="Oxygen analyzer, device (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="62495008"/>
+            <display value="Gamma counter, device (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="701055001"/>
+            <display value="Medical gas pipeline system automatic outlet analyzer (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="701058004"/>
+            <display value="Nitrogen dioxide analyzer (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="701147006"/>
+            <display value="Neon gas analyzer (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="701188006"/>
+            <display value="Laboratory incubator carbon dioxide analyzer (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="701240000"/>
+            <display value="Multiple gas analyzer (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="701241001"/>
+            <display value="Ethylene oxide analyzer (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="701285004"/>
+            <display value="Nitrogen exhaled-gas-sample analyzer (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="701303005"/>
+            <display value="Nitrous oxide analyzer (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="701943009"/>
+            <display value="Pneumatic line tester, line-powered (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="701964008"/>
+            <display value="Nitrogen monoxide analyzer (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="702245007"/>
+            <display value="Argon gas analyzer (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="702272004"/>
+            <display value="Co-oximetry analyzer, semi-automated (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="706202002"/>
+            <display value="Pulse oximeter probe (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="736107004"/>
+            <display value="Transcutaneous central venous blood oximeter probe (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="81320001"/>
+            <display value="Enzyme immunoassay analyzer, device (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="8615009"/>
+            <display value="Blood electrolyte analyzer, device (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="87851008"/>
+            <display value="Blood cell counter and analyzer, device (physical object)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="89509004"/>
+            <display value="Blood culture analyzer, device (physical object)"/>
+        </contains>
+    </expansion>
+</ValueSet>

@@ -1,0 +1,9 @@
+{
+  "resourceType": "Device",
+  "id": "1ba291b4-78b5-4bf9-92f7-50f2f3c94cf5",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Device_Specimen_Container|1.0.0-kommentierung.2"
+    ]
+  }
+}

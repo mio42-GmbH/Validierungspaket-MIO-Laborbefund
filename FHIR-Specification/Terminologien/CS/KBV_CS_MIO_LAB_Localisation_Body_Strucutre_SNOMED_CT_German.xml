@@ -1,0 +1,212 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="KBV-CS-MIO-LAB-Localisation-Body-Strucutre-SNOMED-CT-German"/>
+    <url value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Localisation_Body_Strucutre_SNOMED_CT_German"/>
+    <version value="1.0.0-kommentierung.2"/>
+    <name value="KBV_CS_MIO_LAB_Localisation_Body_Strucutre_SNOMED_CT_German"/>
+    <title value="Lokalisation innerhalb Körperstelle SNOMED CT®"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Dieses Codesystem enthält die Codes für deutsche Bezeichner für Lokalisation innerhalb Körperstelle SNOMED CT®."/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="Rechts"/>
+        <display value="Rechts"/>
+    </concept>
+    <concept>
+        <code value="LinkeruntererQuadrant"/>
+        <display value="Linker unterer Quadrant"/>
+    </concept>
+    <concept>
+        <code value="LinkerobererQuadrant"/>
+        <display value="Linker oberer Quadrant"/>
+    </concept>
+    <concept>
+        <code value="RechteruntererQuadrant"/>
+        <display value="Rechter unterer Quadrant"/>
+    </concept>
+    <concept>
+        <code value="RechterobererQuadrant"/>
+        <display value="Rechter oberer Quadrant"/>
+    </concept>
+    <concept>
+        <code value="Anterior"/>
+        <display value="Anterior"/>
+    </concept>
+    <concept>
+        <code value="Posterior"/>
+        <display value="Posterior"/>
+    </concept>
+    <concept>
+        <code value="Dorsal"/>
+        <display value="Dorsal"/>
+    </concept>
+    <concept>
+        <code value="Medial"/>
+        <display value="Medial"/>
+    </concept>
+    <concept>
+        <code value="1UhrPosition"/>
+        <display value="1-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="0130UhrPosition"/>
+        <display value="01:30-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="10UhrPosition"/>
+        <display value="10-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="1030UhrPosition"/>
+        <display value="10:30-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="11UhrPosition"/>
+        <display value="11-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="1130UhrPosition"/>
+        <display value="11:30-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="12UhrPosition"/>
+        <display value="12-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="1230UhrPosition"/>
+        <display value="12:30-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="2UhrPosition"/>
+        <display value="2-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="0230UhrPosition"/>
+        <display value="02:30-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="3UhrPosition"/>
+        <display value="3-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="0330UhrPosition"/>
+        <display value="03:30-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="4UhrPosition"/>
+        <display value="4-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="0430UhrPosition"/>
+        <display value="04:30-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="5UhrPosition"/>
+        <display value="5-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="0530UhrPosition"/>
+        <display value="05:30-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="6UhrPosition"/>
+        <display value="6-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="0630UhrPosition"/>
+        <display value="06:30-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="7UhrPosition"/>
+        <display value="7-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="0730UhrPosition"/>
+        <display value="07:30-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="8UhrPosition"/>
+        <display value="8-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="0830UhrPosition"/>
+        <display value="08:30-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="9UhrPosition"/>
+        <display value="9-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="0930UhrPosition"/>
+        <display value="09:30-Uhr-Position"/>
+    </concept>
+    <concept>
+        <code value="Inferior"/>
+        <display value="Inferior"/>
+    </concept>
+    <concept>
+        <code value="Unterer"/>
+        <display value="Untere:r"/>
+    </concept>
+    <concept>
+        <code value="Oberer"/>
+        <display value="Obere:r"/>
+    </concept>
+    <concept>
+        <code value="Superficial"/>
+        <display value="Superficial"/>
+    </concept>
+    <concept>
+        <code value="Superior"/>
+        <display value="Superior"/>
+    </concept>
+    <concept>
+        <code value="Infra"/>
+        <display value="Infra"/>
+    </concept>
+    <concept>
+        <code value="Supra"/>
+        <display value="Supra"/>
+    </concept>
+    <concept>
+        <code value="Caudal"/>
+        <display value="Caudal"/>
+    </concept>
+    <concept>
+        <code value="Proximal"/>
+        <display value="Proximal"/>
+    </concept>
+    <concept>
+        <code value="Distal"/>
+        <display value="Distal"/>
+    </concept>
+    <concept>
+        <code value="Lateral"/>
+        <display value="Lateral"/>
+    </concept>
+    <concept>
+        <code value="Basal"/>
+        <display value="Basal"/>
+    </concept>
+    <concept>
+        <code value="Cranial"/>
+        <display value="Cranial"/>
+    </concept>
+    <concept>
+        <code value="Links"/>
+        <display value="Links"/>
+    </concept>
+    <concept>
+        <code value="Profund"/>
+        <display value="Profund"/>
+    </concept>
+</CodeSystem>

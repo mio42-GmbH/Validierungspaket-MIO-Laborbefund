@@ -1,0 +1,344 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "KBV-PR-MIO-LAB-DocumentReference",
+  "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DocumentReference",
+  "version": "1.0.0-kommentierung.2",
+  "name": "KBV_PR_MIO_LAB_DocumentReference",
+  "title": "KBV_PR_MIO_LAB_DocumentReference",
+  "status": "draft",
+  "publisher": "Kassenärztliche Bundesvereinigung (KBV)",
+  "description": "Dieses Profil bildet einen Dokumentationseintrag ab.",
+  "copyright": "Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health - ICF, herausgegeben durch die Weltgesundheitsorganisation.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_DocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference.meta",
+        "path": "DocumentReference.meta",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.meta.versionId",
+        "path": "DocumentReference.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.lastUpdated",
+        "path": "DocumentReference.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.source",
+        "path": "DocumentReference.meta.source",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.meta.profile",
+        "path": "DocumentReference.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.meta.profile:mioProfile",
+        "path": "DocumentReference.meta.profile",
+        "sliceName": "mioProfile",
+        "min": 1,
+        "max": "1",
+        "patternCanonical": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DocumentReference|1.0.0-kommentierung.2"
+      },
+      {
+        "id": "DocumentReference.meta.security",
+        "path": "DocumentReference.meta.security",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.meta.tag",
+        "path": "DocumentReference.meta.tag",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.implicitRules",
+        "path": "DocumentReference.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.text",
+        "path": "DocumentReference.text",
+        "definition": "In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."
+      },
+      {
+        "id": "DocumentReference.text.status",
+        "path": "DocumentReference.text.status",
+        "fixedCode": "extensions"
+      },
+      {
+        "id": "DocumentReference.contained",
+        "path": "DocumentReference.contained",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.masterIdentifier",
+        "path": "DocumentReference.masterIdentifier",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.identifier",
+        "path": "DocumentReference.identifier",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.status",
+        "path": "DocumentReference.status",
+        "definition": "Hier wird der Status des Dokumentenverweises bzw. Anhanges angegeben.",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.docStatus",
+        "path": "DocumentReference.docStatus",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.type",
+        "path": "DocumentReference.type",
+        "definition": "Hier kann der Typ des Dokuments angegeben werden."
+      },
+      {
+        "id": "DocumentReference.type.coding:xds",
+        "path": "DocumentReference.type.coding",
+        "sliceName": "xds",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.type.coding:xds.system",
+        "path": "DocumentReference.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.type.coding:xds.version",
+        "path": "DocumentReference.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.type.coding:xds.code",
+        "path": "DocumentReference.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.type.coding:xds.display",
+        "path": "DocumentReference.type.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.type.coding:xds.userSelected",
+        "path": "DocumentReference.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.category",
+        "path": "DocumentReference.category",
+        "definition": "Hier kann das Dokument kategorisiert werden."
+      },
+      {
+        "id": "DocumentReference.category.coding:xds",
+        "path": "DocumentReference.category.coding",
+        "sliceName": "xds",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.category.coding:xds.system",
+        "path": "DocumentReference.category.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.category.coding:xds.version",
+        "path": "DocumentReference.category.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.category.coding:xds.code",
+        "path": "DocumentReference.category.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.category.coding:xds.display",
+        "path": "DocumentReference.category.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.category.coding:xds.userSelected",
+        "path": "DocumentReference.category.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "definition": "Hier wird die zu behandelnde Person referenziert.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient",
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Practitioner"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.subject.reference",
+        "path": "DocumentReference.subject.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.subject.type",
+        "path": "DocumentReference.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.subject.identifier",
+        "path": "DocumentReference.subject.identifier",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.subject.display",
+        "path": "DocumentReference.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.date",
+        "path": "DocumentReference.date",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.author",
+        "path": "DocumentReference.author",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.authenticator",
+        "path": "DocumentReference.authenticator",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.custodian",
+        "path": "DocumentReference.custodian",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.relatesTo",
+        "path": "DocumentReference.relatesTo",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.description",
+        "path": "DocumentReference.description",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.securityLabel",
+        "path": "DocumentReference.securityLabel",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.content",
+        "path": "DocumentReference.content",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "exists",
+              "path": "attachment.url"
+            }
+          ],
+          "rules": "closed"
+        },
+        "definition": "Strukturierte Referenz auf andere Inhalte, dies kann z. B. ein anderes Dokument in der ePA sein\n\noder\n\nHier wird das Dokument in Form eines formatierten Anhangs abgebildet.",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:verweis",
+        "path": "DocumentReference.content",
+        "sliceName": "verweis",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.content:anhang",
+        "path": "DocumentReference.content",
+        "sliceName": "anhang",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment",
+        "path": "DocumentReference.content.attachment",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.contentType",
+        "path": "DocumentReference.content.attachment.contentType",
+        "definition": "Hier wird das Dateiformat angegeben.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_MIME_Types|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.language",
+        "path": "DocumentReference.content.attachment.language",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.data",
+        "path": "DocumentReference.content.attachment.data",
+        "definition": "Hier wird die Dokument-Datei angehängt.",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.size",
+        "path": "DocumentReference.content.attachment.size",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.hash",
+        "path": "DocumentReference.content.attachment.hash",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.title",
+        "path": "DocumentReference.content.attachment.title",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.creation",
+        "path": "DocumentReference.content.attachment.creation",
+        "definition": "Hier wird der Zeitpunkt der Erstellung des referenzierten Dokumentes bzw. des Anhangs angegeben.",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.format",
+        "path": "DocumentReference.content.format",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.context",
+        "path": "DocumentReference.context",
+        "max": "0"
+      }
+    ]
+  }
+}

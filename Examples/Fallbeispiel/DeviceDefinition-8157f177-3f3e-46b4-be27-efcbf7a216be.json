@@ -1,0 +1,22 @@
+{
+  "resourceType": "DeviceDefinition",
+  "id": "8157f177-3f3e-46b4-be27-efcbf7a216be",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DeviceDefinition|1.0.0-kommentierung.2"
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "code": "30234008",
+        "system": "http://snomed.info/sct",
+        "display": "Medical laboratory analyzer, device (physical object)",
+        "version": "http://snomed.info/sct/11000274103/version/20240515"
+      }
+    ]
+  },
+  "manufacturerReference": {
+    "reference": "urn:uuid:2110eb93-f57f-4f17-8e80-b76bc98d2c6a"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "resourceType": "Condition",
+  "id": "988426e1-b7df-44b2-881c-09e7cf482b72",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Condition_Diagnosis|1.0.0-kommentierung.2"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "404684003",
+        "display": "Clinical finding (finding)",
+        "version": "http://snomed.info/sct/900000000000207008/version/20230731"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7d"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "resourceType": "DeviceDefinition",
+  "id": "01021964-005b-4dd5-975d-2e9a9fa917d9",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DeviceDefinition_Specimen_Container|1.0.0-kommentierung.2"
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "code": "434711009",
+        "system": "http://snomed.info/sct",
+        "display": "Specimen container (physical object)",
+        "version": "http://snomed.info/sct/900000000000207008/version/20220131"
+      }
+    ]
+  }
+}

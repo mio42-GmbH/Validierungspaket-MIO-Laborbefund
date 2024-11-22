@@ -1,0 +1,373 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="KBV-VS-MIO-LAB-Laboratory-Specialties-LOINC"/>
+    <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Laboratory_Specialties_LOINC"/>
+    <version value="1.0.0-kommentierung.2"/>
+    <name value="KBV_VS_MIO_LAB_Laboratory_Specialties_LOINC"/>
+    <title value="Laborbereich LOINC®"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Dieses Valueset enthält die Codes zur Beschreibung von Laborbereich LOINC®."/>
+    <immutable value="false"/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <compose>
+        <include>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <concept>
+                <code value="18717-9"/>
+                <display value="Blood bank studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Blutbank-Untersuchungen"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18718-7"/>
+                <display value="Cell marker studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Zellmarkerdiagnostik"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18719-5"/>
+                <display value="Chemistry studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Klinische Chemie"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18720-3"/>
+                <display value="Coagulation studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Gerinnungsdiagnostik"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18721-1"/>
+                <display value="Therapeutic drug monitoring studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Therapeutische Arzneimittelüberwachung"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18722-9"/>
+                <display value="Fertility studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Fertilitätsdiagnostik"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18723-7"/>
+                <display value="Hematology studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Hämatologie"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18724-5"/>
+                <display value="HLA studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="HLA-Diagnostik"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18725-2"/>
+                <display value="Microbiology studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Mikrobiologie"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18727-8"/>
+                <display value="Serology studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Serologie"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18728-6"/>
+                <display value="Toxicology studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Toxikologie"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18729-4"/>
+                <display value="Urinalysis studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Urindiagnostik"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18767-4"/>
+                <display value="Blood gas studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Blutgasanalytik"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18768-2"/>
+                <display value="Cell counts+Differential studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Zellzählungen und Zelldifferenzierung"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="18769-0"/>
+                <display value="Microbial susceptibility tests Set"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Mikrobielle Empfindlichkeitstests"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="26435-8"/>
+                <display value="Molecular pathology studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Molekularpathologie"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="26436-6"/>
+                <display value="Laboratory studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Laboruntersuchungen"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="26437-4"/>
+                <display value="Chemistry challenge studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Funktionstests"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="26438-2"/>
+                <display value="Cytology studies (set)"/>
+                <designation>
+                    <language value="de"/>
+                    <value value="Zytologie"/>
+                </designation>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="c09aab29-7a46-11ef-b6ba-005056ad9fdf"/>
+        <timestamp value="2024-09-24T09:29:36+02:00"/>
+        <total value="19"/>
+        <offset value="0"/>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18717-9"/>
+            <display value="Blood bank studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Blutbank-Untersuchungen"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18718-7"/>
+            <display value="Cell marker studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Zellmarkerdiagnostik"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18719-5"/>
+            <display value="Chemistry studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Klinische Chemie"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18720-3"/>
+            <display value="Coagulation studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Gerinnungsdiagnostik"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18721-1"/>
+            <display value="Therapeutic drug monitoring studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Therapeutische Arzneimittelüberwachung"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18722-9"/>
+            <display value="Fertility studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Fertilitätsdiagnostik"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18723-7"/>
+            <display value="Hematology studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Hämatologie"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18724-5"/>
+            <display value="HLA studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="HLA-Diagnostik"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18725-2"/>
+            <display value="Microbiology studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Mikrobiologie"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18727-8"/>
+            <display value="Serology studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Serologie"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18728-6"/>
+            <display value="Toxicology studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Toxikologie"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18729-4"/>
+            <display value="Urinalysis studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Urindiagnostik"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18767-4"/>
+            <display value="Blood gas studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Blutgasanalytik"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18768-2"/>
+            <display value="Cell counts+Differential studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Zellzählungen und Zelldifferenzierung"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="18769-0"/>
+            <display value="Microbial susceptibility tests Set"/>
+            <designation>
+                <language value="de"/>
+                <value value="Mikrobielle Empfindlichkeitstests"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="26435-8"/>
+            <display value="Molecular pathology studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Molekularpathologie"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="26436-6"/>
+            <display value="Laboratory studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Laboruntersuchungen"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="26437-4"/>
+            <display value="Chemistry challenge studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Funktionstests"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://loinc.org"/>
+            <version value="2.73"/>
+            <code value="26438-2"/>
+            <display value="Cytology studies (set)"/>
+            <designation>
+                <language value="de"/>
+                <value value="Zytologie"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>

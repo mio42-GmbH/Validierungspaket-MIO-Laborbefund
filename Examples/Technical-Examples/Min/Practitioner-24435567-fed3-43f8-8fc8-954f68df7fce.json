@@ -1,0 +1,48 @@
+{
+  "resourceType": "Practitioner",
+  "id": "24435567-fed3-43f8-8fc8-954f68df7fce",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Practitioner|1.0.0-kommentierung.2"
+    ]
+  },
+  "name": [
+    {
+      "use": "official",
+      "prefix": [
+        "Dr"
+      ],
+      "_prefix": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode": "AC"
+            }
+          ]
+        }
+      ],
+      "text": "Dr. Hans Glücklich",
+      "family": "Hans",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Glücklich"
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+            "valueString": "Prinz"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+            "valueString": "von"
+          }
+        ]
+      },
+      "given": [
+        "Hans"
+      ]
+    }
+  ]
+}

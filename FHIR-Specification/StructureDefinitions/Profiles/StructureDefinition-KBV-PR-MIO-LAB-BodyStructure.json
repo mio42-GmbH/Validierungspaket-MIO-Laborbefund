@@ -1,0 +1,405 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "KBV-PR-MIO-LAB-BodyStructure",
+  "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_BodyStructure",
+  "version": "1.0.0-kommentierung.2",
+  "name": "KBV_PR_MIO_LAB_BodyStructure",
+  "title": "KBV_PR_MIO_LAB_BodyStructure",
+  "status": "draft",
+  "publisher": "Kassenärztliche Bundesvereinigung (KBV)",
+  "description": "Dieses Profil bildet eine Körperstruktur ab.",
+  "copyright": "Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health - ICF, herausgegeben durch die Weltgesundheitsorganisation.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "BodyStructure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/BodyStructure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "BodyStructure",
+        "path": "BodyStructure",
+        "definition": "Dieses Profil bildet eine Körperstruktur ab."
+      },
+      {
+        "id": "BodyStructure.meta",
+        "path": "BodyStructure.meta",
+        "min": 1
+      },
+      {
+        "id": "BodyStructure.meta.versionId",
+        "path": "BodyStructure.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.meta.lastUpdated",
+        "path": "BodyStructure.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.meta.source",
+        "path": "BodyStructure.meta.source",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.meta.profile",
+        "path": "BodyStructure.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "BodyStructure.meta.profile:mioProfile",
+        "path": "BodyStructure.meta.profile",
+        "sliceName": "mioProfile",
+        "min": 1,
+        "max": "1",
+        "patternCanonical": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_BodyStructure|1.0.0-kommentierung.2"
+      },
+      {
+        "id": "BodyStructure.meta.security",
+        "path": "BodyStructure.meta.security",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.meta.tag",
+        "path": "BodyStructure.meta.tag",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.implicitRules",
+        "path": "BodyStructure.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.text",
+        "path": "BodyStructure.text",
+        "definition": "In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."
+      },
+      {
+        "id": "BodyStructure.text.status",
+        "path": "BodyStructure.text.status",
+        "fixedCode": "extensions"
+      },
+      {
+        "id": "BodyStructure.contained",
+        "path": "BodyStructure.contained",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.extension",
+        "path": "BodyStructure.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.extension:laterality",
+        "path": "BodyStructure.extension",
+        "sliceName": "laterality",
+        "definition": "Das Datenelement Lateralität gibt bei paarigen Organen (z.B. Niere) oder paarigen Körperteilen (z.B. Arm, Bein) an, ob Rechts, Links oder Bilateral betroffen ist.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure.laterality"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.extension:laterality.value[x]",
+        "path": "BodyStructure.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.extension:laterality.value[x]:valueCodeableConcept",
+        "path": "BodyStructure.extension.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.extension:laterality.value[x]:valueCodeableConcept.coding",
+        "path": "BodyStructure.extension.value[x].coding",
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Laterality_Body_Structure_SNOMED_CT|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "BodyStructure.extension:laterality.value[x]:valueCodeableConcept.coding.system",
+        "path": "BodyStructure.extension.value[x].coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.extension:laterality.value[x]:valueCodeableConcept.coding.version",
+        "path": "BodyStructure.extension.value[x].coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.extension:laterality.value[x]:valueCodeableConcept.coding.code",
+        "path": "BodyStructure.extension.value[x].coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.extension:laterality.value[x]:valueCodeableConcept.coding.display",
+        "path": "BodyStructure.extension.value[x].coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.extension:laterality.value[x]:valueCodeableConcept.coding.userSelected",
+        "path": "BodyStructure.extension.value[x].coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.extension:laterality.value[x]:valueCodeableConcept.text",
+        "path": "BodyStructure.extension.value[x].text",
+        "definition": "Hier wird die Lateralität als Freitext angegeben.",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.identifier",
+        "path": "BodyStructure.identifier",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.active",
+        "path": "BodyStructure.active",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.morphology",
+        "path": "BodyStructure.morphology",
+        "definition": "Morphologische Einordnung zur Körperstruktur.",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.morphology.coding",
+        "path": "BodyStructure.morphology.coding",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.morphology.coding.system",
+        "path": "BodyStructure.morphology.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.morphology.coding.version",
+        "path": "BodyStructure.morphology.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.morphology.coding.code",
+        "path": "BodyStructure.morphology.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.morphology.coding.display",
+        "path": "BodyStructure.morphology.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.morphology.coding.userSelected",
+        "path": "BodyStructure.morphology.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.morphology.text",
+        "path": "BodyStructure.morphology.text",
+        "definition": "Hier wird die Morphologie als Freitext angegeben.",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.location",
+        "path": "BodyStructure.location",
+        "definition": "Angabe der Körperstelle als anatomische Benennung",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.location.coding",
+        "path": "BodyStructure.location.coding",
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Body_Structures_SNOMED_CT|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "BodyStructure.location.coding.system",
+        "path": "BodyStructure.location.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.location.coding.version",
+        "path": "BodyStructure.location.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.location.coding.code",
+        "path": "BodyStructure.location.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.location.coding.display",
+        "path": "BodyStructure.location.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.location.coding.userSelected",
+        "path": "BodyStructure.location.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.location.text",
+        "path": "BodyStructure.location.text",
+        "definition": "Freitext Bezeichnung der Körperstelle. Mögliche Verwendung:\r\n                        -Ersatzweise, wenn keine passende Codierung zugeordnet werden kann\r\n                        -Als Freitextergänzung, wenn die Körperstelle nicht ausreichend spezifisch codiert werden kann.",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.locationQualifier",
+        "path": "BodyStructure.locationQualifier",
+        "definition": "An dieser Stelle kann eine präzisere Beschreibung der \r\nLokalisation innerhalb einer Struktur / Organs / Körperteils abgebildet werden. Es geht um räumliche Angaben, beispielsweise:\r\noben / obere(r),\r\nunten / untere(r),\r\nmedial,\r\nlateral,\r\nAngabe eines Quadranten,\r\nAngabe auf einem gedachten Kreis (bei 3 Uhr)",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.locationQualifier.coding",
+        "path": "BodyStructure.locationQualifier.coding",
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Localisation_Body_Strucutre_SNOMED_CT|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "BodyStructure.locationQualifier.coding.system",
+        "path": "BodyStructure.locationQualifier.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.locationQualifier.coding.version",
+        "path": "BodyStructure.locationQualifier.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.locationQualifier.coding.code",
+        "path": "BodyStructure.locationQualifier.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.locationQualifier.coding.display",
+        "path": "BodyStructure.locationQualifier.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.locationQualifier.coding.userSelected",
+        "path": "BodyStructure.locationQualifier.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.locationQualifier.text",
+        "path": "BodyStructure.locationQualifier.text",
+        "definition": "Hier wird die Lokalisierung als Freitext angegeben.",
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.description",
+        "path": "BodyStructure.description",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.image",
+        "path": "BodyStructure.image",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.patient",
+        "path": "BodyStructure.patient",
+        "definition": "Dieses Element beschreibt eine Person, die eine oder mehrere medizinische Leistungen in Anspruch nimmt",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.patient.reference",
+        "path": "BodyStructure.patient.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "BodyStructure.patient.type",
+        "path": "BodyStructure.patient.type",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.patient.identifier",
+        "path": "BodyStructure.patient.identifier",
+        "max": "0"
+      },
+      {
+        "id": "BodyStructure.patient.display",
+        "path": "BodyStructure.patient.display",
+        "max": "0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1610 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "KBV-PR-MIO-LAB-Patient",
+  "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient",
+  "version": "1.0.0-kommentierung.2",
+  "name": "KBV_PR_MIO_LAB_Patient",
+  "title": "KBV_PR_MIO_LAB_Patient",
+  "status": "draft",
+  "publisher": "Kassenärztliche Bundesvereinigung (KBV)",
+  "description": "Dieses Profil bildet eine Person ab, die eine oder mehrere medizinische Leistungen in Anspruch nimmt.",
+  "copyright": "Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health - ICF, herausgegeben durch die Weltgesundheitsorganisation.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient",
+        "path": "Patient",
+        "definition": "Dieses Profil bildet eine Person ab, die eine oder mehrere medizinische Leistungen in Anspruch nimmt."
+      },
+      {
+        "id": "Patient.meta",
+        "path": "Patient.meta",
+        "min": 1
+      },
+      {
+        "id": "Patient.meta.versionId",
+        "path": "Patient.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.meta.lastUpdated",
+        "path": "Patient.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.meta.source",
+        "path": "Patient.meta.source",
+        "max": "0"
+      },
+      {
+        "id": "Patient.meta.profile",
+        "path": "Patient.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Patient.meta.profile:mioProfile",
+        "path": "Patient.meta.profile",
+        "sliceName": "mioProfile",
+        "min": 1,
+        "max": "1",
+        "patternCanonical": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient|1.0.0-kommentierung.2"
+      },
+      {
+        "id": "Patient.meta.security",
+        "path": "Patient.meta.security",
+        "max": "0"
+      },
+      {
+        "id": "Patient.meta.tag",
+        "path": "Patient.meta.tag",
+        "max": "0"
+      },
+      {
+        "id": "Patient.implicitRules",
+        "path": "Patient.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Patient.text",
+        "path": "Patient.text",
+        "definition": "In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."
+      },
+      {
+        "id": "Patient.text.status",
+        "path": "Patient.text.status",
+        "fixedCode": "extensions"
+      },
+      {
+        "id": "Patient.contained",
+        "path": "Patient.contained",
+        "max": "0"
+      },
+      {
+        "id": "Patient.extension",
+        "path": "Patient.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:klinischRelevantesGeschlecht",
+        "path": "Patient.extension",
+        "sliceName": "klinischRelevantesGeschlecht",
+        "definition": "Die Angabe des klinisch relevanten Geschlechts ist für die aktuelle klinische Entscheidungsfindung gedacht. Sie weist darauf hin, auf welcher Referenzpopulation bei geschlechtsspezifischen Richtgrenzen eine Messergebnis-Bewertung basieren sollte.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Sex_for_Clinical_Use"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:klinischRelevantesGeschlecht.value[x]",
+        "path": "Patient.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:klinischRelevantesGeschlecht.value[x]:valueCoding",
+        "path": "Patient.extension.value[x]",
+        "sliceName": "valueCoding",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use"
+        }
+      },
+      {
+        "id": "Patient.extension:klinischRelevantesGeschlecht.value[x]:valueCoding.system",
+        "path": "Patient.extension.value[x].system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:klinischRelevantesGeschlecht.value[x]:valueCoding.version",
+        "path": "Patient.extension.value[x].version",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:klinischRelevantesGeschlecht.value[x]:valueCoding.code",
+        "path": "Patient.extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:klinischRelevantesGeschlecht.value[x]:valueCoding.display",
+        "path": "Patient.extension.value[x].display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:klinischRelevantesGeschlecht.value[x]:valueCoding.userSelected",
+        "path": "Patient.extension.value[x].userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "type"
+            }
+          ],
+          "rules": "closed"
+        },
+        "definition": "In diesem Element wird der Identifier (Identifikator) für die Person eingetragen. Der Identifikator kann aus diversen Quellen stammen.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:pid",
+        "path": "Patient.identifier",
+        "sliceName": "pid",
+        "definition": "Abbildung einer organisationsspezifischen Patienten-ID. Die PID kann beispielsweise als Identifikator verwendet werden, wenn eine einsendende Praxis den Laborbefund in pseudonymisierter Form übermittelt bekommen möchte. Nach welchen Regeln und mit welchem Identifier ein pseudonymisierter Laborbefund übermittelt wird, wäre in solcher Konstellation Gegenstand einer Einzelabstimmung zwischen Praxis und Labor.",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:pid.use",
+        "path": "Patient.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:pid.type",
+        "path": "Patient.identifier.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:pid.type.coding",
+        "path": "Patient.identifier.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:pid.type.coding.system",
+        "path": "Patient.identifier.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:pid.type.coding.version",
+        "path": "Patient.identifier.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:pid.type.coding.code",
+        "path": "Patient.identifier.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:pid.type.coding.display",
+        "path": "Patient.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:pid.type.coding.userSelected",
+        "path": "Patient.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:pid.type.text",
+        "path": "Patient.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:pid.system",
+        "path": "Patient.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:pid.value",
+        "path": "Patient.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:pid.period",
+        "path": "Patient.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:pid.assigner",
+        "path": "Patient.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV",
+        "path": "Patient.identifier",
+        "sliceName": "versichertenId_GKV",
+        "definition": "Unveränderlicher Teil der einheitlichen Krankenversicherungsnummer der GKV gemäß § 290 SGB V. Die 10-stellige Zeichenfolge beginnt mit einem zufällig vergebene Großbuchstaben, darauf folgen 8 zufällige Ziffern. Das 10. Zeichen ist eine Prüfziffer.",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV.use",
+        "path": "Patient.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV.type",
+        "path": "Patient.identifier.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV.type.coding",
+        "path": "Patient.identifier.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV.type.coding.system",
+        "path": "Patient.identifier.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV.type.coding.version",
+        "path": "Patient.identifier.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV.type.coding.code",
+        "path": "Patient.identifier.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV.type.coding.display",
+        "path": "Patient.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV.type.coding.userSelected",
+        "path": "Patient.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV.type.text",
+        "path": "Patient.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV.system",
+        "path": "Patient.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV.value",
+        "path": "Patient.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV.period",
+        "path": "Patient.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV.assigner",
+        "path": "Patient.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv",
+        "path": "Patient.identifier",
+        "sliceName": "versichertennummer_pkv",
+        "definition": "Identifikator für eine Privatversichertennummer.",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.use",
+        "path": "Patient.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.type",
+        "path": "Patient.identifier.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.type.coding",
+        "path": "Patient.identifier.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.type.coding.system",
+        "path": "Patient.identifier.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.type.coding.version",
+        "path": "Patient.identifier.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.type.coding.code",
+        "path": "Patient.identifier.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.type.coding.display",
+        "path": "Patient.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.type.coding.userSelected",
+        "path": "Patient.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.type.text",
+        "path": "Patient.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.system",
+        "path": "Patient.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.value",
+        "path": "Patient.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.period",
+        "path": "Patient.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.assigner.reference",
+        "path": "Patient.identifier.assigner.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.assigner.type",
+        "path": "Patient.identifier.assigner.type",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_pkv.assigner.identifier",
+        "path": "Patient.identifier.assigner.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer",
+        "path": "Patient.identifier",
+        "sliceName": "reisepassnummer",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer.use",
+        "path": "Patient.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer.type",
+        "path": "Patient.identifier.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer.type.coding",
+        "path": "Patient.identifier.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer.type.coding.system",
+        "path": "Patient.identifier.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer.type.coding.version",
+        "path": "Patient.identifier.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer.type.coding.code",
+        "path": "Patient.identifier.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer.type.coding.display",
+        "path": "Patient.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer.type.coding.userSelected",
+        "path": "Patient.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer.type.text",
+        "path": "Patient.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer.system",
+        "path": "Patient.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer.value",
+        "path": "Patient.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer.period",
+        "path": "Patient.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:reisepassnummer.assigner",
+        "path": "Patient.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk",
+        "path": "Patient.identifier",
+        "sliceName": "versichertennummer_kvk",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk.use",
+        "path": "Patient.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk.type",
+        "path": "Patient.identifier.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk.type.coding",
+        "path": "Patient.identifier.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk.type.coding.system",
+        "path": "Patient.identifier.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk.type.coding.version",
+        "path": "Patient.identifier.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk.type.coding.code",
+        "path": "Patient.identifier.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk.type.coding.display",
+        "path": "Patient.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk.type.coding.userSelected",
+        "path": "Patient.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk.type.text",
+        "path": "Patient.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk.system",
+        "path": "Patient.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk.value",
+        "path": "Patient.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk.period",
+        "path": "Patient.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertennummer_kvk.assigner",
+        "path": "Patient.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV",
+        "path": "Patient.identifier",
+        "sliceName": "versichertenId_PKV",
+        "definition": "Identifier für den unveränderlichen 10-stelligen Teil der Versicherten ID der privaten Krankenversicherungen. Die 10-stellige Zeichenfolge beginnt mit einem zufällig vergebene Großbuchstaben, darauf folgen 8 zufällige Ziffern. Bei der letzten Ziffer handelt es sich um eine Prüfziffer.",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV.use",
+        "path": "Patient.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV.type",
+        "path": "Patient.identifier.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV.type.coding",
+        "path": "Patient.identifier.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV.type.coding.system",
+        "path": "Patient.identifier.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV.type.coding.version",
+        "path": "Patient.identifier.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV.type.coding.code",
+        "path": "Patient.identifier.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV.type.coding.display",
+        "path": "Patient.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV.type.coding.userSelected",
+        "path": "Patient.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV.type.text",
+        "path": "Patient.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV.system",
+        "path": "Patient.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV.value",
+        "path": "Patient.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV.period",
+        "path": "Patient.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:versichertenId_PKV.assigner",
+        "path": "Patient.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Patient.active",
+        "path": "Patient.active",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "use"
+            }
+          ],
+          "rules": "closed"
+        },
+        "definition": "Dieses Element beschreibt den vollständigen Namen der behandelten Person.",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name",
+        "path": "Patient.name",
+        "sliceName": "name",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.text",
+        "path": "Patient.name.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family",
+        "path": "Patient.name.family",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension",
+        "path": "Patient.name.family.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "min": 1,
+        "max": "3",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:namenszusatz",
+        "path": "Patient.name.family.extension",
+        "sliceName": "namenszusatz",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:namenszusatz.extension",
+        "path": "Patient.name.family.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name:name.family.extension:namenszusatz.value[x]",
+        "path": "Patient.name.family.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:namenszusatz.value[x]:valueString",
+        "path": "Patient.name.family.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:nachname",
+        "path": "Patient.name.family.extension",
+        "sliceName": "nachname",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:nachname.value[x]",
+        "path": "Patient.name.family.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:nachname.value[x]:valueString",
+        "path": "Patient.name.family.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:vorsatzwort",
+        "path": "Patient.name.family.extension",
+        "sliceName": "vorsatzwort",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:vorsatzwort.value[x]",
+        "path": "Patient.name.family.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:vorsatzwort.value[x]:valueString",
+        "path": "Patient.name.family.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.given",
+        "path": "Patient.name.given",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.prefix",
+        "path": "Patient.name.prefix",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.prefix.extension:prefix-qualifier",
+        "path": "Patient.name.prefix.extension",
+        "sliceName": "prefix-qualifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.prefix.extension:prefix-qualifier.value[x]",
+        "path": "Patient.name.prefix.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.prefix.extension:prefix-qualifier.value[x]:valueCode",
+        "path": "Patient.name.prefix.extension.value[x]",
+        "sliceName": "valueCode",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.suffix",
+        "path": "Patient.name.suffix",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name:name.period",
+        "path": "Patient.name.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name:geburtsname",
+        "path": "Patient.name",
+        "sliceName": "geburtsname",
+        "max": "0",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:Pseudonymisierung",
+        "path": "Patient.name",
+        "sliceName": "Pseudonymisierung",
+        "definition": "Dieses Element wird verwendet, falls der Laborgesamtbefund Pseudonymisiert ist.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:Pseudonymisierung.id",
+        "path": "Patient.name.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name:Pseudonymisierung.extension",
+        "path": "Patient.name.extension",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:Pseudonymisierung.extension:data-absent-reason",
+        "path": "Patient.name.extension",
+        "sliceName": "data-absent-reason",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      },
+      {
+        "id": "Patient.name:Pseudonymisierung.extension:data-absent-reason.value[x]",
+        "path": "Patient.name.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:Pseudonymisierung.extension:data-absent-reason.value[x]:valueCode",
+        "path": "Patient.name.extension.value[x]",
+        "sliceName": "valueCode",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "unknown",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:Pseudonymisierung.use",
+        "path": "Patient.name.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name:Pseudonymisierung.text",
+        "path": "Patient.name.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name:Pseudonymisierung.family",
+        "path": "Patient.name.family",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name:Pseudonymisierung.given",
+        "path": "Patient.name.given",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name:Pseudonymisierung.prefix",
+        "path": "Patient.name.prefix",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name:Pseudonymisierung.suffix",
+        "path": "Patient.name.suffix",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name:Pseudonymisierung.period",
+        "path": "Patient.name.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.telecom",
+        "path": "Patient.telecom",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.telecom.system",
+        "path": "Patient.telecom.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.telecom.value",
+        "path": "Patient.telecom.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.telecom.use",
+        "path": "Patient.telecom.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.telecom.rank",
+        "path": "Patient.telecom.rank",
+        "max": "0"
+      },
+      {
+        "id": "Patient.telecom.period",
+        "path": "Patient.telecom.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.gender",
+        "path": "Patient.gender",
+        "definition": "Geschlechtsdefinition nach den Versichertenstammdaten (VSD).",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.gender.extension",
+        "path": "Patient.gender.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.gender.extension:other-amtlich",
+        "path": "Patient.gender.extension",
+        "sliceName": "other-amtlich",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.gender.extension:other-amtlich.extension",
+        "path": "Patient.gender.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Patient.gender.extension:other-amtlich.value[x]",
+        "path": "Patient.gender.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.gender.extension:other-amtlich.value[x].system",
+        "path": "Patient.gender.extension.value[x].system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.gender.extension:other-amtlich.value[x].version",
+        "path": "Patient.gender.extension.value[x].version",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.gender.extension:other-amtlich.value[x].code",
+        "path": "Patient.gender.extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.gender.extension:other-amtlich.value[x].display",
+        "path": "Patient.gender.extension.value[x].display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.gender.extension:other-amtlich.value[x].userSelected",
+        "path": "Patient.gender.extension.value[x].userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Patient.gender.extension:other-amtlich.value[x]:valueCoding",
+        "path": "Patient.gender.extension.value[x]",
+        "sliceName": "valueCoding",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "definition": "Hier wird das Geburtsdatum der behandelten Person angegeben",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.birthDate.extension",
+        "path": "Patient.birthDate.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.birthDate.extension:data-absent-reason",
+        "path": "Patient.birthDate.extension",
+        "sliceName": "data-absent-reason",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.birthDate.extension:data-absent-reason.value[x]",
+        "path": "Patient.birthDate.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed",
+          "ordered": false
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.birthDate.extension:data-absent-reason.value[x]:valueCode",
+        "path": "Patient.birthDate.extension.value[x]",
+        "sliceName": "valueCode",
+        "min": 1,
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.deceased[x]",
+        "path": "Patient.deceased[x]",
+        "max": "0"
+      },
+      {
+        "id": "Patient.address",
+        "path": "Patient.address",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "type"
+            }
+          ],
+          "rules": "closed"
+        },
+        "definition": "Hier können Angaben zur Anschrift der behandelten Person gemacht werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift",
+        "path": "Patient.address",
+        "sliceName": "Strassenanschrift",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.extension",
+        "path": "Patient.address.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.extension:Stadtteil",
+        "path": "Patient.address.extension",
+        "sliceName": "Stadtteil",
+        "definition": "In diesem Element kann der Stadt- oder Ortsteil angegeben werden, z. B. wenn der Ort ein Stadtstaat ist.",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.extension:Stadtteil.value[x]",
+        "path": "Patient.address.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.extension:Stadtteil.value[x]:valueString",
+        "path": "Patient.address.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.use",
+        "path": "Patient.address.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.text",
+        "path": "Patient.address.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.line",
+        "path": "Patient.address.line",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.line.extension",
+        "path": "Patient.address.line.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "max": "3",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.line.extension:Strasse",
+        "path": "Patient.address.line.extension",
+        "sliceName": "Strasse",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.line.extension:Strasse.value[x]",
+        "path": "Patient.address.line.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.line.extension:Strasse.value[x]:valueString",
+        "path": "Patient.address.line.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.line.extension:Hausnummer",
+        "path": "Patient.address.line.extension",
+        "sliceName": "Hausnummer",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.line.extension:Hausnummer.value[x]",
+        "path": "Patient.address.line.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.line.extension:Hausnummer.value[x]:valueString",
+        "path": "Patient.address.line.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.line.extension:Adresszusatz",
+        "path": "Patient.address.line.extension",
+        "sliceName": "Adresszusatz",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.line.extension:Adresszusatz.value[x]",
+        "path": "Patient.address.line.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.line.extension:Adresszusatz.value[x]:valueString",
+        "path": "Patient.address.line.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.city",
+        "path": "Patient.address.city",
+        "definition": "In dieses Feld kann der Ort eingetragen werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.state",
+        "path": "Patient.address.state",
+        "max": "0"
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.postalCode",
+        "path": "Patient.address.postalCode",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.country",
+        "path": "Patient.address.country",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Strassenanschrift.period",
+        "path": "Patient.address.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.address:Postfach",
+        "path": "Patient.address",
+        "sliceName": "Postfach",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Postfach.extension",
+        "path": "Patient.address.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Postfach.extension:Stadtteil",
+        "path": "Patient.address.extension",
+        "sliceName": "Stadtteil",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Postfach.extension:Stadtteil.value[x]",
+        "path": "Patient.address.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Postfach.extension:Stadtteil.value[x]:valueString",
+        "path": "Patient.address.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Postfach.use",
+        "path": "Patient.address.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.address:Postfach.text",
+        "path": "Patient.address.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.address:Postfach.line",
+        "path": "Patient.address.line",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Postfach.line.extension",
+        "path": "Patient.address.line.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Postfach.line.extension:Postfach",
+        "path": "Patient.address.line.extension",
+        "sliceName": "Postfach",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Postfach.line.extension:Postfach.value[x]",
+        "path": "Patient.address.line.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Postfach.line.extension:Postfach.value[x]:valueString",
+        "path": "Patient.address.line.extension.value[x]",
+        "sliceName": "valueString",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Postfach.city",
+        "path": "Patient.address.city",
+        "definition": "In dieses Feld kann der Ort eingetragen werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Postfach.state",
+        "path": "Patient.address.state",
+        "max": "0"
+      },
+      {
+        "id": "Patient.address:Postfach.postalCode",
+        "path": "Patient.address.postalCode",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Postfach.country",
+        "path": "Patient.address.country",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:Postfach.period",
+        "path": "Patient.address.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.maritalStatus",
+        "path": "Patient.maritalStatus",
+        "max": "0"
+      },
+      {
+        "id": "Patient.multipleBirth[x]",
+        "path": "Patient.multipleBirth[x]",
+        "max": "0"
+      },
+      {
+        "id": "Patient.photo",
+        "path": "Patient.photo",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact",
+        "path": "Patient.contact",
+        "max": "0"
+      },
+      {
+        "id": "Patient.communication",
+        "path": "Patient.communication",
+        "definition": "Sprachen, die zur Kommunikation mit der behandelten Person über medizinische Themen verwendet werden können",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.communication.language",
+        "path": "Patient.communication.language",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_CommonLanguages"
+        }
+      },
+      {
+        "id": "Patient.communication.language.coding",
+        "path": "Patient.communication.language.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.communication.language.coding.system",
+        "path": "Patient.communication.language.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.communication.language.coding.version",
+        "path": "Patient.communication.language.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.communication.language.coding.code",
+        "path": "Patient.communication.language.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.communication.language.coding.display",
+        "path": "Patient.communication.language.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.communication.language.coding.userSelected",
+        "path": "Patient.communication.language.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Patient.communication.language.text",
+        "path": "Patient.communication.language.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.communication.preferred",
+        "path": "Patient.communication.preferred",
+        "max": "0"
+      },
+      {
+        "id": "Patient.generalPractitioner",
+        "path": "Patient.generalPractitioner",
+        "max": "0"
+      },
+      {
+        "id": "Patient.managingOrganization",
+        "path": "Patient.managingOrganization",
+        "max": "0"
+      },
+      {
+        "id": "Patient.link",
+        "path": "Patient.link",
+        "max": "0"
+      }
+    ]
+  }
+}

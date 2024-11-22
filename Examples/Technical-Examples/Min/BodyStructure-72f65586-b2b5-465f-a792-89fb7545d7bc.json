@@ -1,0 +1,12 @@
+{
+  "resourceType": "BodyStructure",
+  "id": "72f65586-b2b5-465f-a792-89fb7545d7bc",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_BodyStructure|1.0.0-kommentierung.2"
+    ]
+  },
+  "patient": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7d"
+  }
+}

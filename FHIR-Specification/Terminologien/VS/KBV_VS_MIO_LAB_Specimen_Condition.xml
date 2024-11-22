@@ -1,0 +1,185 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="KBV-VS-MIO-LAB-Specimen-Condition"/>
+    <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Specimen_Condition"/>
+    <version value="1.0.0-kommentierung.2"/>
+    <name value="KBV_VS_MIO_LAB_Specimen_Condition"/>
+    <title value="Zustand Probe"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Dieses Valueset enthält die Codes zur Beschreibung von Zustand Probe."/>
+    <immutable value="false"/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <compose>
+        <include>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0493"/>
+            <version value="2.2.0"/>
+            <concept>
+                <code value="AUT"/>
+                <display value="Autolyzed"/>
+            </concept>
+            <concept>
+                <code value="CLOT"/>
+                <display value="Clotted"/>
+            </concept>
+            <concept>
+                <code value="CON"/>
+                <display value="Contaminated"/>
+            </concept>
+            <concept>
+                <code value="COOL"/>
+                <display value="Cool"/>
+            </concept>
+            <concept>
+                <code value="FROZ"/>
+                <display value="Frozen"/>
+            </concept>
+            <concept>
+                <code value="HEM"/>
+                <display value="Hemolyzed"/>
+            </concept>
+            <concept>
+                <code value="LIVE"/>
+                <display value="Live"/>
+            </concept>
+            <concept>
+                <code value="ROOM"/>
+                <display value="Room Temperature"/>
+            </concept>
+            <concept>
+                <code value="SNR"/>
+                <display value="Sample not received"/>
+            </concept>
+            <concept>
+                <code value="CFU"/>
+                <display value="Centrifuged"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <concept>
+                <code value="710070002"/>
+                <display value="Specimen unsatisfactory for evaluation due to broken container (finding)"/>
+            </concept>
+            <concept>
+                <code value="448140007"/>
+                <display value="Specimen unsatisfactory for evaluation due to obscuring lubricant jelly (finding)"/>
+            </concept>
+            <concept>
+                <code value="712743008"/>
+                <display value="Specimen unsatisfactory for evaluation due to improper storage of sample (finding)"/>
+            </concept>
+            <concept>
+                <code value="448141006"/>
+                <display value="Specimen unsatisfactory for evaluation due to marked cellular degeneration (finding)"/>
+            </concept>
+            <concept>
+                <code value="373881006"/>
+                <display value="Unsatisfactory for evaluation due to lack of patient identification on specimen and/or requisition form (finding)"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="cafc218f-7a46-11ef-b7ee-005056ad9fdf"/>
+        <timestamp value="2024-09-24T09:29:54+02:00"/>
+        <total value="15"/>
+        <offset value="0"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="710070002"/>
+            <display value="Specimen unsatisfactory for evaluation due to broken container (finding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="448140007"/>
+            <display value="Specimen unsatisfactory for evaluation due to obscuring lubricant jelly (finding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="712743008"/>
+            <display value="Specimen unsatisfactory for evaluation due to improper storage of sample (finding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="448141006"/>
+            <display value="Specimen unsatisfactory for evaluation due to marked cellular degeneration (finding)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="373881006"/>
+            <display value="Unsatisfactory for evaluation due to lack of patient identification on specimen and/or requisition form (finding)"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0493"/>
+            <version value="2.2.0"/>
+            <code value="AUT"/>
+            <display value="Autolyzed"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0493"/>
+            <version value="2.2.0"/>
+            <code value="CLOT"/>
+            <display value="Clotted"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0493"/>
+            <version value="2.2.0"/>
+            <code value="CON"/>
+            <display value="Contaminated "/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0493"/>
+            <version value="2.2.0"/>
+            <code value="COOL"/>
+            <display value="Cool"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0493"/>
+            <version value="2.2.0"/>
+            <code value="FROZ"/>
+            <display value="Frozen"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0493"/>
+            <version value="2.2.0"/>
+            <code value="HEM"/>
+            <display value="Hemolyzed"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0493"/>
+            <version value="2.2.0"/>
+            <code value="LIVE"/>
+            <display value="Live"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0493"/>
+            <version value="2.2.0"/>
+            <code value="ROOM"/>
+            <display value="Room Temperature"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0493"/>
+            <version value="2.2.0"/>
+            <code value="SNR"/>
+            <display value="Sample not received"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0493"/>
+            <version value="2.2.0"/>
+            <code value="CFU"/>
+            <display value="Centrifuged"/>
+        </contains>
+    </expansion>
+</ValueSet>

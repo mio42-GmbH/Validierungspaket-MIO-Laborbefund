@@ -1,0 +1,795 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "KBV-PR-MIO-LAB-DiagnosticReport",
+  "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DiagnosticReport",
+  "version": "1.0.0-kommentierung.2",
+  "name": "KBV_PR_MIO_LAB_DiagnosticReport",
+  "title": "KBV_PR_MIO_LAB_DiagnosticReport",
+  "status": "draft",
+  "publisher": "Kassenärztliche Bundesvereinigung (KBV)",
+  "description": "In diesem Profil kann ein Laborbefund dokumentiert werden.",
+  "copyright": "Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health - ICF, herausgegeben durch die Weltgesundheitsorganisation.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "definition": "Dieses Profil bildet einen Befund / Bericht ab."
+      },
+      {
+        "id": "DiagnosticReport.meta",
+        "path": "DiagnosticReport.meta",
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.meta.versionId",
+        "path": "DiagnosticReport.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.meta.lastUpdated",
+        "path": "DiagnosticReport.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.meta.source",
+        "path": "DiagnosticReport.meta.source",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.meta.profile",
+        "path": "DiagnosticReport.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.meta.profile:mioProfile",
+        "path": "DiagnosticReport.meta.profile",
+        "sliceName": "mioProfile",
+        "min": 1,
+        "max": "1",
+        "patternCanonical": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DiagnosticReport|1.0.0-kommentierung.2"
+      },
+      {
+        "id": "DiagnosticReport.meta.security",
+        "path": "DiagnosticReport.meta.security",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.meta.tag",
+        "path": "DiagnosticReport.meta.tag",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.implicitRules",
+        "path": "DiagnosticReport.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.text",
+        "path": "DiagnosticReport.text",
+        "definition": "In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."
+      },
+      {
+        "id": "DiagnosticReport.text.status",
+        "path": "DiagnosticReport.text.status",
+        "fixedCode": "extensions"
+      },
+      {
+        "id": "DiagnosticReport.contained",
+        "path": "DiagnosticReport.contained",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.extension",
+        "path": "DiagnosticReport.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:KennzeichenPseudonymisierterBefund",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "KennzeichenPseudonymisierterBefund",
+        "comment": "Vorgabe\nWenn eine einsendende Praxis den Laborbefund in pseudonymisierter Form übermittelt, ist die Minimalangabe ein Identifikator anstelle des korrekten amtlichen Namens.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Pseudonymized_Result"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:KennzeichenPseudonymisierterBefund.value[x]",
+        "path": "DiagnosticReport.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:KennzeichenPseudonymisierterBefund.value[x]:valueBoolean",
+        "path": "DiagnosticReport.extension.value[x]",
+        "sliceName": "valueBoolean",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:KennzeichenKritischerBefund",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "KennzeichenKritischerBefund",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Critical_Result"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:KennzeichenKritischerBefund.value[x]",
+        "path": "DiagnosticReport.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:KennzeichenKritischerBefund.value[x]:valueBoolean",
+        "path": "DiagnosticReport.extension.value[x]",
+        "sliceName": "valueBoolean",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:SekundaerStatus",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "SekundaerStatus",
+        "min": 0,
+        "max": "3",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Secondary_Status"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:SekundaerStatus.value[x]",
+        "path": "DiagnosticReport.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:SekundaerStatus.value[x]:valueCoding",
+        "path": "DiagnosticReport.extension.value[x]",
+        "sliceName": "valueCoding",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Secondary_Status|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "DiagnosticReport.extension:SekundaerStatus.value[x]:valueCoding.system",
+        "path": "DiagnosticReport.extension.value[x].system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:SekundaerStatus.value[x]:valueCoding.version",
+        "path": "DiagnosticReport.extension.value[x].version",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:SekundaerStatus.value[x]:valueCoding.code",
+        "path": "DiagnosticReport.extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:SekundaerStatus.value[x]:valueCoding.display",
+        "path": "DiagnosticReport.extension.value[x].display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:SekundaerStatus.value[x]:valueCoding.userSelected",
+        "path": "DiagnosticReport.extension.value[x].userSelected",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.extension:DiagnosticReportCompositionR5",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "DiagnosticReportCompositionR5",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:DiagnosticReportCompositionR5.value[x]",
+        "path": "DiagnosticReport.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed",
+          "ordered": false
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:DiagnosticReportCompositionR5.value[x]:valueReference",
+        "path": "DiagnosticReport.extension.value[x]",
+        "sliceName": "valueReference",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Composition|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:DiagnosticReportCompositionR5.value[x]:valueReference.id",
+        "path": "DiagnosticReport.extension.value[x].id",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.extension:DiagnosticReportCompositionR5.value[x]:valueReference.reference",
+        "path": "DiagnosticReport.extension.value[x].reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:DiagnosticReportCompositionR5.value[x]:valueReference.type",
+        "path": "DiagnosticReport.extension.value[x].type",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.extension:DiagnosticReportCompositionR5.value[x]:valueReference.identifier",
+        "path": "DiagnosticReport.extension.value[x].identifier",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.extension:DiagnosticReportCompositionR5.value[x]:valueReference.display",
+        "path": "DiagnosticReport.extension.value[x].display",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.identifier",
+        "path": "DiagnosticReport.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "type"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "max": "2",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor",
+        "path": "DiagnosticReport.identifier",
+        "sliceName": "auftragsnummerLabor",
+        "definition": "Auftragsnummer, die das auftragsnehmende Labor vergibt und führt",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor.use",
+        "path": "DiagnosticReport.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor.type",
+        "path": "DiagnosticReport.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "AL",
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Laboratory_Identificator",
+              "display": "Auftragsnummer des Labors",
+              "version": "1.0.0-kommentierung.2"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor.type.coding",
+        "path": "DiagnosticReport.identifier.type.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor.type.coding.system",
+        "path": "DiagnosticReport.identifier.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor.type.coding.version",
+        "path": "DiagnosticReport.identifier.type.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor.type.coding.code",
+        "path": "DiagnosticReport.identifier.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor.type.coding.display",
+        "path": "DiagnosticReport.identifier.type.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor.type.coding.userSelected",
+        "path": "DiagnosticReport.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor.type.text",
+        "path": "DiagnosticReport.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor.system",
+        "path": "DiagnosticReport.identifier.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor.value",
+        "path": "DiagnosticReport.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor.period",
+        "path": "DiagnosticReport.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.identifier:auftragsnummerLabor.assigner",
+        "path": "DiagnosticReport.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.identifier:laborgesamtbefund",
+        "path": "DiagnosticReport.identifier",
+        "sliceName": "laborgesamtbefund",
+        "definition": "Die eindeutige Identifikation des Laborbefundes zu einem Laborauftrag geschieht mittels UUID (Universal Unique Identifier). Sie wird durch das auftragnehmende Labor generiert. Die Erzeugung und Vergabe der UUID ist obligat!\r\nDie UUID wird als Befundinhalt beim Übermitteln des Laborbefundes mitgegeben, auch dann, wenn der Laborbefund jenseits der ePA übermittelt wird (z. B: per E-Mail oder KIM). Diese UUID bleibt über den gesamten Workflow der Abarbeitung des Auftrages die selbe; durch die Versionierung eines Laborbefundes hindurch (vorläufiger, finaler Folge-Befund...) und durch alle Systeme hindurch. Anhand der UUID und des Zeitstempels der Befund-Erstellung bekommt das empfangende System die Möglichkeit, dem/der NutzerIn immer den aktuellen Befund zu präsentieren.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:laborgesamtbefund.use",
+        "path": "DiagnosticReport.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.identifier:laborgesamtbefund.type",
+        "path": "DiagnosticReport.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.identifier:laborgesamtbefund.system",
+        "path": "DiagnosticReport.identifier.system",
+        "min": 1,
+        "patternUri": "urn:ietf:rfc:3986",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:laborgesamtbefund.value",
+        "path": "DiagnosticReport.identifier.value",
+        "comment": "Vorgabe\n(pseudo-)zufällige Version 4 der UUID",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:laborgesamtbefund.period",
+        "path": "DiagnosticReport.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.identifier:laborgesamtbefund.assigner",
+        "path": "DiagnosticReport.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.basedOn",
+        "path": "DiagnosticReport.basedOn",
+        "definition": "Referenz auf das auftragnehmende Labor ",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_ServiceRequest|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.basedOn.reference",
+        "path": "DiagnosticReport.basedOn.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.basedOn.type",
+        "path": "DiagnosticReport.basedOn.type",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.basedOn.identifier",
+        "path": "DiagnosticReport.basedOn.identifier",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.basedOn.display",
+        "path": "DiagnosticReport.basedOn.display",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.status",
+        "path": "DiagnosticReport.status",
+        "definition": "Hier wird der Status des Befunds/Berichts als Code angegeben.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Diagnostic_ReportStatus|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "definition": "Codierte Angabe zur Art des Befundes, hier Laborbefund",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.code.coding",
+        "path": "DiagnosticReport.code.coding",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "11502-2",
+          "system": "http://loinc.org",
+          "display": "Laboratory report"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.code.coding.system",
+        "path": "DiagnosticReport.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.code.coding.version",
+        "path": "DiagnosticReport.code.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.code.coding.code",
+        "path": "DiagnosticReport.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.code.coding.display",
+        "path": "DiagnosticReport.code.coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.code.coding.userSelected",
+        "path": "DiagnosticReport.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.code.text",
+        "path": "DiagnosticReport.code.text",
+        "definition": "Hier wird der Titel des Dokuments angegeben.",
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.subject",
+        "path": "DiagnosticReport.subject",
+        "definition": "Dieses Element beschreibt eine Person, die eine oder mehrere medizinische Leistungen in Anspruch nimmt",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.subject.reference",
+        "path": "DiagnosticReport.subject.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.subject.type",
+        "path": "DiagnosticReport.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.subject.identifier",
+        "path": "DiagnosticReport.subject.identifier",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.subject.display",
+        "path": "DiagnosticReport.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.effective[x]",
+        "path": "DiagnosticReport.effective[x]",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.issued",
+        "path": "DiagnosticReport.issued",
+        "definition": "Dokumentationszeitpunkt des Befundes durch das auftragnehmende Labor.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.performer",
+        "path": "DiagnosticReport.performer",
+        "definition": "Hier wird die Person referenziert, die für Erstellung des Befunds/Berichts verantwortlich ist.",
+        "comment": "Vorgabe\nVon den Unterstrukturen darf entweder Behandelnde Person oder Einrichtung/Organisationseinheit oder die Kombination Behandelnde Person/Einrichtung einmal vorkommen.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_PractitionerRole|1.0.0-kommentierung.2",
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Organization",
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Practitioner"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.performer.reference",
+        "path": "DiagnosticReport.performer.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.performer.type",
+        "path": "DiagnosticReport.performer.type",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.performer.identifier",
+        "path": "DiagnosticReport.performer.identifier",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.performer.display",
+        "path": "DiagnosticReport.performer.display",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.resultsInterpreter",
+        "path": "DiagnosticReport.resultsInterpreter",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.specimen",
+        "path": "DiagnosticReport.specimen",
+        "comment": "Vorgabe\nWenn auf Gesamtbefundebene das gesamte Probenmaterial referenziert wird, so ist dies redundant zu den Probenreferenzen der Einzeluntersuchungen.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Specimen"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "definition": "Hier werden die einzelnen Ergebnisse des Befunds/Berichts referenziert",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Observation_Laboratory_Study_Group|1.0.0-kommentierung.2"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.result.reference",
+        "path": "DiagnosticReport.result.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.result.type",
+        "path": "DiagnosticReport.result.type",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.result.identifier",
+        "path": "DiagnosticReport.result.identifier",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.result.display",
+        "path": "DiagnosticReport.result.display",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.imagingStudy",
+        "path": "DiagnosticReport.imagingStudy",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.media",
+        "path": "DiagnosticReport.media",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.conclusion",
+        "path": "DiagnosticReport.conclusion",
+        "definition": "Hier wird eine zusammenfassende Beurteilung angegeben, in der die Ergebnisse bewertet und in den klinischen Zusammenhang gesetzt werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.conclusionCode",
+        "path": "DiagnosticReport.conclusionCode",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm",
+        "path": "DiagnosticReport.presentedForm",
+        "definition": "Hier wird der Befund/Bericht als Anhang in Form eines formatierten Dokuments abgebildet.",
+        "comment": "Vorgabe\n\"Anhang-Laborgesamtbefund\" (PresentedForm) ist ein exportierbares, auch druckbares Format (z.B. PDF) vom Laborgesamtbefund, inklusive aller medizinischen Daten. Dazu gehören auch die Inhalte von \"Ergänzende Dokumente\" und \"Ergänzende Angaben\". \n Weitere Dokumentenanhänge in: KBV_PR_MIO_LAB_Composition ",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.contentType",
+        "path": "DiagnosticReport.presentedForm.contentType",
+        "definition": "Hier wird das Dateiformat abgebildet. Es ist ein Code aus dem System urn:ietf:bcp:13 zu wählen.",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_MIME_Types|1.0.0-kommentierung.2"
+        }
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.language",
+        "path": "DiagnosticReport.presentedForm.language",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.data",
+        "path": "DiagnosticReport.presentedForm.data",
+        "definition": "Hier wird der Befund/Bericht als Dokument angehängt.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.url",
+        "path": "DiagnosticReport.presentedForm.url",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.size",
+        "path": "DiagnosticReport.presentedForm.size",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.hash",
+        "path": "DiagnosticReport.presentedForm.hash",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.title",
+        "path": "DiagnosticReport.presentedForm.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.creation",
+        "path": "DiagnosticReport.presentedForm.creation",
+        "mustSupport": true
+      }
+    ]
+  }
+}

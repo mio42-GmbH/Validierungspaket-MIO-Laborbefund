@@ -1,0 +1,511 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="KBV-VS-MIO-LAB-Localisation-Body-Strucutre-SNOMED-CT"/>
+    <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_LAB_Localisation_Body_Strucutre_SNOMED_CT"/>
+    <version value="1.0.0-kommentierung.2"/>
+    <name value="KBV_VS_MIO_LAB_Localisation_Body_Strucutre_SNOMED_CT"/>
+    <title value="Lokalisation innerhalb Körperstelle SNOMED CT®"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Dieses Valueset enthält die Codes zur Beschreibung von Lokalisation innerhalb Körperstelle SNOMED CT®."/>
+    <immutable value="false"/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <concept>
+                <code value="7771000"/>
+                <display value="Left (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="24028007"/>
+                <display value="Right (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="40415009"/>
+                <display value="Proximal (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="46053002"/>
+                <display value="Distal (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="255554000"/>
+                <display value="Dorsal (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="255549009"/>
+                <display value="Anterior (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="26283006"/>
+                <display value="Superficial (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="795002"/>
+                <display value="Deep (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="57195005"/>
+                <display value="Basal (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="261183002"/>
+                <display value="Upper (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="261122009"/>
+                <display value="Lower (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="255561001"/>
+                <display value="Medial (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="49370004"/>
+                <display value="Lateral (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="264217000"/>
+                <display value="Superior (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="261089000"/>
+                <display value="Inferior (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="255551008"/>
+                <display value="Posterior (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="351726001"/>
+                <display value="Below (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="352730000"/>
+                <display value="Supra- (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="3583002"/>
+                <display value="Caudal (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="66787007"/>
+                <display value="Cephalic (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="255481003"/>
+                <display value="Left upper quadrant (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="255497008"/>
+                <display value="Right upper quadrant (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="255480002"/>
+                <display value="Left lower quadrant (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="255495000"/>
+                <display value="Right lower quadrant (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260318004"/>
+                <display value="1 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260319007"/>
+                <display value="1.30 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260322009"/>
+                <display value="10 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260323004"/>
+                <display value="10.30 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260324005"/>
+                <display value="11 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260325006"/>
+                <display value="11.30 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260326007"/>
+                <display value="12 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260327003"/>
+                <display value="12.30 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260328008"/>
+                <display value="2 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260329000"/>
+                <display value="2.30 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260330005"/>
+                <display value="3 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260331009"/>
+                <display value="3.30 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260333007"/>
+                <display value="4 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260334001"/>
+                <display value="4.30 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260335000"/>
+                <display value="5 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260336004"/>
+                <display value="5.30 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260337008"/>
+                <display value="6 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260338003"/>
+                <display value="6.30 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260339006"/>
+                <display value="7 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260340008"/>
+                <display value="7.30 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260341007"/>
+                <display value="8 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260342000"/>
+                <display value="8.30 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260343005"/>
+                <display value="9 o'clock position (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="260344004"/>
+                <display value="9.30 o'clock position (qualifier value)"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="8bfebc9b-7a46-11ef-a86f-005056ad9fdf"/>
+        <timestamp value="2024-09-24T09:28:08+02:00"/>
+        <total value="48"/>
+        <offset value="0"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="7771000"/>
+            <display value="Left (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="24028007"/>
+            <display value="Right (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="40415009"/>
+            <display value="Proximal (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="46053002"/>
+            <display value="Distal (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="255554000"/>
+            <display value="Dorsal (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="255549009"/>
+            <display value="Anterior (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="26283006"/>
+            <display value="Superficial (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="795002"/>
+            <display value="Deep (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="57195005"/>
+            <display value="Basal (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="261183002"/>
+            <display value="Upper (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="261122009"/>
+            <display value="Lower (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="255561001"/>
+            <display value="Medial (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="49370004"/>
+            <display value="Lateral (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="264217000"/>
+            <display value="Superior (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="261089000"/>
+            <display value="Inferior (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="255551008"/>
+            <display value="Posterior (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="351726001"/>
+            <display value="Below (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="352730000"/>
+            <display value="Supra- (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="3583002"/>
+            <display value="Caudal (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="66787007"/>
+            <display value="Cephalic (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="255481003"/>
+            <display value="Left upper quadrant (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="255497008"/>
+            <display value="Right upper quadrant (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="255480002"/>
+            <display value="Left lower quadrant (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="255495000"/>
+            <display value="Right lower quadrant (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260318004"/>
+            <display value="1 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260319007"/>
+            <display value="1.30 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260322009"/>
+            <display value="10 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260323004"/>
+            <display value="10.30 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260324005"/>
+            <display value="11 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260325006"/>
+            <display value="11.30 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260326007"/>
+            <display value="12 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260327003"/>
+            <display value="12.30 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260328008"/>
+            <display value="2 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260329000"/>
+            <display value="2.30 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260330005"/>
+            <display value="3 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260331009"/>
+            <display value="3.30 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260333007"/>
+            <display value="4 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260334001"/>
+            <display value="4.30 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260335000"/>
+            <display value="5 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260336004"/>
+            <display value="5.30 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260337008"/>
+            <display value="6 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260338003"/>
+            <display value="6.30 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260339006"/>
+            <display value="7 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260340008"/>
+            <display value="7.30 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260341007"/>
+            <display value="8 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260342000"/>
+            <display value="8.30 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260343005"/>
+            <display value="9 o'clock position (qualifier value)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/11000274103/version/20240515"/>
+            <code value="260344004"/>
+            <display value="9.30 o'clock position (qualifier value)"/>
+        </contains>
+    </expansion>
+</ValueSet>

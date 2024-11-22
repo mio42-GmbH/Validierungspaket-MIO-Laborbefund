@@ -1,0 +1,32 @@
+{
+  "index-version" : 2,
+  "files" : [
+    {
+      "filename" : "ImplementationGuide-hl7.fhir.eu.extensions.json",
+      "resourceType" : "ImplementationGuide",
+      "id" : "hl7.fhir.eu.extensions",
+      "url" : "http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "StructureDefinition-composition-basedOn-order-or-requisition.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "composition-basedOn-order-or-requisition",
+      "url" : "http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition",
+      "version" : "0.1.0",
+      "kind" : "complex-type",
+      "type" : "Extension",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-information-recipient.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "information-recipient",
+      "url" : "http://hl7.eu/fhir/StructureDefinition/information-recipient",
+      "version" : "0.1.0",
+      "kind" : "complex-type",
+      "type" : "Extension",
+      "derivation" : "constraint"
+    }
+  ]
+}

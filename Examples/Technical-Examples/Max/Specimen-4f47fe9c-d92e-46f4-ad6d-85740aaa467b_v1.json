@@ -1,0 +1,137 @@
+{
+  "resourceType": "Specimen",
+  "id": "4f47fe9c-d92e-46f4-ad6d-85740aaa467b",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Specimen|1.0.0-kommentierung.2"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2023-05-03T11:15:00+01:00"
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Probe</div>"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/900000000000207008/version/20220131",
+        "code": "370133003",
+        "display": "Specimen substance"
+      }
+    ],
+    "text": "test"
+  },
+  "collection": {
+    "duration": {
+      "system": "http://unitsofmeasure.org",
+      "value": 20,
+      "comparator": ">",
+      "unit": "ms",
+      "code": "ms"
+    },
+    "fastingStatusDuration": {
+      "system": "http://unitsofmeasure.org",
+      "value": 20,
+      "comparator": ">",
+      "unit": "ms",
+      "code": "ms"
+    },
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/bodySite",
+        "valueReference": {
+          "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7c"
+        }
+      },
+      {
+        "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Extracorporeal_Source",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "119376003",
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/sct/11000274103/version/20240515",
+              "display": "Tissue specimen"
+            }
+          ]
+        }
+      }
+    ],
+    "collectedDateTime": "2023-05-03",
+    "method": {
+      "coding": [
+        {
+          "code": "4241000179101",
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/11000274103/version/20240515",
+          "display": "Laboratory report (record artifact)"
+        }
+      ]
+    }
+  },
+  "container": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.container.device",
+          "valueReference": {
+            "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7v"
+          }
+        }
+      ],
+      "specimenQuantity": {
+        "value": 20,
+        "unit": "ms",
+        "system": "http://unitsofmeasure.org",
+        "code": "ms"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "value": "Test Specimen identifier",
+      "system": "http://testsystem.de"
+    }
+  ],
+  "status": "available",
+  "subject": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7d"
+  },
+  "receivedTime": "2021-11-15T16:55:00+01:00",
+  "parent": [
+    {
+      "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7e"
+    }
+  ],
+  "processing": [
+    {
+      "description": "test",
+      "additive": [
+        {
+          "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7a"
+        }
+      ],
+      "timeDateTime": "2023-05-03"
+    }
+  ],
+  "condition": [
+    {
+      "coding": [
+        {
+          "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Specimen_Condition_German",
+          "version": "1.0.0-kommentierung.2",
+          "code": "Zelldegenration",
+          "display": "Zelldegenration"
+        }
+      ],
+      "text": "test"
+    }
+  ],
+  "note": [
+    {
+      "text": "test"
+    }
+  ]
+}

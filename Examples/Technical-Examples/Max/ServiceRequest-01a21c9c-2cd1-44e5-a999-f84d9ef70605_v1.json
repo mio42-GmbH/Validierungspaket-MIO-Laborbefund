@@ -1,0 +1,126 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "01a21c9c-2cd1-44e5-a999-f84d9ef70605",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_ServiceRequest|1.0.0-kommentierung.2"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2023-05-03T11:15:00+01:00"
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "721965002",
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "display": "Laboratory order (record artifact)"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Recipient_Laboratory_Report",
+      "extension": [
+        {
+          "url": "practitionerRole",
+          "valueReference": {
+            "reference": "urn:uuid:122fa5c5-f1f9-4406-9b8f-f6e451ca62ad"
+          }
+        }
+      ]
+    }
+  ],
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laborauftrag-Information</div>"
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "AE",
+            "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Laboratory_Identificator",
+            "display": "Auftragsnummer des Einsenders",
+            "version": "1.0.0-kommentierung.2"
+          }
+        ]
+      },
+      "system": "http://testsystem.de",
+      "value": "20211115-127"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "NI",
+            "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_LAB_Laboratory_Identificator",
+            "display": "Nachforderungsidentifikation",
+            "version": "1.0.0-kommentierung.2"
+          }
+        ]
+      },
+      "system": "http://testsystem.de",
+      "value": "20211115-127"
+    }
+  ],
+  "reasonCode": [
+    {
+      "extension": [
+        {
+          "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Reason_Type",
+          "valueString": "Anlass"
+        }
+      ],
+      "text": "Grund"
+    },
+    {
+      "extension": [
+        {
+          "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_LAB_Reason_Type",
+          "valueString": "Veranlassungsgrund"
+        }
+      ],
+      "text": "Grund2"
+    }
+  ],
+  "status": "completed",
+  "intent": "order",
+  "priority": "routine",
+  "orderDetail": [
+    {
+      "text": "Beispieltext"
+    }
+  ],
+  "subject": {
+    "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7d"
+  },
+  "requester": {
+    "reference": "urn:uuid:2b946366-cf18-4d89-a29c-00bf69ac90f6",
+    "identifier": {
+      "system": "http://testsystem.de",
+      "value": "testValue"
+    }
+  },
+  "performer": [
+    {
+      "reference": "urn:uuid:b65dfcca-c6ce-4dac-8742-8da00c192c7f"
+    }
+  ],
+  "reasonReference": [
+    {
+      "reference": "urn:uuid:1d344181-abf0-428d-9f3f-1bbd84b7684e"
+    }
+  ],
+  "supportingInfo": [
+    {
+      "display": "testressource"
+    }
+  ],
+  "note": [
+    {
+      "text": "test"
+    }
+  ]
+}

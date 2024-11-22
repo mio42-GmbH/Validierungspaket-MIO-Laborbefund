@@ -1,0 +1,23 @@
+{
+  "resourceType": "Provenance",
+  "id": "f3533f34-781a-4cb4-9926-19fc8479b3e3",
+  "meta": {
+    "profile": [
+      "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Provenance|1.0.0-kommentierung.2"
+    ]
+  },
+  "target": [
+    {
+      "reference": "urn:uuid:771950bf-d6b0-4289-bb51-3ac43b5400f5"
+    }
+  ],
+  "occurredDateTime": "2021-11-15T16:00:00+01:00",
+  "recorded": "2021-11-15T16:00:00+01:00",
+  "agent": [
+    {
+      "who": {
+        "reference": "urn:uuid:24435567-fed3-43f8-8fc8-954f68df7fce"
+      }
+    }
+  ]
+}
